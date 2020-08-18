@@ -1,0 +1,8 @@
+# Ignore mac directory files (TWD; 2020-01-28)
+.DS_Store
+
+# Ignore auxiliary raster XML (TWD; 2020-02-13)
+*.aux.xml
+
+# Ignore compiled python (TWD; 2020-03-20)
+__pycache__
