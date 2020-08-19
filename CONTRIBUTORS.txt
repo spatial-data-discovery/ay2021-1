@@ -1,5 +1,5 @@
 # List of Fall 2020 Contributors
-Add your name to the list.
+Add your name to the list. Thanks!
 
 * Tyler W. Davis (dt-woods)
 * Hannah M. Slevin (hannahslevin)
@@ -7,3 +7,5 @@ Add your name to the list.
 * Xianglu Peng (XLPeng57)
 * John H. Hennin (johnhennin)
 * Ben Ralston (ben-ralston)
+* Jamil Abbas (Jabbaswm)
+* Sylvia Shea (sylviashea1)
