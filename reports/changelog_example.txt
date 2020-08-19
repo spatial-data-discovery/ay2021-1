@@ -1,0 +1,308 @@
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+#                                   ABOUT                                     #
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+PC NAME:   xxxxxx
+OS TYPE:   Windows 10 Enterprise (64-bit)
+PROCESSOR: i7-7820HQ @ 2.90 GHz
+MEMORY:    16 GB RAM
+STORAGE:   256 GB SDD
+
+
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+#                                 SHORTCUTS                                   #
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+
+~~~~~~~~
+KEYBOARD
+~~~~~~~~
+WIN+D :: launch desktop
+WIN+I :: open Windows Settings
+WIN+W :: open Windows Ink workspace
+WIN+L :: lock screen
+WIN+P :: open second screen pane (project to second screen options)
+WIN+Q :: search Apps
+WIN+R :: open Run window
+WIN+U :: open Ease of Access center
+WIN+X :: open tools menu
+
+
+~~~~~~~~~~~
+WINDOWS CMD
+~~~~~~~~~~~
+`H:` <-- move to H:\ drive
+`C:` <-- move back to C:\ drive
+`cls` <-- clears command prompt window
+
+
+~~~~~~~~~~~~~~~~~~~~~~~
+ATOM EDITOR CHEAT SHEET
+~~~~~~~~~~~~~~~~~~~~~~~
+ctrl+shift+m   :: opens/closes markdown previewer
+ctrl+shift+d   :: duplicate line
+ctrl+ArrowUp   :: move the current line up one line
+ctrl+ArrowDown :: move the current line down one line
+ctrl+k+u       :: converts highlighted text to uppercase
+ctrl+k+l       :: converts highlighted text to lowercase
+ctrl+g         :: go to line #
+ctrl+x         :: cut line
+alt+ArrowLeft  :: move cursor backward one word
+alt+ArrowRight :: move cursor forward one word
+alt+Backspace  :: delete back to beginning of sub-word
+
+
+
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+#                               TROUBLESHOOT                                  #
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+To turn off scroll lock
+--> WinL --> "osk" --> On Screen Keyboard --> Click 'ScrLk' to deactive
+
+Convert Microsoft Word to Markdown
+  `pandoc example.docx --wrap=none -t markdown -o example.md`
+
+Create simple HTTP server from commandline
+  ```
+  # Opens a connection to the local directory on http://localhost:8000
+  python -m http.server
+  ```
+
+
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+#                                CHANGELOG                                    #
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+NOTE I use "+" for additions, "-" for removals and "*" for other changes
+NOTE I use "!!!" to highlight things that I need find quickly
+
+2019-08-05  Picked up newly wiped PC from W&M IT
+
+                !!! prepacked with Office 2016
+
+2019-08-06  Downloaded and installed new packages
+            + Atom text editor 1.39.1 (https://atom.io)
+            + VLC media player 3.0.7.1 (https://www.videolan.org/vlc)
+            + LibreOffice 6.2.5.2 (https://www.libreoffice.org)
+            + Git 2.22.0 (https://git-scm.com/download/win)
+
+            Created user environment variables:
+            * HOME - C:\Users\twdavis
+            * REPO - C:\Users\twdavis\Repositories
+            * CRS - C:\Users\twdavis\Repositories\personal\courses
+
+            Created Repositories directory
+            * cloned courses
+
+            Installed R (3.6.1) for Windows
+            * web search "cran r" or "r for windows"
+            * click "R for Windows - cran.r-project.org"
+            --> https://cran.r-project.org/bin/windows/
+            * click "install R for the first time"
+            --> https://cran.r-project.org/bin/windows/base/
+            * click "Download R #.#.# for Windows"
+            --> save file
+            * open executable
+            --> run with defaults (includes both 32 and 64 bit)
+            * update user Path environment (for R and Rscript)
+            --> C:\Program Files\R\R-3.6.1\bin
+
+2019-08-09  Downloaded and installed new packages
+            + Rstudio Desktop 1.2.1335
+
+                !!! Local R library: C:\Users\twdavis\R\win-library\3.6
+
+            Installed new R packages
+            + rmarkdown 1.14 (+17 dependencies)
+
+2019-08-11  Rpackage update
+            * rprojroot
+
+            Installed new package
+            + pandoc 2.7.3 (local C:\users\twdavis\appdata\local\pandoc)
+
+                !!! user environment path auto updated
+
+2019-08-12  Downloaded and installed new packages
+            + SlimPDF Reader 1.0
+            + Ghostscript 9.27
+            + Adobe Acrobat Reader DC 2019.012.20034
+            + ArcGIS Pro 2.2 (local ~\appdata\local\programs\arcgis\pro)
+            + MiKTeX 2.9 (local ~\appdata\local\programs\miktex 2.9)
+            + Strawberry Perl 5.30.0.1
+            + TexMaker 5.0.3
+            + IrfanView 4.53
+            + Gimp 2.8.22 (for compatibility with Linux machine)
+
+            Uninstalled
+            - SlimPDF Reader (I do not like it!)
+
+            Changed Windows default applications
+            * PDF: Adobe Acrobat Reader
+            * Music: VLC Player
+            * Photos: IrfanView
+
+            Updated IrfanView Properties --> Extensions
+            * checked "Load only associated types while moving through folder"
+
+            Software updates
+            * Adobe Acrobat Reader DC 2019.012.20035
+            * ArcGIS Pro 2.4.1
+
+                !!! NOTE: Python arcgis is located here:
+                !!! C:\Users\twdavis\AppData\Local\Programs\ArcGIS\Pro\bin\   \
+                !!! Python\envs\arcgispro-py3\Lib\site-packages\arcgis
+
+            Disabled Adobe Acrobat Update Task (Task Scheduler)
+
+            Installed new LaTeX packages
+            + exam
+            + caption
+            + url
+
+2019-08-09  Downloaded and installed new software
+            + SRWare Iron
+
+                !!! updated Iron preferences
+                !!! (turn off password manager, ask where to download, etc.)
+
+                !!! turned off LibreOffice Calc autocorrect preferences
+
+2019-08-14  Downloaded Trusted Certificates update in Adobe Acrobat Reader
+
+2019-08-15  Installed Atom package
+            + minimap 4.29.9
+
+2019-08-19  Downloaded and installed new packages
+            + Thunderbird 68.8.0
+
+            Installed new R packages
+            + reticulate (needed for python script)
+            + RTools (required dependency)
+
+2019-08-20  Downloaded and installed eduroam certificate
+            * connect.wm.edu
+            * install/launch secure w2
+
+            Download and install QGIS
+            * using the OSGeo4W Network installer (64bit)
+            * Options for installation
+              Command Line
+                + gdal 2.4.1
+                + libgeotiff 1.4.2
+                + netcdf 4.6.2
+                + proj 5.2.0
+                + python3-core 3.7.0
+                + python3-tools 3.7.0
+              Desktop
+                + qgis-ltr-full 3.4
+                + saga-ltr 2.3.2
+              Libs
+                + gdal 2.4.1
+                + hdf5 1.10.4
+                + libgeotiff 1.4.2
+                + libtiff 4.0.8
+                + netcdf 4.6.2
+                + proj 5.2.0
+                + python3-gdal 2.4.1
+                + python3-h5py 2.8.0
+                + python3-jupyter-core 4.4.0
+                + python3-numpy 1.16.3
+                + python3-pip 19.0.3
+                + python3-scipy 1.1.0
+              Web install
+                + (everything)
+              Fixed unmet dependencies
+                + avce00 2.0.0
+                + boost-libs 1.56.0
+                + cairo 1.12.14
+                + curl 7.60.0
+                + expat 2.1.0
+                + fcgi 2.4.1
+                + fftw 3.3.3
+                + freexl 1.0.2
+                + fribidi 0.19.2
+                + gdal-ecw 2.4.1
+                + gdal-mrsid 2.4.1
+                + gdal-oracle 2.4.1
+                + gdal-python 2.4.1
+                + gdal-sosi 2.4.1
+                + gdal111dll 1.11.3
+                + geos 3.7.2
+                + gpsbabel 1.4.4
+                + grass 7.6.1
+                + gs 9.07
+                + gsl-libs 1.15
+                + hdf4 4.2.14
+                + iconv 1.14
+                + iconv-vc14 1.15
+                + icu-libs 56.1
+                (...)
+
+                !!! System Error
+                !!! crssync.exe: code execution failed
+                !!!    because xlibeay102p.dll was not found
+                !!! Check /var/log/setup.log.full
+                !!! Package: qgis-common
+	            !!!    qgis-common.bat exit code -1073741515
+                !!! Package: qgis-ltr-common
+	            !!!    qgis-ltr-common.bat exit code -1073741515
+                !!! Weird error, because it works...
+
+            OSGeo4W Python3 installed in:
+            * C:\OSGeo4W64\apps\Python37\
+            OSGeo4W Pip3 installed in
+            * C:\OSGeo4W64\apps\Python37\Scripts
+
+            Created new system environment variables
+            + OSGEO4W=C:\OSGeo4W64
+            + QGISNAME=qgis
+            + QGIS=C:\OSGeo4W64\apps\qgis
+
+            Updated user Path environment variables
+            + C:\OSGeo4W64\apps\Python37
+            + C:\OSGeo4W64\apps\Python37\Scripts
+            + C:\OSGeo4W64\bin
+            + C:\OSGeo4W64\apps\qgis\bin
+
+            Created new user environment variables
+            + PYTHONHOME=C:\OSGeo4W64\apps\Python37
+            + PYTHONPATH=C:\OSGeo4W64\apps\qgis\python
+
+                !!! python
+                !!! >>> import qgis (WORKS!)
+                !!! *remedy from https://gis.stackexchange.com/questions/200510/no-module-named-qgis
+
+2019-08-26  Installed new R packages (in RStudio)
+            + revealjs 0.9
+
+2019-08-27  Getting basemaps in QGIS
+            + plugin: QuickMapServices v.0.19.10.1
+            * Plugin Settings --> More Services --> Get contributed pack
+
+            Downloaded new software (TODO: install it)
+            * 7zip v.19.00
+
+@TODO (installs)
+NOTE: "_" for todo and "x" for done
+_ 7zip (https://www.7-zip.org/)
+x Adobe PDF Viewer DC (https://get.adobe.com/reader/)
+x ArcGIS Pro (https://www.arcgis.com/index.html)
+x Atom (https://atom.io)
+x Dropbox (https://www.dropbox.com/)
+x Ghostscript (https://www.ghostscript.com/download.html)
+x GIMP (https://www.gimp.org/downloads/)
+x Git (https://git-scm.com/download/win)
+_ Google Earth (Engine?)
+_ Imagemagick (https://imagemagick.org/index.php)
+x IrfanView (https://www.irfanview.com/)
+x LibreOffice (https://www.libreoffice.org)
+x MikeTex (https://miktex.org/download)
+x Pandoc (https://pandoc.org/installing.html)
+_ Panoply (https://www.giss.nasa.gov/tools/panoply/)
+x Perl (http://strawberryperl.com/)
+x Python 3
+--> installed v.3.7.0 with OSGeo4W (8/20)
+x QGIS (https://www.qgis.org/en/site/)
+x R (https://cran.r-project.org/bin/windows/)
+x RStudio (https://www.rstudio.com)
+x SRWare Iron (https://www.srware.net/en/software_srware_iron.php)
+x Texmaker (https://www.xm1math.net/texmaker/)
+x Thunderbird (https://www.thunderbird.net/en-US/thunderbird/all/)
