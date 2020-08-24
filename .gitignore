@@ -6,3 +6,5 @@
 
 # Ignore compiled python (TWD; 2020-03-20)
 __pycache__
+
+desktop.ini
