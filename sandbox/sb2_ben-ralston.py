@@ -8,7 +8,7 @@ import matplotlib.pyplot as plt
 def get_properties(geo_dict, file_name):
     properties = {'image': file_name}
     for key in geo_dict:
-        if key == 'Latitude' or key == 'Longitude':
+        if key == 'Longitude' or key == 'Latitude':
             continue
         property_name = key.lower()
         properties[property_name] = geo_dict[key]
@@ -22,7 +22,7 @@ def save_geojson(image_directory, output_file):
         file_path = os.path.join(image_directory, file_name)
         geo_data = gpsphoto.getGPSData(file_path)
 
-        point = Point((geo_data['Latitude'], geo_data['Longitude']))
+        point = Point((geo_data['Longitude'], geo_data['Latitude']))
         properties = get_properties(geo_data, file_name)
         feature = Feature(geometry=point, properties=properties)
         features.append(feature)
@@ -38,7 +38,7 @@ def save_plot(feature_list, pdf_path, png_path):
     ax = plt.axes(projection=EqualEarth())
     ax.stock_img()
     for feature in feature_list:
-        lat, lon = feature['geometry']['coordinates']
+        lon, lat = feature['geometry']['coordinates']
         plt.plot(lon, lat, 'ro', markersize=3, markeredgecolor='k',
                  markeredgewidth=.6, transform=Geodetic())
 
