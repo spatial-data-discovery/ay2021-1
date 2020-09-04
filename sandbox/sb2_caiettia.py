@@ -1,4 +1,3 @@
-import pandas as pd
 from geojson import Point, Feature, FeatureCollection, dump
 from GPSPhoto import gpsphoto
 import exifread
