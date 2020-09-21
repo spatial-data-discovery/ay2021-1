@@ -9,7 +9,7 @@ def CheckRasterFormat(file):
             return True
         return False
 
-    specs = pd.read_csv('aehillaraster.txt', sep=" ", header=None, index_col =False, skiprows= lambda x: logic(x) )
+    specs = pd.read_csv(file, sep=" ", header=None, index_col =False, skiprows= lambda x: logic(x) )
     # https://thispointer.com/pandas-skip-rows-while-reading-csv-file-to-a-dataframe-using-read_csv-in-python/
 
     #check ncols:
