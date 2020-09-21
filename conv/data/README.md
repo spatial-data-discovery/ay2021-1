@@ -9,4 +9,5 @@ This directory is for storing the input/output data files of the conversion scri
 
 | FILENAME | DESCRIPTION |
 |:---------|:------------|
+| **README.md** | This readme file |
 | **test.hdf** | The input file for conversion script 1 |
