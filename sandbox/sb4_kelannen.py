@@ -46,24 +46,24 @@ def checkRaster(file_path, name):
                     print(name + " - Error, does not contain nrows in the header.")
                     return
         elif totalrows == 2:
-            if line[:9].lower() == "xllcorner":
+            if line[:9].lower() == "xllcorner" or line[:9].lower() == "xllcenter":
                 if not isFloat(line[9:].strip()):
-                    print(name + " - Error, xllcorner does not have a numeric value.")
+                    print(name + " - Error, xllcorner/xllcenter does not have a numeric value.")
                     return
                 else:
                     totalrows += 1
             else:
-                print(name + " - Error, does not contain xllcorner in the header.")
+                print(name + " - Error, does not contain xllcorner or xllcenter in the header.")
                 return
         elif totalrows == 3:
-            if line[:9].lower() == "yllcorner":
+            if line[:9].lower() == "yllcorner" or line[:9].lower() == "yllcenter":
                 if not isFloat(line[9:].strip()):
-                    print(name + " - Error, yllcorner does not have a numeric value.")
+                    print(name + " - Error, yllcorner/yllcenter does not have a numeric value.")
                     return
                 else:
                     totalrows += 1
             else:
-                print(name + " - Error, does not contain yllcorner in the header.")
+                print(name + " - Error, does not contain yllcorner or yllcenter in the header.")
                 return
         elif totalrows == 4:
             if line[:8].lower() == "cellsize":
