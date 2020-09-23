@@ -106,51 +106,6 @@ def row_check(content,row_num):
     else:
         return 'pass'
 
-def check_prj(path,file):
-    '''
-    Checks .prj for proper entries
-    '''
-    with open(path) as f:
-        content = f.readlines()
-    content = [lines.strip() for lines in content]
-    checks = []
-    items = content[0].split(',')
-    for i in range(len(items)):
-        if i==0:
-            geo = items[i].split('[')[0]
-            if geo=='GEOGCS':
-                checks.append('pass')
-            else:
-                checks.append('fail')
-        if i==1:
-            datum = items[i].split('[')[0]
-            if datum=='DATUM':
-                checks.append('pass')
-            else:
-                checks.append('fail')
-        if i==2:
-            spher = items[i].split('[')[0]
-            if spher=='SPHEROID':
-                checks.append('pass')
-            else:
-                checks.append('fail')
-        if i==5:
-            prim = items[i].split('[')[0]
-            if prim=='PRIMEM':
-                checks.append('pass')
-            else:
-                checks.append('fail')
-        if i==7:
-            unit = items[i].split('[')[0]
-            if unit=='UNIT':
-                checks.append('pass')
-            else:
-                checks.append('fail')
-    if 'fail' in checks:
-        print('ERROR: %s is not a valid raster' % file)
-    else:
-        print('PASS: %s is a valid raster' % file)
-
 def check_txt(path,file):
     with open(path) as f:
         content = f.readlines()
@@ -195,9 +150,7 @@ def main():
         #             zf.extract(filename)
         #             path = os.path.join(folder,filename)
         #             check_txt(path,filename)
-        elif file.endswith('.prj'):
-            path = os.path.join(folder,file)
-            check_prj(path,file)
+        
         else: 
             print('%s is incorrect file type' % file)
         print('--------------------')
