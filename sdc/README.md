@@ -1,5 +1,5 @@
 # README
-* LAST UPDATED: 2020-08-19
+* LAST UPDATED: 2020-09-28
 * ORGANIZATION: spatial-data-discovery
 * REPOSITORY: ay2021-1/sdc
 
