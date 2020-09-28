@@ -14,6 +14,7 @@
 * Collaboration using a Git repository
 
 ### Instructions
-See "Sparse Data Challenge" GitHub Issue
+See "Sparse Data Challenge" GitHub Issue.
 
+You may work with a partner.
 As you complete the assignment, be sure to keep track of your strategy and your sources.
