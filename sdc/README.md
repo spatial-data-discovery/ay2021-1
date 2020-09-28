@@ -15,3 +15,5 @@
 
 ### Instructions
 See "Sparse Data Challenge" GitHub Issue
+
+As you complete the assignment, be sure to keep track of your strategy and your sources.
