@@ -67,4 +67,4 @@ if __name__ == "__main__":
     #call function
     HDFConverter(path_hdf)
     #describe location of the test.hdf file
-    print("This raster is located in Georgia near ")
+    print("This raster is located in Georgia near Monticello.  The raster encompasses the intersection of Goolsby and Fullerton Phillips road and Cedar Creek.")
