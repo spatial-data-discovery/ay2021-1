@@ -56,5 +56,9 @@ if __name__ == "__main__":
     with open('data/conv1_johnhennin.prj', 'w+') as prjfile:
         prjfile.write(dic['crs'])
 
+    prjfile.close()
+    ascfile.close()
+    hdfile.close()
+
     #Where is it?
     print("The raster is of Cedar Creek––specifically the general area where Goolsby Road meets Jordan Road in the north and McMichael Road in the south––southeast of Monticello, Georgia, USA.")
