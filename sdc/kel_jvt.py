@@ -35,7 +35,12 @@ def checkRaster(red_path, blue_path, green_path, final_path):
                 if green_row_values[i] == "-9999":
                     green_row_values[i] = "0"
                 
-                final_row_values.append(str(int(red_row_values[i])+int(blue_row_values[i])+int(green_row_values[i])))
+                final_value = int(red_row_values[i])+int(blue_row_values[i])+int(green_row_values[i])
+                if (final_value > 255):
+                    final_value = 255
+
+                #final_row_values.append(str(int(red_row_values[i])+int(blue_row_values[i])+int(green_row_values[i])))
+                final_row_values.append(str(final_value))
 
             sum_row_values = ""
             if len(final_row_values) != len(red_row_values):
