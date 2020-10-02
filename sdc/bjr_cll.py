@@ -1,5 +1,17 @@
 import csv
 
+try:
+    import numpy as np
+    imported_np = True
+except ImportError:
+    imported_np = False
+
+try:
+    from PIL import Image
+    imported_pil = True
+except ImportError:
+    imported_pil = False
+
 
 def read_raster(filename):
     with open(filename, 'r') as file:
@@ -136,6 +148,37 @@ def get_nearby_cells(width, height, row, col, distance):
     return cell_set
 
 
+def ask_to_create_image():
+    print()
+
+    while True:
+        answer = input('Would you like to create a PNG from the '
+                       'corrected rasters (yes/no)? ')
+        if answer.lower() in ['yes', 'no']:
+            break
+
+        print('That is not a valid response. Please enter "yes" or "no".\n')
+
+    if answer.lower() == 'yes':
+        return True
+    else:
+        return False
+
+
+def make_png():
+    file_list = ['red_bjr_cll.asc', 'green_bjr_cll.asc', 'blue_bjr_cll.asc']
+
+    channels = []
+    for file in file_list:
+        matrix = read_raster(file)[0]
+        np_array = np.array(matrix)
+        new_image = Image.fromarray(np_array.astype('uint8'), mode='L')
+        channels.append(new_image)
+
+    image = Image.merge('RGB', (channels[0], channels[1], channels[2]))
+    image.save('bjr_cll.png', 'PNG')
+
+
 def main():
     file_list = ['blue.asc', 'green.asc', 'red.asc']
     add_to_name = '_bjr_cll.asc'
@@ -147,6 +190,10 @@ def main():
 
         new_filename = file[:-4] + add_to_name
         write_raster(new_filename, new_matrix, headers)
+
+    if imported_np and imported_pil:
+        if ask_to_create_image():
+            make_png()
 
 
 if __name__ == '__main__':
