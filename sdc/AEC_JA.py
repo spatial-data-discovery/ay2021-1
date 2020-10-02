@@ -144,6 +144,8 @@ if __name__ == '__main__':
     green_path = os.path.dirname(sys.argv[0]) +r'/green.asc'
     Raster_Null_Fill(red_path, blue_path, green_path)
 
+# The image is a river delta, specficially the Lena River Delta, 
+# specifically it looks like the image was taken in 2019 in the summer.
 
 
 
@@ -174,5 +176,4 @@ if __name__ == '__main__':
 # print(" duplicates: ", duplicates)
 # print('triplicates: ', triplicates)
 
-# The image is a river delta, specficially the Lena River Delta, 
-# specifically it looks like the image was taken in 2019 in the summer.
+
