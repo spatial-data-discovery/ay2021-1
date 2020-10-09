@@ -2,10 +2,10 @@ import argparse
 import h5py
 import numpy as np
 
-def HDFConverter(filepath):
+def HDFConverter():
 
     # read file
-    f = h5py.File(filepath, "r")
+    f = h5py.File("data/test.hdf", "r")
 
     #get raster data
     data = [i for i in f['data']['assignment']]
@@ -18,7 +18,7 @@ def HDFConverter(filepath):
 
     #write attributes into asc file
     asc_attr = ['nrows', 'ncols', 'xllcorner', 'yllcorner', 'cellsize', 'NODATA_value']
-    with open("conv_1.txt","w+") as asc:
+    with open("data/conv1_xp.txt","w+") as asc:
         for key in asc_attr:
             asc.write("%s %s\n" % (key, attributes[key]))
 
@@ -28,7 +28,7 @@ def HDFConverter(filepath):
                 asc.write(str(x)+"  ")
             asc.write("\n")
     
-    with open("conv_1.prj","w+") as prj:
+    with open("data/conv1_xp.prj","w+") as prj:
         prj.write("%s" %attributes['crs'])
 
 
@@ -37,7 +37,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description = 'This script extract the data from the HDF5 file and save the data into a valid ascii file. Users need to provide a valid filepath.')
     args=parser.parse_args()
 
-    filename = input("Enter the path to your file:  ")
+    #filename = input("Enter the path to your file:  ")
     #HDFConverter("/Users/pxl/Documents/2020_Fall/DATA_431/test.hdf")
-    HDFConverter(filename)
+    HDFConverter()
     print("The raster image covers part of the Cedar Creek, Goolsby Road, and Fullerton Phillips Road. It's somewhere near Monticello, Georgia.")
