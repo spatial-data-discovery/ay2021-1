@@ -22,7 +22,6 @@ def hdf2rastertxt(file_name):
     except:
         return 'no metadata found. file may not be a raster, or it was improperly formatted'
     
-    #trial and error. for some reason they were printed not in order?
     ncols = metadata[3][1].decode('UTF-8')
     nrows = metadata[4][1].decode('UTF-8')
     xllcorner = metadata[5][1].decode('UTF-8')
@@ -34,12 +33,13 @@ def hdf2rastertxt(file_name):
     
     ###write data
     with open(r'data/vincentandaw_raster.txt','w') as txt:
-        txt.write("nrows "+ nrows+"\n"+
-                  "ncols "+ncols+"\n"+
-                  "xllcorner_or_center "+xllcorner_or_center+'\n'+
-                  'yllcorner_or_center '+yllcorner_or_center+'\n'+
-                  'cellsize '+cellsize+'\n'+
-                  "NODATA_value "+nodat+'\n')
+        txt.write("ncols "+ncols+"\n"+
+                  "nrows "+nrows+"\n"+
+                  "xllcorner "+xllcorner+'\n'+
+                  "yllcorner "+yllcorner+'\n'+
+                  "cellsize "+cellsize+'\n'+
+                  "NODATA_value "+nodat+'\n'+
+                  '\n')
         for i in raster_array:
             for j in i:
                 txt.write(str(j)+' ')
