@@ -1,8 +1,8 @@
 # conv1_CSSTARFISH.py
 #
-# VERSION 0.1
+# VERSION 0.2
 #
-# LAST EDIT: 2020-09-30
+# LAST EDIT: 2020-10-11
 #
 # This script reads an HDF5 file into an ASCII raster.
 #
@@ -24,11 +24,8 @@ parse = argparse.ArgumentParser("Reads a provided HDF5 file and converts it into
 parsing = parse.parse_args()
 
 # Set file path
-path_input = input("Please enter the file path: ")
+path_input = input("Please enter the file path, including the name of the .hdf file: ")
 my_dir = path_input
-
-file_name = "test.hdf"
-hdf_path = os.path.join(my_dir, file_name)
 
 if os.path.isfile(hdf_path):
     print("\nOpening existing HDF file.")
