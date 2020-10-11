@@ -1,6 +1,6 @@
 # conv1_CSSTARFISH.py
 #
-# VERSION 0.2
+# VERSION 0.3
 #
 # LAST EDIT: 2020-10-11
 #
@@ -68,5 +68,5 @@ else:
 
 print("\nWhere in the world is this raster from? ")
 print("\nThis raster's bottom left corner is positioned at approximately 83 degrees West and about 33 degrees North.")
-print("\nAs such, the raster comes from a town in Jasper County, Georgia that is positioned to southeast of Monticello.")
-print("\nIn addition, the raster is positioned within the bounds of GA Highway 11, Kinderhook Road, Fullerton-Phillips Road, and Perimeter Road.")
+print("\nConsequently, the raster is located within a town from Jasper County, Georgia, to the southeast of Monticello.")
+print("\nThe raster is also positioned within the bounds of GA Highway 11, Kinderhook Road, Fullerton-Phillips Road, and Perimeter Road.")
