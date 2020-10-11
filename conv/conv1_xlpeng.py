@@ -7,6 +7,7 @@ def HDFConverter():
     # read file
     f = h5py.File("data/test.hdf", "r")
 
+
     #get raster data
     data = [i for i in f['data']['assignment']]
     
