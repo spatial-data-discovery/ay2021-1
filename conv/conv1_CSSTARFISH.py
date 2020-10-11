@@ -25,7 +25,7 @@ parsing = parse.parse_args()
 
 # Set file path
 path_input = input("Please enter the file path, including the name of the .hdf file: ")
-my_dir = path_input
+hdf_path = path_input
 
 if os.path.isfile(hdf_path):
     print("\nOpening existing HDF file.")
