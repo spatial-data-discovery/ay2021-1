@@ -3,10 +3,28 @@ import numpy as np
 import argparse
 import os
 import sys
+from pathlib import Path
 
-def HDFtoRaster(file_name):
+def HDFtoRaster():
+
+    #### identify the necessary directories
+    d_f = 'data'
+    data= 'test.hdf'
+    raster_txt = 'caiettia_raster.txt'
+    prj_txt = 'caiettia_metadata.prj'
+    hdf_data = os.path.join(d_f, data)
+
+    # get the working directory
+    work_direct = os.path.dirname(os.path.realpath(__file__))
+
+    # directories for hdf data, raster data target save-path, prj file taret save-path respectively
+    data_dir = os.path.join(work_direct, hdf_data)
+    raster_dir = os.path.join(work_direct, os.path.join(d_f, raster_txt))
+    prj_dir = os.path.join(work_direct, os.path.join(d_f, prj_txt))
+    ####
+
     # open the hdf file in read mode
-    hdf = h5py.File(file_name+r'/data/test.hdf', "r")
+    hdf = h5py.File(data_dir, "r")
     
     # navigate to the "data" group
     a = hdf['data']
@@ -38,7 +56,7 @@ def HDFtoRaster(file_name):
     #### This block writes our extracted data to a .txt file and some metadata to a .prj file
 
     # write our extracted raster data into a txt file
-    with open(file_name+r'/data/test_caiettia.txt', "w+") as f:
+    with open(raster_dir, "w+") as f:
         f.write("nrows "+ nrows+"\n"+"ncols "+ncols+"\n"+"xllcorner "+xllcorner+'\n'+'yllcorner '+yllcorner+'\n'+'cellsize '+cellsize+'\n' "NODATA_value "+NODATA+'\n'+'\n')
         for items in a_array:
             for ele in items:
@@ -47,23 +65,17 @@ def HDFtoRaster(file_name):
             f.write('\n')
 
     # write the GEOGCS data to the .prj file
-    with open(file_name+r'/data/test_caiettia.prj', "w+") as f:
+    with open(prj_dir, "w+") as f:
         f.write(crs)
     ####
 
 
 if __name__ =='__main__':
-    parser = argparse.ArgumentParser(description = 'User provides a path to the HDF file, and script returns the raster data in .txt format.')
+    parser = argparse.ArgumentParser(description = 'Script navigates to hdf data, extracts, then returns the raster data in .txt format.')
     args=parser.parse_args()
-    print(os.path.dirname(sys.argv[0]))
-    file_name = os.path.dirname(sys.argv[0])
-    file_path_test = file_name + r'/data/test.hdf'    
-    if file_path_test.endswith('.hdf'):
-        HDFtoRaster(file_name)
-        print("The Raster Image is an image covering Cedar Creek by Goolsby Road just outside of Monticello, Georgia, USA")
-    else:
-        print('Incorrect File Type')
-    
+
+    HDFtoRaster()
+    print("The Raster Image is an image covering Cedar Creek by Goolsby Road just outside of Monticello, Georgia, USA")   
 
 
 
