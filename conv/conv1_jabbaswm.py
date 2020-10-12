@@ -3,7 +3,7 @@
 
 
 
-#NOTE: Requires creation of a blank raster file titled <test.asc> in data/test.asc
+
 
 ###################
 #Required modules
@@ -31,16 +31,15 @@ def extract_to_raster(fpath):
         hdf_file = h5py.File(fpath, 'r')
 
         #Open the empty raster file
-        raster_a = open('data/test.asc', 'w')
+        raster_a = open('data/test.asc', 'w+')
 
         #Get data
         d1 = hdf_file.get('data')
         d2 = d1.get('assignment')
 
-        for k in d2.attrs.keys():
-            if(k.startswith('NODATA') == False ):
-                raster_a.write(k + ' ' + d2.attrs[k].decode('UTF-8'))
-                raster_a.write('\n')
+
+        #Build the header of the raster manually
+        raster_a.write('NCOLS ' + '648' +'\n' + 'NROWS ' + '648' + '\n' + 'XLLCORNER ' + '-83.640000000003' + '\n' + 'YLLCORNER ' + '33.189999999996' + '\n' + 'CELLSIZE ' + '0.000092592593' + '\n' + 'NODATA_VALUE '  + '-9999' + '\n')
 
         d2_numpy = numpy.array(d2)
 
@@ -68,7 +67,7 @@ def extract_to_raster(fpath):
 #Main
 ###################
 
-par = argparse.ArgumentParser(description = 'User inputs file path to a type .hdf file and the program writes an asc raster file filled with the contents. NOTE: Requires creation of a blank raster file titled <test.asc> in data/test.asc')
+par = argparse.ArgumentParser(description = 'User inputs file path to a type .hdf file and the program writes an asc raster file filled with the contents.')
 args = par.parse_args()
 
 file = input('Enter path to .hdf file: ')
