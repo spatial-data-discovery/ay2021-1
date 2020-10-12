@@ -1,0 +1,62 @@
+*******************************************************************************
+*                                   About                                     *
+*******************************************************************************
+
+Project Title:    The Rise of a Superstar
+Created by:       Ryan Han
+GitHub:           rhan9
+University:       College of William & Mary
+Class:            Data 431 - Spatial Data Discovery
+Website:          https://spatial-data-discovery.github.io/project-rhan9.html
+
+*******************************************************************************
+*                                 Project Log                                 *
+*******************************************************************************
+
+2020-04-09  1st discussion about final project
+            * Talked about potential topics
+            * Was thinking about visualizing California wildfires and hotspots
+
+2020-04-12  Tried looking for Cali Wildfire related datasets
+            * Thought about visualizing US wildfires since 2000
+            * Found potential dataset: https://www.ncdc.noaa.gov/societal-impacts/wildfires/
+            * Explored dataset
+
+2020-04-16  2nd Discussion day
+            * Still not sure how to represent wildfires spatially
+            * Got some ideas from: https://source.opennews.org/articles/how-we-mapped-more-100-years-california-wildfire-h/
+
+2020-04-17  Found second dataset
+            * https://source.opennews.org/articles/how-we-mapped-more-100-years-california-wildfire-h/
+
+2020-04-20  Decided last minute to change project topic to visualizing NBA shots
+            * Inspired by: https://fivethirtyeight.com/features/how-mapping-shots-in-the-nba-changed-it-forever/
+            * searched for datasets
+
+2020-04-20  Was having trouble finding current NBA datasets.
+            * Thought about scraping, but it was taking too long.
+            * And didn't want to convert json files to csv files.
+
+2020-04-23  Luckily found an API with current NBA dataset
+            * https://github.com/swar/nba_api
+
+2020-04-30  Figured out how to utilize Nba_api
+            * Now needed to figure how to create nba court
+
+2020-05-02  Struggling to draw court
+
+2020-05-03  Found tutorial that saved my life
+            * http://savvastjortjoglou.com/nba-shot-sharts.html
+
+2020-05-04  Started player_shotchart script
+
+2020-05-06  Finished script and worked on visuals
+
+2020-05-07  Finished visualizations
+            * Wanted to try to visualize charts using hexbins, but ran into coding issues
+            * https://pro.arcgis.com/en/pro-app/tool-reference/spatial-statistics/h-whyhexagons.htm
+
+2020-05-08  Finished project
+            * Finished project.Rmd files
+            * Finished ReadMe file
+            * Touched up visuals
