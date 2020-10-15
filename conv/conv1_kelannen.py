@@ -54,9 +54,9 @@ def read_hdf(file_path):
 
 
 if __name__ == "__main__":
-    parser= argparse.ArgumentParser(description='Converts the data from the HDF5 file ./test.hdf to an ASCII raster file'
+    parser= argparse.ArgumentParser(description='Converts the data from the HDF5 file ./data/test.hdf to an ASCII raster file.'
                                                 'Saves this raster file as ./data/conv1_kelannen.asc along with its corresponding'
-                                                '.prj file. Prints out the location of this test.hdf raster file.')
+                                                '.prj file. Prints out the location of the test.hdf file.')
     args = parser.parse_args()
 
     file_path = os.path.join('data', 'test.hdf')
