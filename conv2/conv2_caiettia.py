@@ -23,7 +23,7 @@ def ASCtoNetCDF():
         for item in list_dir_data: # CATCH IF THERE IS NO DATA IN DATA FOLDER
             if item.endswith('.zip'):
                 count_zip+=1
-                
+
         if count_zip > 0:
             print("Found ", count_zip," zip files. Parsing now...")
             file_dates=[]
@@ -89,8 +89,8 @@ def ASCtoNetCDF():
             time.units = 'days since 2006-01-01'
 
             #fill the each variable with values
-            latitude[:] = np.arange(90,-90,-0.5,int)
-            longitude[:] = np.arange(-180,180, 0.5,int)
+            latitude[:] = np.arange(89.75,-90,-0.5,float)
+            longitude[:] = np.arange(-179.75,180, 0.5,float)
             np.copyto(time[:], days_since)
 
             # Create the EVI variable
@@ -101,6 +101,8 @@ def ASCtoNetCDF():
             evi.units = 'unitless'
             evi.valid_min = -0.2
             evi.valid_max = 1
+            for i in range(len(dataframes)):
+                dataframes[i] = np.flipud(dataframes[i]) # we flip the values in the rows of the array to match the calculated coordinates
             np.copyto(evi[:], dataframes) # here, we store the rasters into our EVI variable by month
 
             print('NetCDF file created. Done.')
