@@ -77,7 +77,7 @@ def make_netcdf_from_ascii(data_folder):
                     data_container3 = np.flipud(data_container2)
 
                     # add it to the actual place where the data lives
-                    data.append(data_container)
+                    data.append(data_container3)
 
         # now we're outside the for loop but still inside the else block
         data = np.asarray(data)
