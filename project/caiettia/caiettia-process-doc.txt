@@ -1,0 +1,18 @@
+*******************************************************************************
+*                                   About                                     *
+*******************************************************************************
+
+Project Title:    TBD
+Created by:       Andrew Caietti
+GitHub:           caiettia
+University:       College of William & Mary
+Class:            Data 431 - Spatial Data Discovery
+Website:          TBD
+
+*******************************************************************************
+*                                 Project Log                                 *
+*******************************************************************************
+
+2020-04-09  Created initial project files
+            * Created project process log
+            * Created project folder on the repository

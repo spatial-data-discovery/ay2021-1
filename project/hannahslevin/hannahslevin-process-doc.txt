@@ -1,0 +1,19 @@
+*******************************************************************************
+*                                   About                                     *
+*******************************************************************************
+
+Project Title:    Pending
+Created by:       Hannah Slevin
+GitHub:           Hannah-Slevin
+University:       College of William & Mary
+Class:            Data 431 - Spatial Data Discovery
+Website:          https://spatial-data-discovery.github.io/project-hannahslevin.html
+
+
+*******************************************************************************
+*                                 Project Log                                 *
+*******************************************************************************
+
+2020-10-13	Beginning the project
+		* Created project folder in ay-2021.github.io repository with README and 		process doc
+		* Uploaded a blank template project-hannahslevin.Rmd file to spatial-data-		discovery.github.io 
