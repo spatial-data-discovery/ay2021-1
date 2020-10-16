@@ -66,7 +66,10 @@ def list_objects(hf, parent_path):
 ###############################################################################
 # I use Prof. Davis' pre-written methods, which are outlined above
 #takes user input to file
-hdf_path = input('Enter file path to the .hdf file you wish to convert, including HDF file name: ')
+hdf_folder = input('Enter folder path to the .hdf file you wish to convert: ')
+hdf_filename = input('Enter filename of .hdf file you wish to convert, including the .hdf file extension:')
+hdf_path = hdf_folder+ "\\"+ hdf_filename
+asc_path = hdf_folder + '\\' + "h5converted.asc"
 
 #checks valid file, takes new input if invalid
 while os.path.isfile(hdf_path) != True:
@@ -78,30 +81,23 @@ if os.path.isfile(hdf_path):
     datadic = get_object_attrs(hdfile, "data/assignment")
     datatest = hdfile['data/assignment']
 #prepping .hdf attributes to be .asc headers
-    noDATAstring = ('NODATA_value '+ datadic['NODATA_value'])
-    print(noDATAstring)
+    noDATAstring = ('NODATA_VALUE '+ datadic['NODATA_value'])
     cellsizestring = ('CELLSIZE '+ datadic['cellsize'])
-    print(cellsizestring)
     ncolsstring = ('NCOLS '+ datadic['ncols'])
-    print(ncolsstring)
     nrowsstring = ('NROWS '+ datadic['nrows'])
-    print(nrowsstring)
 #should differentiate between hdf files that have x corner/x center coordinates
     if datadic['xllcorner']:
+        coordinatestr = "lower left corner"
         xllcornerstring = ('XLLCORNER '+ datadic['xllcorner'])
-        print(xllcornerstring)
         yllcornerstring = ('YLLCORNER '+ datadic['yllcorner'])
-        print(yllcornerstring)
     elif datadic['xllcenter']:
+        coordinatestr = "center"
         xllcornerstring = ('XLLCENTER '+ datadic['xllcenter'])
-        print(xllcornerstring)
         yllcornerstring = ('YLLCENTER '+ datadic['yllcenter'])
-        print(yllcornerstring)
+
     datarray = datatest[0:]
-    asc = open("h5converted.asc", "x")
-    asc.close()
-    asc = open("h5converted.asc", "w")
-#writes headers to .asc file, but will cause error if .asc already exists
+    asc = open(asc_path, "w+")
+#writes headers to .asc file
     asc.write(ncolsstring + ' \n')
     asc.write(nrowsstring+ ' \n')
     asc.write(xllcornerstring+ ' \n')
@@ -114,5 +110,5 @@ if os.path.isfile(hdf_path):
             asc.write(str(num)+ ' ')
     asc.close()
 #prints information about location
-    print ("This file is a raster file with a cell size of " + cellsizestring +" and where " + xllcornerstring + ' and ' + yllcornerstring)
+    print ("This file is a raster file with a cell size of " + cellsizestring +". It has a "+ coordinatestr+' located at latitude/longitude X coordinate ' + xllcornerstring  + ' and Y coordinate ' + yllcornerstring)
     hdfile.close()
