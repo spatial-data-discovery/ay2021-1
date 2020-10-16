@@ -1,6 +1,6 @@
 # conv2_CSSTARFISH.py
 #
-# VERSION 0.2
+# VERSION 0.3
 #
 # LAST EDIT: 2020-10-16
 #
@@ -108,7 +108,7 @@ evi = nc.createVariable("EVI", "f4", ("Time", "Latitude", "Longitude"))
 evi._FillValue = -0.3
 evi.missing_Value = -0.3
 evi.units = "unitless"
-#evi.scale_factor = 10000
+evi.scale_factor = 10000
 evi.valid_min = -0.2
 evi.valid_max = 1.0
 evi[:] = asc_files
