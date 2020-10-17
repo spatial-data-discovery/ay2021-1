@@ -2,14 +2,17 @@
 *                                   About                                     *
 *******************************************************************************
 
-Project Title:    xxx
+Project Title:    TBD
 Created by:       Sylvia Shea
 GitHub:           sylviashea1
 University:       College of William & Mary
 Class:            Data 431 - Spatial Data Discovery
-Website:          
+Website:          TBD
 
 *******************************************************************************
 *                                 Project Log                                 *
 *******************************************************************************
 
+2020-10-15  Project Preparation
+            * Created project workspace on git (ay2021-1/project/sylviashea1)
+            * 
