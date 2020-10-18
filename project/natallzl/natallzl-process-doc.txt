@@ -1,0 +1,21 @@
+*******************************************************************************
+*                                   About                                     *
+*******************************************************************************
+
+Project Title:    TBD
+Created by:       Natalie Larsen
+GitHub:           natallzl
+University:       College of William & Mary
+Class:            Data 431 - Spatial Data Discovery
+Website:          TBD
+
+
+*******************************************************************************
+*                                 Project Log                                 *
+*******************************************************************************
+
+2020-10-18  Created natallzl folder in ay2021-1 project directory
+            + Created project process document
+            + Created README
+
+            Created blank template project-natallzl.Rmd in spatial-data-discovery.github.io repository
