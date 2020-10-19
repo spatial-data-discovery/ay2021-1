@@ -13,6 +13,17 @@ Website:          TBD
 *                                 Project Log                                 *
 *******************************************************************************
 
-2020-04-09  Created initial project files
+2020-10-15  Created initial project files
             * Created project process log
             * Created project folder on the repository
+
+2020-10-16 Explored Data Sources
+	    * Looked into registering for environmental data from ARGOS satellite
+	    * Found California Condor locational data over time
+		- Potentially going to use this...exploring further
+	    * Found shipping traffic data over time (want to visualize shipping traffic)
+		- Each day is 200mb size is then 365*200mb which may be difficult 
+
+2020-10-17 Aquired Data
+	    * Got access to use ARGOS satellite data from NASA
+	    * Found various wildfire data sources covering CA and the greater US
