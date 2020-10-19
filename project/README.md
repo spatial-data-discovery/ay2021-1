@@ -1,3 +1,5 @@
+**DUE Friday, 20 November**
+
 The purpose of this project is for you to showcase spatial data on a public website (https://spatial-data-discovery.github.io). The task is to find (or create) spatial data that interests you; explain why it is interesting; describe what it is, where it came from, and any processes you used to create/modify it; and produce a visualization of the data that expresses your interest to others.
 
 - must include at least one graphic (still or animated); (e.g., a PNG or MP4)
