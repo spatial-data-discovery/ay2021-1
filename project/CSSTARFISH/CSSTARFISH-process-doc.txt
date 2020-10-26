@@ -1,0 +1,38 @@
+*******************************************************************************
+
+*                                   About                                     *
+
+*******************************************************************************
+
+Project Title:    Stabilizing Sturgeon
+Created by:       CSStarfish
+University:       College of William & Mary
+Class:            Data 431 - Spatial Data Discovery
+
+*******************************************************************************
+
+*                                 Project Log                                 *
+
+*******************************************************************************
+
+2020-10-12	Created project folder
+		Explored potential datasets pertaining to tropical precipitation
+		Decided to pursue a project pertaining to animal populations/distributions
+
+		Explored potential datasets pertaining to hummingbird flight patterns over time
+2020-10-13	Searched for datasets pertaining to salmon tracking
+		Searched for datasets pertaining to fish tracking, overall
+		Searched for datasets pertaining to fish species tracking along the US east coast
+
+2020-10-14	Considered changing project topic to tracking hurricane paths over time 
+
+2020-10-19	Setup README file
+
+2020-10-20	Sifted through various dataset options I found to remove any that didn't record tracking data annually/recently
+
+2020-10-25 	Read further detail about various datasets found in previous searches to narrow down options
+
+2020-10-26	Found CSV file from NOAA Fisheries [Dataset on NOAA Website](https://noaa-fisheries-swfsc.data.socrata.com/Species/Green-Sturgeon-Acoustic-Monitoring/cbdw-sw7g)
+		This dataset stores data about Green Sturgeon tracking since 2002 along the coast of central California.
+		Dataset last updated March 12, 2020.
+ 
