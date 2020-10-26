@@ -1,0 +1,21 @@
+*******************************************************************************
+*                                   About                                     *
+*******************************************************************************
+
+Project Title:	TBD
+Created by: 	Brian Wu
+GitHub:		brain-bot
+University:	College of William & Mary
+Class:		Data 431 - Spatial Data Discovery
+Website:	TBD	
+
+
+*******************************************************************************
+*                                 Project Log                                 *
+*******************************************************************************
+
+2020-10-25	Created blank project-username.Rmd and uploaded it to spatial-data-discovery.github.io repository
+
+2020-10-26	Created project folder 
+		* Created README.md
+		* Created process document
