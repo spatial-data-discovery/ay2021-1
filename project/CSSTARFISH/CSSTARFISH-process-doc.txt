@@ -32,7 +32,7 @@ Class:            Data 431 - Spatial Data Discovery
 
 2020-10-25 	Read further detail about various datasets found in previous searches to narrow down options
 
-2020-10-26	Found CSV file from NOAA Fisheries [Dataset on NOAA Website](https://noaa-fisheries-swfsc.data.socrata.com/Species/Green-Sturgeon-Acoustic-Monitoring/cbdw-sw7g)
+2020-10-26	Found CSV file from NOAA Fisheries (https://noaa-fisheries-swfsc.data.socrata.com/Species/Green-Sturgeon-Acoustic-Monitoring/cbdw-sw7g)
 		This dataset stores data about Green Sturgeon tracking since 2002 along the coast of central California.
 		Dataset last updated March 12, 2020.
  
