@@ -1,6 +1,6 @@
 # README
 
-* LAST UPDATED: 2020-10-19
+* LAST UPDATED: 2020-10-26
 * ORGANIZATION: spatial-data-discovery
 * USERNAME: CSStarfish
 * REPOSITORY: ay2021-1
