@@ -4,7 +4,7 @@
 
 Project Title:    Pending
 Created by:       Hannah Slevin
-GitHub:           Hannah-Slevin
+GitHub:           hannahslevin
 University:       College of William & Mary
 Class:            Data 431 - Spatial Data Discovery
 Website:          https://spatial-data-discovery.github.io/project-hannahslevin.html
