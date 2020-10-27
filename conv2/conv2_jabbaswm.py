@@ -93,13 +93,13 @@ def create_netcdf():
 
     #Longtitude dimension:
     f.createDimension('long', 720)
-    longitude = f.createVariable('long', 'i', ('long', ))
+    longitude = f.createVariable('long', 'f', ('long', ))
     longitude[:] = np.arange(-179.75, 180, 0.5, float)
     longitude.units = 'degrees_east'
 
     #Latitude dimension:
     f.createDimension('lat', 360)
-    latitude = f.createVariable('lat', 'i', ('lat', ))
+    latitude = f.createVariable('lat', 'f', ('lat', ))
     latitude[:] = np.arange(-89.75, 90, 0.5, float)
     latitude.units = 'degrees_north'
 
@@ -114,7 +114,7 @@ def create_netcdf():
     evi = f.createVariable('evi', 'f4', ('time', 'lat', 'long', ))
     evi._FillValue = -0.3
     evi.missing_value = -0.3
-    evi.units = 'N/A'
+    evi.units = 'unitless'
     evi[:] = data
 
     f.close()
