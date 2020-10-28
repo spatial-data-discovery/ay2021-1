@@ -56,7 +56,7 @@ for file in files:
                 for point in range(len(current_split_line)):
                     point = current_split_line[point]
                     point_val = int(point)/10000
-                    lines.append(point)
+                    lines.append(point_val)
 
                 file_data.append(lines)
             file_data = np.flipud(np.asarray(file_data))
@@ -94,8 +94,9 @@ time.units = "days since 1900-01-01"
 nc.createDimension("Longitude", 720)
 nc.createDimension("Latitude", 360)
 
-longitude = nc.createVariable("Longitude", "i", ("Longitude", ))
-latitude = nc.createVariable("Latitude", "i", ("Latitude", ))
+# Stored as 64-bit floating points
+longitude = nc.createVariable("Longitude", "f8", ("Longitude", ))
+latitude = nc.createVariable("Latitude", "f8", ("Latitude", ))
 
 longitude[:] = np.arange(-179.75, 180, 0.5)
 latitude[:] = np.arange(-89.75, 90, 0.5)
@@ -108,7 +109,6 @@ evi = nc.createVariable("EVI", "f4", ("Time", "Latitude", "Longitude"))
 evi._FillValue = -0.3
 evi.missing_Value = -0.3
 evi.units = "unitless"
-evi.scale_factor = 10000
 evi.valid_min = -0.2
 evi.valid_max = 1.0
 evi[:] = asc_files
