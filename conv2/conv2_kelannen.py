@@ -14,8 +14,6 @@ def net_cdf(folder_path):
     if len(file_paths) == 0:
         print("No zip files found in ./data.")
         return
-
-    print(file_paths)
     
     file_data = []
 
@@ -31,7 +29,7 @@ def net_cdf(folder_path):
                 rows = []
                 split_body = body[x].split(' ')
                 for y in range(len(split_body)):
-                    pixel = int(split_body[y]) / 1000
+                    pixel = int(split_body[y]) / 10000
                     rows.append(pixel)
                 temp.append(rows)
             temp = np.flipud(np.asarray(temp))
@@ -61,11 +59,11 @@ def net_cdf(folder_path):
     nc_file.createDimension('longitude', 720)
     nc_file.createDimension('time', 12)
 
-    latitude = nc_file.createVariable('latitude', 'i', ('latitude',))
+    latitude = nc_file.createVariable('latitude', 'f', ('latitude',))
     latitude.units = 'deg_North'
     latitude[:] = np.arange(-89.75,90,0.5,float)
 
-    longitude = nc_file.createVariable('longitude', 'i', ('longitude',))
+    longitude = nc_file.createVariable('longitude', 'f', ('longitude',))
     longitude.units = 'deg_East'
     longitude[:] = np.arange(-179.75,180,0.5,float)
 
