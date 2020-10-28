@@ -83,12 +83,12 @@ if __name__ == '__main__':
 
     # Write dimensions and corresponding variables
     f.createDimension('latitude',360)
-    latitude = f.createVariable('latitude','i',('latitude',))
+    latitude = f.createVariable('latitude','f',('latitude',))
     latitude[:] = np.arange(-89.75,90,0.5,float)
     latitude.units = 'deg_North'
 
     f.createDimension('longitude',720)
-    longitude = f.createVariable('longitude','i',('longitude',))
+    longitude = f.createVariable('longitude','f',('longitude',))
     longitude[:] = np.arange(-179.75,180,0.5,float)
     longitude.units = 'deg_East'
 
