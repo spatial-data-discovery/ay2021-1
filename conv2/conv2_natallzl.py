@@ -78,13 +78,13 @@ if __name__ == "__main__":
 
     #latitude dimension and variable
     f.createDimension('latitude', 360)
-    latitude = f.createVariable('latitude', 'i', ('latitude',))
+    latitude = f.createVariable('latitude', 'f', ('latitude',))
     latitude[:] = np.arange(-89.75, 90, 0.5)
     latitude.units = 'deg_North'
 
     #longitude dimension and variable
     f.createDimension('longitude', 720)
-    longitude = f.createVariable('longitude', 'i', ('longitude',))
+    longitude = f.createVariable('longitude', 'f', ('longitude',))
     longitude[:] = np.arange(-179.75, 180, 0.5)
     longitude.units = 'deg_East'
 
@@ -101,7 +101,6 @@ if __name__ == "__main__":
     evi._FillValue = -0.3
     evi.missing_value = -0.3
     evi.units = 'unitless'
-    evi.scale_factor = 10000
     evi[:] = evi_data
 
     f.close()
