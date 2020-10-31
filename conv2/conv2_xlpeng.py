@@ -71,7 +71,7 @@ def RasterToCDF():
         #find days since 1900-01-01
         days_since_1900 = []
         for i in range(1,13):
-            days_since_1900.append((date(2006,i,1) - date(1990,1,1)).days)
+            days_since_1900.append((date(2006,i,1) - date(1900,1,1)).days)
         days_since_1900 = np.asarray(days_since_1900)
 
         #Create netCDF
@@ -84,13 +84,13 @@ def RasterToCDF():
 
         #longitude
         ncdf.createDimension("longitude", 720)
-        longitude = ncdf.createVariable('longitude', 'i', ('longitude', ))
+        longitude = ncdf.createVariable('longitude', 'f', ('longitude', ))
         longitude.units = 'deg_East'
         longitude[:] = np.arange(-179.75, 180, 0.5, float)
 
         #latitude
         ncdf.createDimension("latitude", 360)
-        latitude = ncdf.createVariable('latitude', 'i', ('latitude', ))
+        latitude = ncdf.createVariable('latitude', 'f', ('latitude', ))
         latitude.units = 'deg_North'
         latitude[:] = np.arange(-89.75, 90, 0.5, float)
 
