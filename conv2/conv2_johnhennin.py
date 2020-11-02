@@ -78,15 +78,15 @@ if __name__ == "__main__":
 
     #Creates longitude dimension and variable
     f.createDimension('longitude',720)
-    long=f.createVariable('long','f',('longitude',))
-    long[:]=np.arange(-179.75,180,.5,float)
-    long.units="deg_East"
+    longitude=f.createVariable('longitude','f',('longitude',))
+    longitude[:]=np.arange(-179.75,180,.5,float)
+    longitude.units="deg_East"
 
-    #Creates longitude dimension and variable
+    #Creates latitude dimension and variable
     f.createDimension('latitude',360)
-    lat=f.createVariable('lat','f',('latitude',))
-    lat[:]=np.arange(-89.75,90,0.5,float)
-    lat.units="deg_North"
+    latitude=f.createVariable('latitude','f',('latitude',))
+    latitude[:]=np.arange(-89.75,90,0.5,float)
+    latitude.units="deg_North"
 
     #Creates time dimension and variable
     f.createDimension('time',12)
