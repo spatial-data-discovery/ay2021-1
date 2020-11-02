@@ -8,13 +8,12 @@ from scipy.io import netcdf
 ##############################################################################
 # GLOBAL VARIABLES:
 ##############################################################################
-ERROR_VAL = -9999
+ERROR_VAL = -0.3 #3000 (nodata from ASC) / 10000 (EVI scaling factor)
 
 ###############################################################################
 # FUNCTIONS
 ###############################################################################
 def netcdf_maker():
-    ### Let's get raster data ###
     #Locate data folder
     os.chdir(r'data')
 
@@ -33,18 +32,19 @@ def netcdf_maker():
                 zip.extractall()
 
     #take raster data 
-    container = []
+    point_data = []
     for file in os.listdir(os.getcwd()):
         if file.endswith('.txt'):
             raw_grid = np.loadtxt(file,skiprows=6) #skips first 6 formatting rows
             grid = raw_grid.astype(float) #checks numeric status here.
             container.append(grid/10000) #rescaled to divide by 10000 for -0.3<EVI<10
-    raster_slices = np.asarray(container) #This was one of the reasons why code didn't work last time
-
-
+    raster_slices = np.flipud(np.asarray(point_data)) 
+    #flipped for correct visualization: ASC and latitude now start at same side (southernmost)
+    
+    
     ### Create a new NetCDF file ###
 
-    my_file = "conv2_vincentandaw.nc"
+    my_file = "test_vince.nc"
     nc_path = os.path.join(".", my_file)
     f = netcdf.netcdf_file(nc_path, 'w')
 
@@ -57,7 +57,6 @@ def netcdf_maker():
     f.institution = 'William & Mary'
 
     # Create lon
-    #Thanks Professor, would not have figured np.arange() out without hints!
     f.createDimension('longitude', 720) #720 represents 720 pixels 
     longitude = f.createVariable('longitude', 'f4', ('longitude',) ) #f4=32bit floating point
     longitude[:] = np.arange(-179.75, 180, 0.5) 
@@ -76,21 +75,17 @@ def netcdf_maker():
     f.createDimension('time', 12) #it's monthly data
     time = f.createVariable('time', 'i', ('time',))
     time[:] = time_array
-    time.units = 'days_since_1900-01-01'
+    time.units = 'days since 1900-01-01'
     
     #Create EVI: Composite of time, lat, lon 
     evi = f.createVariable('evi', 'f4', ('time','latitude','longitude'))
     evi._FillValue = ERROR_VAL
     evi.missing_value = ERROR_VAL
     evi.long_name = 'Enhanced Vegetation Index with lat, long and time'
-    evi.units = 'none'
-    evi.valid_min = -0.3
+    evi.units = 'unitless'
+    evi.valid_min = -0.2
     evi.valid_max = 10
     evi[:] = raster_slices
-
-    # Reference for Attribute conventions
-    # http://www.bic.mni.mcgill.ca/users/sean/Docs/netcdf/guide.txn_18.html
-    # David Fulker, Unidata Program Center Director, UCAR
 
     f.close()
     print('NetCDF file created successfully!')
