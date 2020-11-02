@@ -57,13 +57,13 @@ def conversion_2(data_folder):
     time[:] = days_after
     #create longitude dimension
     f.createDimension('longitude',720)
-    longitude = f.createVariable('longitude','i',('longitude',))
+    longitude = f.createVariable('longitude','f',('longitude',))
     longitude.units = 'deg_East'
     longitude[:] = np.arange(-179.75,180,0.5)
     #create latitude dimension
     f.createDimension('latitude',360)
-    latitude = f.createVariable('latitude','i',('latitude',))
-    latitude.units = 'def_North'
+    latitude = f.createVariable('latitude','f',('latitude',))
+    latitude.units = 'deg_North'
     latitude[:] = np.arange(90,-89.75,-0.5)
 
 
