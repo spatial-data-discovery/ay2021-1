@@ -59,12 +59,12 @@ def conversion_2(data_folder):
     f.createDimension('longitude',720)
     longitude = f.createVariable('longitude','f',('longitude',))
     longitude.units = 'deg_East'
-    longitude[:] = np.arange(-179.75,180,0.5)
+    longitude[:] = np.arange(-179.75,180,0.5,float)
     #create latitude dimension
     f.createDimension('latitude',360)
     latitude = f.createVariable('latitude','f',('latitude',))
     latitude.units = 'deg_North'
-    latitude[:] = np.arange(90,-89.75,-0.5)
+    latitude[:] = np.arange(-89.75,90,0.5,float)
 
 
     #create evi variable
@@ -72,9 +72,11 @@ def conversion_2(data_folder):
     evi.units = 'unitless'
     evi.valid_minimum = -0.2
     evi.valid_maximum = 1
-    evi.fill_value = -3000
-    evi.missing_value = -3000
+    evi.fill_value = -0.3
+    evi.missing_value = -0.3
     evi.long_name = 'Enhanced Vegetation Indexes'
+    for x in range(len(frames)):
+        frames[x] = np.flipud(frames[x]) #flip the image so it's not upside-down
     np.copyto(evi[:],frames)
     f.close()
 
