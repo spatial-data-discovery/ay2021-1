@@ -1,0 +1,29 @@
+*******************************************************************************
+*                                   About                                     *
+*******************************************************************************
+
+Project Title:    TBA
+Created by:       Jamil Abbas
+GitHub:           jabbas
+University:       College of William & Mary
+Class:            Data 431 - Spatial Data Discovery
+Website:          TBA
+
+*******************************************************************************
+*                                 Project Log                                 *
+*******************************************************************************
+
+
+2020-10-30 Created Initial Files
+           + Created process Log
+           + Created project folder ('project/jabbas')
+
+           * Found possible datasets:
+                  + Air quality datset (openaq)
+                  https://openaq.org/#/countries/US?_k=v5hm51
+
+                  + Armed conflict dataset (experience.arcgis)
+                  https://experience.arcgis.com/experience/003f05cc447b46dc8818640c38b69b83/page/page_5/?views=view_16
+
+                  + US Crisis monitor (Domestic armed conflict dataset)(ACLED)
+                  https://acleddata.com/special-projects/us-crisis-monitor/
