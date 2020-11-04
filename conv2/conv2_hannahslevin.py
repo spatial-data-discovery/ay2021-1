@@ -59,25 +59,25 @@ if __name__ == '__main__':
     netcdf.satellite = 'Terra'
     netcdf.institution = 'The College of William & Mary'
     netcdf.contact = 'Hannah Slevin (hmslevin@email.wm.edu)'
-    netcdf.history = "Created on" +  str(datetime.date.today())
+    netcdf.history = "Created on " +  str(datetime.date.today())
 
 #Write dimensions
 #Longitude
     netcdf.createDimension('longitude', 720)
-    longitude = netcdf.createVariable('longitude', 'i', ('longitude', ))
+    longitude = netcdf.createVariable('longitude', 'f', ('longitude', ))
     longitude[:] = np.arange(-179.75, 180, .5, float)
-    longitude.units = 'degrees'
+    longitude.units = 'degrees_East'
 
 #Latitude
     netcdf.createDimension('latitude', 360)
-    latitude = netcdf.createVariable('latitude', 'i', ('latitude', ))
+    latitude = netcdf.createVariable('latitude', 'f', ('latitude', ))
     latitude[:] = np.arange(-89.75, 90, .5, float)
-    latitude.units = 'degrees'
+    latitude.units = 'degrees_North'
 # Time
     netcdf.createDimension('time', 12)
     time = netcdf.createVariable('time', 'i', ('time', ))
     time[:] = days
-    time.units = "Days since January 1, 1900"
+    time.units = "days since 1900-01-01"
 
     EVI =  netcdf.createVariable('EVI', 'f4', ('time', 'latitude', 'longitude'))
     EVI.missing_value = -0.3
