@@ -1,0 +1,18 @@
+******************************************************************************
+*                                   About                                     *
+*******************************************************************************
+
+Project Title:    TBD
+Created by:       Katherine Lannen
+GitHub:           kelannen
+University:       College of William & Mary
+Class:            Data 431 - Spatial Data Discovery
+Website:          TBD
+
+*******************************************************************************
+*                                 Project Log                                 *
+*******************************************************************************
+
+2020-11-04  Created kelannen folder in ay2021-1 project directory
+            + Created project process document
+            + Created README
