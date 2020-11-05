@@ -15,4 +15,16 @@ Website:          TBD
 
 2020-10-15  Project Preparation
             * Created project workspace on git (ay2021-1/project/sylviashea1)
-            * 
+
+2020-11-03  Topic Search
+            * Researching data for topics that I'm interested in.
+            * Topics include:
+            	* Vaccination coverage
+            	* The Opioid Epidemic
+            	* Gun violence
+              Data availability will determine which topic I pursue.
+2020-11-04  Topic Decision
+            * I decided on visualizing the relationship between mass
+              shootings, gun vendors, and strictness of gun control laws
+              by state.
+
