@@ -1,0 +1,34 @@
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+#                                    About                                      #
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+
+Project Title:    Ice Ice Baby
+Created by:       John Hennin
+GitHub:           johnhennin
+University:       College of William & Mary
+Class:            Data 431 - Spatial Data Discovery
+Website:          
+
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+#                                 Project Log                                   #
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+
+2020-10-19: Searched for datasets
+            * Found nighttime lights dataset: https://developers.google.com/earth-engine/datasets/catalog/NOAA_DMSP-OLS_CALIBRATED_LIGHTS_V4
+            * Decided dataset would be too difficult to work with
+
+2020-10-26: Searched for other datasets
+            * Found first sea-ice dataset: https://daac.ornl.gov/cgi-bin/dsviewer.pl?ds_id=981
+            * Decided against first dataset, as it was too old and not well representative of North and South Poles
+            * Found second sea-ice dataset: https://nsidc.org/data/G02135/versions/3
+            * Chose the second dataset, as it was very recent and very well representative of North and South Poles
+
+2020-11-04: 1st discussion about project progress
+            * Discussed converting GeoTIFF files into ASCII raster format
+            * Dr. Davis suggested rasterio: https://rasterio.readthedocs.io/en/latest/
+            * Decided to compare how much ice melted in 1979-1980 with 2019-2020
+
+2020-11-05: Wrote processing script and made visualization for North Pole
+            * Processing script converts GeoTIFF files into more familiar ASCII raster format
+            * Struggled with GIMP and FFmpeg, but eventually got a finished product
+            * New ASCII raster files won't open in QGIS due to cell size, may try to scale down
