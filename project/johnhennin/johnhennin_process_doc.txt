@@ -33,3 +33,5 @@ Website:
             * Struggled with GIMP and FFmpeg, but eventually got a finished product
             * New ASCII raster files won't open in QGIS due to cell size, may try to scale down
             * Decided against 1979-1980 with 2019-2020 comparison, now investigating ice coverage every 5 years since 1980
+
+2020-11-06: Made visualization for South Pole
