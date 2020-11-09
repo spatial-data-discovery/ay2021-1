@@ -35,3 +35,6 @@ Website:
             * Decided against 1979-1980 with 2019-2020 comparison, now investigating ice coverage every 5 years since 1980
 
 2020-11-06: Made visualization for South Pole
+
+2020-11-09: Fixed cell size issue in processing script
+            * Discovered I was foolishly squaring the true cell size, which explained why it was far too big for QGIS to load
