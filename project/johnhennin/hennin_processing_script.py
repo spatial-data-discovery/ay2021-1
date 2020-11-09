@@ -19,7 +19,7 @@ for file in os.listdir("."):
             nrows = tif.height
             crs = tif.crs
             xllcorner, yllcorner = tif.transform * (0,tif.height)
-            cellsize = ((tif.transform[0]))*(-(tif.transform[4]))
+            cellsize = tif.transform[0]
             prjinfo = crs.wkt
 
         # Write header information and data in new ASCII raster file of same name as original GeoTIFF
