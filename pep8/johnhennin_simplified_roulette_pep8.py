@@ -10,7 +10,7 @@
 # There also three different roulette wheels (No Zero, French, and American).
 # The player starts with $1000 and is asked how much they'd like to bet.
 # The game possesses utility as a source of entertainment.
-# The script requires the numpy module
+# The script requires the numpy module.
 
 
 # Import Modules
