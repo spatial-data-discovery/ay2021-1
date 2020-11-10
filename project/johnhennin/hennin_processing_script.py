@@ -2,7 +2,7 @@
 # Last Updated: 2020-11-05
 
 # Script Description:
-# This script reads all GeoTIFF files in the local directory and produces new ASCII raster files with the same data, as well as complementary PRJ files
+# This script reads all GeoTIFF files in the local directory and produces new ASCII raster files with the same data, as well as complementary PRJ files.
 # It also generates a text file describing the amount of each unique cell value in each raster file. This can be used for analysis purposes.
 
 import rasterio
