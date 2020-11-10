@@ -6,12 +6,14 @@
 # It also generates a text file describing the amount of each unique cell value in each raster file. This can be used for analysis purposes.
 
 import rasterio
+import numpy as np
 import os
 
-
+files = []
 for file in os.listdir("."):
     # Check for tif files in local directory
     if file[-3:] == "tif":
+        files.append(file)
         with rasterio.open(file) as tif:
 
             # Save ASCII raster header and PRJ file features
