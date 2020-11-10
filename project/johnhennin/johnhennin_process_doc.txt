@@ -34,11 +34,13 @@ Website:
             * New ASCII raster files won't open in QGIS due to cell size, may try to scale down
             * Decided against 1979-1980 with 2019-2020 comparison, now investigating ice coverage every 5 years since 1980
 
-2020-11-06: Made visualization for South Pole
+2020-11-06: Made visualization for South Pole (same process as North Pole visualization)
 
 2020-11-09: Fixed cell size issue in processing script
             * Discovered I was foolishly squaring the true cell size, which explained why it was far too big for QGIS to load
 
-2020-11-10: Added functionality to processing script
+2020-11-10: Added functionality to processing script and made website
             * I did so to hopefully fulfill the unique processing techniques/creativity requirement and to improve my comparison of ice amount per raster file
             * The script now creates one .txt file describing (for each newly converted raster file) the unique cell values in the raster file, as well as the amount of each unique cell value
+            * Website may need tweaking, will email Dr. Davis asking for rendering tomorrow
+
