@@ -3,6 +3,7 @@
 
 # Script Description:
 # This script reads all GeoTIFF files in the local directory and produces new ASCII raster files with the same data, as well as complementary PRJ files
+# It also generates a text file describing the amount of each unique cell value in each raster file. This can be used for analysis purposes.
 
 import rasterio
 import os
@@ -33,3 +34,31 @@ for file in os.listdir("."):
         # Write PRJ information in new PRJ file of same name as original GeoTIFF
         with open(file[:-4]+".prj","w+") as prjfile:
             prjfile.write(prjinfo)
+
+        # Save count of cells per each unique value in raster file
+        valcounts = []
+        for value in np.unique(arraydata):
+            valcount = 0
+            for line in arraydata:
+                for pixel in line:
+                    if pixel == value:
+                        valcount += 1
+            valcounts.append(valcount)
+
+        # Create text file with first raster file cell count
+        if file == files[0]:
+            with open("cell_counts.txt","w+") as countfile:
+                countfile.write(str(file[:-4])+" Unique Values and Amounts:\n")
+                for i in np.arange(len(np.unique(arraydata))):
+                    countfile.write(str(np.unique(arraydata)[i])+" : "+str(valcounts[i])+"\n")
+                    if i == len(np.unique(arraydata))-1:
+                        countfile.write("\n")
+
+        # Add to text file if more than one raster file converted
+        else:
+            with open("cell_counts.txt","a") as countfile:
+                countfile.write(str(file[:-4])+" Unique Values and Amounts:\n")
+                for i in np.arange(len(np.unique(arraydata))):
+                    countfile.write(str(np.unique(arraydata)[i])+" : "+str(valcounts[i])+"\n")
+                    if i == len(np.unique(arraydata))-1:
+                        countfile.write("\n")
