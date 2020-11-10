@@ -2,7 +2,7 @@
 #                                    About                                      #
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
 
-Project Title:    Ice Ice Baby
+Project Title:    Arctic and Antarctic Sea Ice Over Time
 Created by:       John Hennin
 GitHub:           johnhennin
 University:       College of William & Mary
