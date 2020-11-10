@@ -40,5 +40,5 @@ Website:
             * Discovered I was foolishly squaring the true cell size, which explained why it was far too big for QGIS to load
 
 2020-11-10: Added functionality to processing script
-            * Hopefully this addition will fulfill unique processing techniques/creativity requirement and can improve comparison of ice amount per raster file
+            * I did so to hopefully fulfill the unique processing techniques/creativity requirement and to improve my comparison of ice amount per raster file
             * The script now creates one .txt file describing (for each newly converted raster file) the unique cell values in the raster file, as well as the amount of each unique cell value
