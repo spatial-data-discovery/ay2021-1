@@ -10,6 +10,8 @@
 * [hennin_processing_script.py](hennin_processing_script.py)
 * [johnhennin_process_doc.txt](johnhennin_process_doc.txt)
 
+# hennin_processing_script.py
+
 ## How hennin_processing_script.py Works and How to Run It
 hennin_processing_script.py reads files in the local directory, checks which ones are GeoTIFF files, and reads the data from each GeoTIFF file. It then, in the same directory, produces an ASCII raster file and a PRJ file for every GeoTIFF file read. Additionally, once all GeoTIFF files have been converted to ASCII raster format, a single .txt document is made containing multiple lists, each one corresponding to a single GeoTIFF file. Each list describes every unique cell value in the corresponding GeoTIFF file, along with the amount of cells with each unique value. In order to properly run this script, it must be run in the command line within the same directory as the GeoTIFF files you wish to convert.
 
