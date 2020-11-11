@@ -50,4 +50,4 @@ Class:            Data 431 - Spatial Data Discovery
 
 2020-11-11	Completed first portion of Python script that processes and cleans original dataset and outputs a new CSV file
 		Began working on the portion of the Python script that will make visualizations using the GeoPandas library
-		Create project Rmd file for Spatial Data Discovery website repository (https://github.com/spatial-data-discovery/spatial-data-discovery.github.io)
+		Created and updated project Rmd file for Spatial Data Discovery website repository (https://github.com/spatial-data-discovery/spatial-data-discovery.github.io)
