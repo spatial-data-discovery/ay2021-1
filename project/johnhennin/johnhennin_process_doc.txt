@@ -30,7 +30,7 @@ Website:
 
 2020-11-05: Wrote processing script and made visualization for North Pole
             * Processing script converts GeoTIFF files into more familiar ASCII raster format
-            * Struggled with GIMP and FFmpeg, but eventually got a finished product
+            * Struggled with GIMP and FFmpeg, but eventually got a finished product: https://spatial-data-discovery.github.io/resources-methods.html#converting-images-to-animations
             * New ASCII raster files won't open in QGIS due to cell size, may try to scale down
             * Decided against 1979-1980 with 2019-2020 comparison, now investigating ice coverage every 5 years since 1980
 
