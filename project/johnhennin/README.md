@@ -22,12 +22,29 @@ hennin_processing_script.py reads files in the local directory, checks which one
 * os
 
 ## Input Files
-* [GeoTIFF file(s)](https://earthdata.nasa.gov/esdis/eso/standards-and-references/geotiff)
+* [GeoTIFF file(s)](https://earthdata.nasa.gov/esdis/eso/standards-and-references/geotiff) (Arctic and Antarctic Sea Ice GeoTIFF files came from the [National Snow and Ice Data Center](https://nsidc.org/data/G02135/versions/3?qt-data_set_tabs=1#qt-data_set_tabs))
 
 ## Output Files
 * [ASCII Raster file(s)](http://resources.esri.com/help/9.3/arcgisengine/java/GP_ToolRef/spatial_analyst_tools/esri_ascii_raster_format.htm)
 * [PRJ file(s)](https://fileinfo.com/extension/prj#:~:text=A%20PRJ%20file%20contains%20a,files%20used%20by%20the%20project.)
 * Plain Text Document
 
-data file(s) attribution/metadata (see DATA ATTACHMENT above)
-list of data variables/attributes that you used/created
+## Sea Ice GeoTIFF Files Metadada
+Data provider: [National Snow and Ice Data Center](https://nsidc.org/data/G02135/versions/3?qt-data_set_tabs=1#qt-data_set_tabs)
+Variable definitions: Monthly Mean +15% Concentration Sea Ice Extent, Monthly Mean +85% Concentration Sea Water Extent, Land
+Units: Square Kilometers
+NoData value: None
+Contact info: nsidc@nsidc.org
+Institution name: National Snow and Ice Data Center
+Date created: July of 1980, 1985, 1990, 1995, 2000, 2005, 2010, 2015, and 2020
+
+## Data Variables Used
+* Monthly Mean +15% Concentration Sea Ice Extent (sq. km)
+* Monthly Mean +85% Concentration Sea Water Extent (sq. km)
+* Land (sq. KM)
+
+## Data Variables Created
+* Amount of Monthly Mean +15% Sea Ice Extent Cells (25 km x 25 km per cell)
+* Amount of Monthly Mean +85% Sea Water Extent Cells (25 km x 25 km per cell)
+* Amount of Land Cells (25 km x 25 km per cell)
+- include a list of files in your folder
