@@ -1,5 +1,4 @@
 # README
-
 LAST UPDATED: 2020-10-19  
 ORGANIZATION: spatial-data-discovery  
 REPOSITORY: ay2021-1  
@@ -34,7 +33,22 @@ time-stamped coordinates tracking the hawk's movement.
 With this datasource, intial exploration of the data allowed me to see the movement of a bird overtime by seeing each given 
 bird's location over time. So, my goal was to aggregate my data by individual identifier (SW1, SW2, ...) and map their 
 migratory path over time. I needed to create shapes beyond the POINT shapes I currently had. So, I found LineStrings. In a GeoJSON
-object, LineStrings are shape objects constructed by a series of coordinate pairs. 
+object, LineStrings are shape objects constructed by a series of coordinate pairs. The LineString will then create line shapes 
+between the points. Initially, I had made LineStrings mapping out the paths of each individual bird. However, I realized that for 
+animation's sake, it would be more helpful for the user to be able to see the path of the bird develop overtime. So, I rewrote my 
+script to create LineStrings that are timestamped. 
+
+To visualize this data, I took advantage of a tool called Kepler-gl, a tool for geospatial data analysis that I think particularly excels at visualizing time series data. I was able to simply import my dataset in GeoJSON format to the WebGL component of Kepler-gl. There, I was able to use a timestamp filter to create the animation of the bird migration over time. 
+
+# Wind Vector Data
+For my wind vector data, the biggest challenge was finding surface wind data that covered the time period of my migration dataset; 
+1995 - 1998. I found the wind vector data, titled NCEP Reanalysis provided by NOAA/OAR/ESRL PSL, which had surface wind vector data 
+from 1948 to the present. As such, I downloaded two datasets filtered from 1995-1998. The first is called Zonal Velocity (u) which 
+is horizontal wind velocity at coordinate points. The second dataset is called Meridional Velocity (v), which is vertical wind. 
+With this, I was able to create vectors in Panoply by loading both datasets, then creating a merged plot which created a wind 
+vector (as an arrow) with the formula:
+
+![equation](http://www.sciweavers.org/upload/Tex2Img_1605305106/render.png)
 
 WHERE FROM, PROCESSES / CHANGES MADE
 HOW CONVERTED IT FOR VIZ
