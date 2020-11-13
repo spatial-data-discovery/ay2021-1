@@ -47,4 +47,3 @@ Date created: July of 1980, 1985, 1990, 1995, 2000, 2005, 2010, 2015, and 2020
 * Amount of Monthly Mean +15% Sea Ice Extent Cells (25 km x 25 km per cell)
 * Amount of Monthly Mean +85% Sea Water Extent Cells (25 km x 25 km per cell)
 * Amount of Land Cells (25 km x 25 km per cell)
-- include a list of files in your folder
