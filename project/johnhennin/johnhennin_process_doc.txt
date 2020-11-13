@@ -44,3 +44,5 @@ Website:
             * The script now creates one .txt file describing (for each newly converted raster file) the unique cell values in the raster file, as well as the amount of each unique cell value
             * Website may need tweaking, will email Dr. Davis asking for rendering tomorrow
 
+2020-11-11: Remade visualization and made README file for Project Folder
+            * Added percent change to visualizations
