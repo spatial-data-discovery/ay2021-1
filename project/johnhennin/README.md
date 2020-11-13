@@ -30,13 +30,13 @@ hennin_processing_script.py reads files in the local directory, checks which one
 * Plain Text Document
 
 ## Sea Ice GeoTIFF Files Metadada
-Data provider: [National Snow and Ice Data Center](https://nsidc.org/data/G02135/versions/3?qt-data_set_tabs=1#qt-data_set_tabs)
-Variable definitions: Monthly Mean +15% Concentration Sea Ice Extent, Monthly Mean +85% Concentration Sea Water Extent, Land
-Units: Square Kilometers
-NoData value: None
-Contact info: nsidc@nsidc.org
-Institution name: National Snow and Ice Data Center
-Date created: July of 1980, 1985, 1990, 1995, 2000, 2005, 2010, 2015, and 2020
+* Data provider: [National Snow and Ice Data Center](https://nsidc.org/data/G02135/versions/3?qt-data_set_tabs=1#qt-data_set_tabs)
+* Variable definitions: Monthly Mean +15% Concentration Sea Ice Extent, Monthly Mean +85% Concentration Sea Water Extent, Land
+* Units: Square Kilometers
+* NoData value: None
+* Contact info: nsidc@nsidc.org
+* Institution name: National Snow and Ice Data Center
+* Date created: July of 1980, 1985, 1990, 1995, 2000, 2005, 2010, 2015, and 2020
 
 ## Data Variables Used
 * Monthly Mean +15% Concentration Sea Ice Extent (sq. km)
