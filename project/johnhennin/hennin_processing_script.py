@@ -1,5 +1,5 @@
 # Author: John Hennin
-# Last Updated: 2020-11-05
+# Last Updated: 2020-11-10
 
 # Script Description:
 # This script reads all GeoTIFF files in the local directory and produces new ASCII raster files with the same data, as well as complementary PRJ files.
