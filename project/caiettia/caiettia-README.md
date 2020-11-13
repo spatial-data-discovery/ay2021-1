@@ -23,6 +23,7 @@ If anything, it is important to have a heightened awareness of the implications 
 migratory patterns such as the Swainson's Hawk.
 
 # Data Sources
+## Migration Data
 Firstly, my migratory data came from MoveBank.org, an opensource platform that allows researchers to archive and analyze animal 
 movement data. From MoveBank, I was able to successfully identify the Swainson's Hawk dataset. Originally, the dataset was composed
 for a study of "migration routes, length of migration, and duration of migration" for Swainson's Hawks in 1998. Each bird was radio 
@@ -40,7 +41,7 @@ script to create LineStrings that are timestamped.
 
 To visualize this data, I took advantage of a tool called Kepler-gl, a tool for geospatial data analysis that I think particularly excels at visualizing time series data. I was able to simply import my dataset in GeoJSON format to the WebGL component of Kepler-gl. There, I was able to use a timestamp filter to create the animation of the bird migration over time. 
 
-# Wind Vector Data
+## Wind Vector Data
 For my wind vector data, the biggest challenge was finding surface wind data that covered the time period of my migration dataset; 
 1995 - 1998. I found the wind vector data, titled NCEP Reanalysis provided by NOAA/OAR/ESRL PSL, which had surface wind vector data 
 from 1948 to the present. As such, I downloaded two datasets filtered from 1995-1998. The first is called Zonal Velocity (u) which 
