@@ -51,6 +51,14 @@ vector (as an arrow) with the formula:
 
 ![equation](http://www.sciweavers.org/upload/Tex2Img_1605305106/render.png)
 
-WHERE FROM, PROCESSES / CHANGES MADE
-HOW CONVERTED IT FOR VIZ
+## TEST map display
+
+![map](https://kepler.gl/demo/map?mapUrl=https://dl.dropboxusercontent.com/s/osu05t0scoy9mbx/keplergl_45gu4r.json)
+
+# Attributions
+Fuller, M.R., Seegar, W.S., Schueck, L.S., 1998. Routes and Travel Rates of Migrating Peregrine Falcons Falco peregrinus and 
+Swainson's Hawks Buteo swainsoni in the Western Hemisphere. Journal of Avian Biology 29:433-440.
+
+Kalnay et al.,The NCEP/NCAR 40-year reanalysis project, Bull. Amer. Meteor. Soc., 77, 437-470, 1996.
+
 
