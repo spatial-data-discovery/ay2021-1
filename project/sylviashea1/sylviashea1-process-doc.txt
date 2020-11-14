@@ -7,24 +7,74 @@ Created by:       Sylvia Shea
 GitHub:           sylviashea1
 University:       College of William & Mary
 Class:            Data 431 - Spatial Data Discovery
-Website:          TBD
+Website:          https://spatial-data-discovery.github.io/project-sylviashea1.html
 
 *******************************************************************************
 *                                 Project Log                                 *
 *******************************************************************************
 
 2020-10-15  Project Preparation
-            * Created project workspace on git (ay2021-1/project/sylviashea1)
+	* Created project workspace on git (ay2021-1/project/sylviashea1)
 
 2020-11-03  Topic Search
-            * Researching data for topics that I'm interested in.
-            * Topics include:
-            	* Vaccination coverage
+	* Researching data for topics that I'm interested in.
+	* Topics include:
+		* Vaccination coverage
             	* The Opioid Epidemic
             	* Gun violence
+
               Data availability will determine which topic I pursue.
 2020-11-04  Topic Decision
-            * I decided on visualizing the relationship between mass
-              shootings, gun vendors, and strictness of gun control laws
-              by state.
+	* I decided on visualizing the relationship between mass
+	shootings, gun vendors, and strictness of gun control laws
+	by state.
 
+2020-11-05 Gathering Data
+	* Gun law strictness scorecards from 2010 - 2019
+		* Manually put scorecard data into CSV format
+		* hhttps://giffords.org/lawcenter/resources/scorecard/#rankings
+	* Mass shootings from 2009 - 2019
+		* https://maps.everytownresearch.org/massshootingsreports/mass-
+		shootings-in-america-2009-2019/
+	* Gun vendors in the US
+		* https://www.atf.gov/firearms/listing-federal-firearms-licensees-
+		ffls-2016
+	* United States shape file (ADM1)
+		* https://www2.census.gov/geo/tiger/GENZ2018/shp/cb_2018_us_state_
+		500k.zip
+
+2020-11-06 Gathering Inspiration for Viz
+	* https://fivethirtyeight.com/features/gun-deaths/
+	* https://www.theguardian.com/news/datablog/2011/jan/10/gun-crime-us-state
+
+2020-11-07 Processing the Data
+	* Geocoded mass shooting data CSV
+	* Geocoded gun vendors data CSV
+	* Removed US territories, Alaska, and Hawaii from all datasets
+
+2020-11-08 Testing Visualizations 
+	* Selected one year of scorecards
+		* Joined to US states shape file
+	* Changed all date entries in shooting data to separate columns for month
+	and year
+	* Plotted law strictness as choropleth map
+	* Plotted shooting incidents with circle (graduated symbol - larger with
+	more shots fired)
+	* Modified legend for choropleth map
+	* Added numbers to circles on map (indicating total shot)
+
+2020-11-10 Writing main script
+	* Goal: creates map for each month of each year between 2009 - 2019
+		* Reads in all files
+		* Cleans all files
+		* Joins law strictness to shape file, stores in dict {year: df}
+		* Loop through years, months
+			* Select law strictness shapefile by year
+			* Select subset of mass shooting dataframe by date
+			* Plot shootings and law strictness for month and year
+			* Generate map as PNG
+
+
+	
+
+	
