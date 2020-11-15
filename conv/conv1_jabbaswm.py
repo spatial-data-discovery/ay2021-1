@@ -39,7 +39,7 @@ def extract_to_raster(fpath):
 
 
         #Build the header of the raster manually
-        raster_a.write('NCOLS ' + '648' +'\n' + 'NROWS ' + '648' + '\n' + 'XLLCORNER ' + '-83.640000000003' + '\n' + 'YLLCORNER ' + '33.189999999996' + '\n' + 'CELLSIZE ' + '0.000092592593' + '\n' + 'NODATA_VALUE '  + '-9999' + '\n')
+        raster_a.write('NCOLS ' + '648' +'\n' + 'NROWS ' + '648' + '\n' + 'XLLCORNER ' + '-83.640000000003' + '\n' + 'YLLCORNER ' + '33.189999999996' + '\n' + 'CELLSIZE ' + '0.000092592593' + '\n' + 'NODATA_VALUE '  + '-3.4028234663852885981e+38' + '\n')
 
         d2_numpy = numpy.array(d2)
 
