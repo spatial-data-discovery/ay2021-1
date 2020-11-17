@@ -19,3 +19,32 @@ Website:	TBD
 2020-10-26	Created project folder 
 		* Created README.md
 		* Created process document
+		
+		Thought about choosing a dataset for bird migration, and discussed ideas in class
+		
+2020-10-29	Reached out to a professor for some potential sources of bird migration data
+		* He sent me a link to a website called Movebank.org
+
+2020-10-31	Searched for data from a website called data.world
+		* Found some data on bird collision with airplanes that could be interesting 
+
+2020-11-3	Continued to search for data from data.world
+		* Found some data for tiny organisms called ostracodes
+
+		Found data for tracking the presence of plankton in the ocean
+		* https://www.sciencebase.gov/catalog/item/570e9a18e4b0ef3b7ca253aa
+
+2020-11-4	Found data from Movebank about tracking the movements of Purple Martins
+		
+		Discussed idea in class with classmates and professor. Felt set on the idea afterwards.
+
+2020-11-07	Found data on the movements on wood warblers, European Mallards, and Pacific Sea Ducks from MoveBank.
+
+		Played around with animation to see which bird data would work the best for project. 
+
+		Decided to go with data on Pacific Sea Ducks. 
+
+2020-11-14	Started code on python script
+		* Decided to take certain aspects of original CSV file from MoveBank and place it into new one.
+
+2020-11-16	Continued to work on python script. 
