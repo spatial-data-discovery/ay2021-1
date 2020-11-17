@@ -30,16 +30,16 @@ The script reads the two files in the file's directory: a geojson and csv file. 
 These files are in both CSV and GeoJSON formats. 
 * Provider: [Movebank](https://www.movebank.org/cms/webapp?gwt_fragment=page=studies,path=study204253)
 * Variables: 
-* * event-id : unique identifier of recorded bird location (integer)
-* * visible : If the Hawk is visually (TRUE/FALSE)
-* * timestamp : Time Recorded (mm/DD/YYYY HH:MM:ss)
-* * location-long: Longitude (-180,180; degrees)
-* * location-lat : Latitude (-90,90; degrees)
-* * sensor-type : method of recording location (satellite string)
-* * individual-taxon-canonical-name : scientific name of hawk (string)
-* * tag-local-identifier : unique identifier for each bird (integer)
-* * individual-local-identifier : unique identifier for each bird (string)
-* * study-name : name of Movebank study (string)
+ * event-id : unique identifier of recorded bird location (integer)
+ * visible : If the Hawk is visually (TRUE/FALSE)
+ * timestamp : Time Recorded (mm/DD/YYYY HH:MM:ss)
+ * location-long: Longitude (-180,180; degrees)
+ * location-lat : Latitude (-90,90; degrees)
+ * sensor-type : method of recording location (satellite string)
+ * individual-taxon-canonical-name : scientific name of hawk (string)
+ * tag-local-identifier : unique identifier for each bird (integer)
+ * individual-local-identifier : unique identifier for each bird (string)
+ * study-name : name of Movebank study (string)
 * Contact info: sdavidson@ab.mpg.de
 * Institution : Max Planck Institue of Animal Behavior
 * Dates Covered : 1995-07-29 to 1998-06-24
@@ -52,15 +52,15 @@ These files are in both CSV and GeoJSON formats.
 ## Wind Vector Data
 This dataset is broken into two components, Zonal wind data(u wind) and Meridional wind data (v wind). As such, both data sets had to be acquired in tandem to create a wind vector map.
 * Provider : [NOAA Physical Sciences Laboratory (PSL)](https://psl.noaa.gov/about/)
-* * [U Wind Data](https://psl.noaa.gov/cgi-bin/GrADS.pl?dataset=NCEP%20Reanalysis%20Daily%20Averages;DB_did=195;file=%2FDatasets%2Fncep.reanalysis.dailyavgs%2Fsurface%2Fuwnd.sig995.1948.nc%20uwnd.sig995.y4.nc%20105523;variable=uwnd;DB_vid=228;DB_tid=89420;units=m%2Fs;longstat=Mean;DB_statistic=Mean;stat=;lat-begin=90.00S;lat-end=90.00N;lon-begin=0.00E;lon-end=357.50E;dim0=time;year_begin=1996;mon_begin=Jul;day_begin=1;year_end=1997;mon_end=Jul;day_end=7;X=lon;Y=lat;output=file;bckgrnd=black;use_color=on;fill=lines;cint=;range1=;range2=;scale=100;maskf=%2FDatasets%2Fncep.reanalysis.dailyavgs%2Fsurface%2Fland.nc;maskv=Land-sea%20mask;submit=Create%20Plot%20or%20Subset%20of%20Data;time-begin=17715%20Jul%201%201996;time-end=18086%20Jul%207%201997)
-* * [V Wind Data](https://psl.noaa.gov/cgi-bin/GrADS.pl?dataset=NCEP%20Reanalysis%20Daily%20Averages;DB_did=195;file=%2FDatasets%2Fncep.reanalysis.dailyavgs%2Fsurface%2Fvwnd.sig995.1948.nc%20vwnd.sig995.y4.nc%20105523;variable=vwnd;DB_vid=278;DB_tid=89420;units=m%2Fs;longstat=Mean;DB_statistic=Mean;stat=;lat-begin=90.00S;lat-end=90.00N;lon-begin=0.00E;lon-end=357.50E;dim0=time;year_begin=1996;mon_begin=Jul;day_begin=1;year_end=1997;mon_end=Jul;day_end=7;X=lon;Y=lat;output=file;bckgrnd=black;use_color=on;fill=lines;cint=;range1=;range2=;scale=100;maskf=%2FDatasets%2Fncep.reanalysis.dailyavgs%2Fsurface%2Fland.nc;maskv=Land-sea%20mask;submit=Create%20Plot%20or%20Subset%20of%20Data;time-begin=17715%20Jul%201%201996;time-end=18086%20Jul%207%201997)
+ * [U Wind Data](https://psl.noaa.gov/cgi-bin/GrADS.pl?dataset=NCEP%20Reanalysis%20Daily%20Averages;DB_did=195;file=%2FDatasets%2Fncep.reanalysis.dailyavgs%2Fsurface%2Fuwnd.sig995.1948.nc%20uwnd.sig995.y4.nc%20105523;variable=uwnd;DB_vid=228;DB_tid=89420;units=m%2Fs;longstat=Mean;DB_statistic=Mean;stat=;lat-begin=90.00S;lat-end=90.00N;lon-begin=0.00E;lon-end=357.50E;dim0=time;year_begin=1996;mon_begin=Jul;day_begin=1;year_end=1997;mon_end=Jul;day_end=7;X=lon;Y=lat;output=file;bckgrnd=black;use_color=on;fill=lines;cint=;range1=;range2=;scale=100;maskf=%2FDatasets%2Fncep.reanalysis.dailyavgs%2Fsurface%2Fland.nc;maskv=Land-sea%20mask;submit=Create%20Plot%20or%20Subset%20of%20Data;time-begin=17715%20Jul%201%201996;time-end=18086%20Jul%207%201997)
+ * [V Wind Data](https://psl.noaa.gov/cgi-bin/GrADS.pl?dataset=NCEP%20Reanalysis%20Daily%20Averages;DB_did=195;file=%2FDatasets%2Fncep.reanalysis.dailyavgs%2Fsurface%2Fvwnd.sig995.1948.nc%20vwnd.sig995.y4.nc%20105523;variable=vwnd;DB_vid=278;DB_tid=89420;units=m%2Fs;longstat=Mean;DB_statistic=Mean;stat=;lat-begin=90.00S;lat-end=90.00N;lon-begin=0.00E;lon-end=357.50E;dim0=time;year_begin=1996;mon_begin=Jul;day_begin=1;year_end=1997;mon_end=Jul;day_end=7;X=lon;Y=lat;output=file;bckgrnd=black;use_color=on;fill=lines;cint=;range1=;range2=;scale=100;maskf=%2FDatasets%2Fncep.reanalysis.dailyavgs%2Fsurface%2Fland.nc;maskv=Land-sea%20mask;submit=Create%20Plot%20or%20Subset%20of%20Data;time-begin=17715%20Jul%201%201996;time-end=18086%20Jul%207%201997)
 * Variables:
-* * lat : Latitude (-90,90; degrees)
-* * lon : Longitude (0, 360; degrees)
-* * time : Time (hours since 1800-01-01 00:00:0.0)
-* * level : Level (millibar)
-* * uwnd : Mean Daily U-wind (m/s)
-* * vwnd : Mean Daily V-wind (m/s)
+ * lat : Latitude (-90,90; degrees)
+ * lon : Longitude (0, 360; degrees)
+ * time : Time (hours since 1800-01-01 00:00:0.0)
+ * level : Level (millibar)
+ * uwnd : Mean Daily U-wind (m/s)
+ * vwnd : Mean Daily V-wind (m/s)
 
 ![equation](http://www.sciweavers.org/upload/Tex2Img_1605305106/render.png)
 
