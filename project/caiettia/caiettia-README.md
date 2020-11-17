@@ -1,5 +1,5 @@
 # README
-LAST UPDATED: 2020-10-19  
+LAST UPDATED: 2020-11-13  
 ORGANIZATION: spatial-data-discovery  
 REPOSITORY: ay2021-1  
 FOLDER: project/caiettia
@@ -24,6 +24,7 @@ migratory patterns such as the Swainson's Hawk.
 
 # Data Sources
 ## Migration Data
+![MigrationData](https://www.movebank.org/cms/webapp?gwt_fragment=page=studies,path=study204253)
 Firstly, my migratory data came from MoveBank.org, an opensource platform that allows researchers to archive and analyze animal 
 movement data. From MoveBank, I was able to successfully identify the Swainson's Hawk dataset. Originally, the dataset was composed
 for a study of "migration routes, length of migration, and duration of migration" for Swainson's Hawks in 1998. Each bird was radio 
@@ -42,6 +43,7 @@ script to create LineStrings that are timestamped.
 To visualize this data, I took advantage of a tool called Kepler-gl, a tool for geospatial data analysis that I think particularly excels at visualizing time series data. I was able to simply import my dataset in GeoJSON format to the WebGL component of Kepler-gl. There, I was able to use a timestamp filter to create the animation of the bird migration over time. 
 
 ## Wind Vector Data
+![WindVectorData](https://psl.noaa.gov/data/gridded/data.ncep.reanalysis.surface.html)
 For my wind vector data, the biggest challenge was finding surface wind data that covered the time period of my migration dataset; 
 1995 - 1998. I found the wind vector data, titled NCEP Reanalysis provided by NOAA/OAR/ESRL PSL, which had surface wind vector data 
 from 1948 to the present. As such, I downloaded two datasets filtered from 1995-1998. The first is called Zonal Velocity (u) which 
@@ -51,14 +53,11 @@ vector (as an arrow) with the formula:
 
 ![equation](http://www.sciweavers.org/upload/Tex2Img_1605305106/render.png)
 
-## TEST map display
-
-![map](https://kepler.gl/demo/map?mapUrl=https://dl.dropboxusercontent.com/s/osu05t0scoy9mbx/keplergl_45gu4r.json)
-
 # Attributions
 Fuller, M.R., Seegar, W.S., Schueck, L.S., 1998. Routes and Travel Rates of Migrating Peregrine Falcons Falco peregrinus and 
 Swainson's Hawks Buteo swainsoni in the Western Hemisphere. Journal of Avian Biology 29:433-440.
 
 Kalnay et al.,The NCEP/NCAR 40-year reanalysis project, Bull. Amer. Meteor. Soc., 77, 437-470, 1996.
 
+![WindVectorMathematics](http://tornado.sfsu.edu/geosciences/classes/m430/Wind/WindDirection.html)
 
