@@ -130,7 +130,7 @@ def check_txt(path,file):
         if 'fail' in chain(header_checks,[num_check],[cols_valid],[rows_valid]):
             print('ERROR: %s is not a valid raster' % file)
         else:
-            print('PASS: %s is a valid raster' % file)
+            print('PASS: %s is a valid raster' % f]ile)
 
 def main():
     folder = 'data'

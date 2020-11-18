@@ -2,7 +2,7 @@
 *                                   About                                     *
 *******************************************************************************
 
-Project Title:    TBD
+Project Title:    Gun Laws vs. Mass Shootings
 Created by:       Sylvia Shea
 GitHub:           sylviashea1
 University:       College of William & Mary
@@ -22,8 +22,8 @@ Website:          https://spatial-data-discovery.github.io/project-sylviashea1.h
 		* Vaccination coverage
             	* The Opioid Epidemic
             	* Gun violence
+	* Data availability will determine which topic I pursue.
 
-              Data availability will determine which topic I pursue.
 2020-11-04  Topic Decision
 	* I decided on visualizing the relationship between mass
 	shootings, gun vendors, and strictness of gun control laws
@@ -32,7 +32,7 @@ Website:          https://spatial-data-discovery.github.io/project-sylviashea1.h
 2020-11-05 Gathering Data
 	* Gun law strictness scorecards from 2010 - 2019
 		* Manually put scorecard data into CSV format
-		* hhttps://giffords.org/lawcenter/resources/scorecard/#rankings
+		* https://giffords.org/lawcenter/resources/scorecard/#rankings
 	* Mass shootings from 2009 - 2019
 		* https://maps.everytownresearch.org/massshootingsreports/mass-
 		shootings-in-america-2009-2019/
@@ -51,6 +51,8 @@ Website:          https://spatial-data-discovery.github.io/project-sylviashea1.h
 	* Geocoded mass shooting data CSV
 	* Geocoded gun vendors data CSV
 	* Removed US territories, Alaska, and Hawaii from all datasets
+	* Decided to not visualize gun stores - sorry for geocoding 80,000 rows
+	for no reason
 
 2020-11-08 Testing Visualizations 
 	* Selected one year of scorecards
@@ -74,7 +76,35 @@ Website:          https://spatial-data-discovery.github.io/project-sylviashea1.h
 			* Plot shootings and law strictness for month and year
 			* Generate map as PNG
 
+2020-11-15 Finalizing visualization
+	* Decided on final color scheme for choropleth map
+	* Decided on final color for shooting markers
+	* Decided on fonts for text
 
-	
+2020-11-16 Generated plots and video script
+	* Ran main script to generate plot for every month of each year
+		* It actually worked the first time wow
+	* Worked on script to turn plot pngs into video
+		* Tried cv2, imageio, skvideo.io, moviepy
+		* Some images were different sizes, which prevented the modules
+		from building the video
+		* Tried to resize and regenerate plots-nothing worked
 
+2020-11-17 Making video
+	* Could not get video module to work
+	* Decided to do it manually via:
+		* Using script from stack overflow to download jupyter 
+		directory that contained all plots
+		* Adding all images to iMovie
+		* Made each image have duration of 1 second
+		* Fit video to screen
+	* Trouble with resolution
+		* When exporting iMovie, didn't have the option for lower pixel size
+		to satisfy 910> requirement
+		* Used moviepy to resize video
+		* Movie not compatible with quicktime (despite being mp4/MPEG4 type)
+		* Downloaded Elmedia player, a third party video display software
+		* Can view video, looks good
+	* This process was a nightmare
+	* Shoutout to Professor Davis for using FFMPEG to resize the original video
 	
