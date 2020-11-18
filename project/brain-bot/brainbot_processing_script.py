@@ -23,9 +23,9 @@ with open('Sea_Duck_Migration.csv', 'w', newline='') as csvfile_to:
     with open('Migration Patterns of Pacific Sea Ducks.csv', newline='') as csvfile_from:
         reader = csv.DictReader(csvfile_from)
         for row in reader:
-            # We'll only use the first 5 individual ducks found in the read CSV file.
+            # We'll only use the first 20 individual ducks found in the read CSV file.
             # That way, the visualization won't be too messy.
-            if(len(list_of_individuals) > 5):
+            if(len(list_of_individuals) > 20):
                 print("Time to stop")
                 break;
             if(row['tag-local-identifier'] not in list_of_individuals):
