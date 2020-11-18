@@ -41,7 +41,7 @@ To successfully run this script, one needs to first have all of the input files 
 
 
 ## Swainson's Hawk Migratory Data
-These files are in both CSV and GeoJSON formats. 
+The migratory dataset is in both CSV and GeoJSON format for my project. 
 * Provider: [Movebank](https://www.movebank.org/cms/webapp?gwt_fragment=page=studies,path=study204253)
 * Variables: 
   * event-id : unique identifier of recorded bird location (integer)
@@ -76,6 +76,7 @@ This dataset is broken into two components, Zonal wind data(u wind) and Meridion
   * level : Level (millibar)
   * uwnd : Mean Daily U-wind (m/s)
   * vwnd : Mean Daily V-wind (m/s)
+* Missing Data Value :  -9.96921E36
 * Contact info: psl.data@noaa.gov
 * Institution Name: Physical Sciences Laboratory NOAA
 * Date Created: 1996 (spans 1948-2020)
