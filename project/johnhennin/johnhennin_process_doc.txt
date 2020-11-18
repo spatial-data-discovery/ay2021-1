@@ -46,3 +46,6 @@ Website:
 
 2020-11-11: Remade visualization and made README file for Project Folder
             * Added percent change to visualizations
+
+2020-11-17: Fixed issue with visualizations where they would be cut off on a mobile device
+            * Used https://www.w3schools.com/css/css_rwd_videos.asp for help with this
