@@ -38,8 +38,8 @@ def RetrievePlaneData_Full():
     Outputs:    Aviation data in a Pandas Dataframe
     Features:   Call the Opensky-network API and retrieve all possible data
                 and return a Pandas Dataframe of the data.
-    Note:       API call has 15 second requirement between calls. This function will
-                sleep if the API is called too quickly.
+    Note:       API call has 15 second requirement between calls. This 
+                function will sleep if the API is called too quickly.
     """
 
     # Call the API and full data
@@ -105,7 +105,7 @@ def PlaneData_to_file(file_name,df, save_folder=os.path.dirname(os.path.realpath
                     - str, specifies what format to store data in (save_type)
                         -- supported formates include: csv, json, hdf, excel
     Outputs:    File saved as file_name in the current directory
-    Features:   Creates a time-stamped file of live aviation dataframe, default is CSV
+    Features:   Creates a time-stamped file of aviation dataframe, default is CSV
 
     """
 
