@@ -95,7 +95,8 @@ def RetrievePlaneData_Full():
 # Pass a path name, where you would like to save the file, 
 # and the data you called from RetrievePlaneData, 
 # to generate a file on your desktop, default type being CSV
-def PlaneData_to_file(file_name,df, save_folder=os.path.dirname(os.path.realpath(__file__)), save_type='csv'):
+default_loc= os.path.dirname(os.path.realpath(__file__))
+def PlaneData_to_file(file_name,df, save_folder=default_loc, save_type='csv'):
     """
     Name:       PlaneData_to_file
     Inputs:     - str, name of file to be saved (file_name)
