@@ -8,11 +8,12 @@
 ##### Summary #####
 
 # This script calls an opensource API from OpenSkyNetwork.com. 
-# The data can then be saved as a CSV or worked with in its pandas dataframe
-# format. Each row represents an individual aircraft with 
+# The data can then be saved as a CSV or worked with in its pandas 
+# dataframe format. Each row represents an individual aircraft with 
 # 17 total fields.
 #
-# For further information, please see the link below (valied as of 2020-11-17)
+# For further information, please see the link below 
+# (valid as of 2020-11-17)
 # https://opensky-network.org/
 ###################
 
@@ -40,6 +41,7 @@ def RetrievePlaneData_Full():
     Note:       API call has 15 second requirement between calls. This function will
                 sleep if the API is called too quickly.
     """
+
     # Call the API and full data
     while True:
         try:            
@@ -47,10 +49,12 @@ def RetrievePlaneData_Full():
             states = api.get_states()
             break
         except:
-            # Occasionally, the API can reject a request (15 second necessary time between requests)
+            # Occasionally, the API can reject a request 
+            # (15 second necessary time between requests).
             # If error arises, sleep the necessary time and try again
             sleep(15)
     
+
     main_array = []
     for item in states.states:
     # Iterate through and store states object attributes (StateVector) 
@@ -76,16 +80,20 @@ def RetrievePlaneData_Full():
     
     # Create and formate dataframe for use
     aviation_df = pd.DataFrame(main_array)
-    aviation_df.columns = ['icao24','Callsign','Origin Country','Time Position',
-    'Last Contact','Longitude','Latitude','Baro Altitude','Velocity','Heading','Vertical Rate',
-    'On Ground','Sensors','Geo Altitude','Squawk','Spi','Position Source']
+    aviation_df.columns = ['icao24','Callsign','Origin Country',
+    'Time Position','Last Contact','Longitude','Latitude',
+    'Baro Altitude','Velocity',
+    'Heading','Vertical Rate',
+    'On Ground','Sensors','Geo Altitude','Squawk',
+    'Spi','Position Source']
 
     return aviation_df   
 
 
 
 
-# Pass a path name, where you would like to save the file, and the data you called from RetrievePlaneData, 
+# Pass a path name, where you would like to save the file, 
+# and the data you called from RetrievePlaneData, 
 # to generate a file on your desktop, default type being CSV
 def PlaneData_to_file(file_name,df, save_folder=os.path.dirname(os.path.realpath(__file__)), save_type='csv'):
     """
@@ -97,7 +105,7 @@ def PlaneData_to_file(file_name,df, save_folder=os.path.dirname(os.path.realpath
                     - str, specifies what format to store data in (save_type)
                         -- supported formates include: csv, json, hdf, excel
     Outputs:    File saved as file_name in the current directory
-    Features:   Creates a time-stamped file of live aviation dataframe, default is CSV format
+    Features:   Creates a time-stamped file of live aviation dataframe, default is CSV
 
     """
 
@@ -113,10 +121,12 @@ def PlaneData_to_file(file_name,df, save_folder=os.path.dirname(os.path.realpath
         else:
             save_folder = os.path.dirname(os.path.realpath(__file__))
         
-        temp_save_path = os.path.join(save_folder, file_name)
-        timestamp = strftime(r'%Y-%m-%d__H%H-M%M-S%S') # Record current time to time-stamp the file
 
-        # Check if save_type is valid, then the save file according to given save_type
+        temp_save_path = os.path.join(save_folder, file_name)
+        timestamp = strftime(r'%Y-%m-%d__H%H-M%M-S%S')#Timestamp the file
+
+
+        # Check if save_type is valid, then save file according to given save_type.
         if type(save_type) is str:
             if save_type == 'csv':
                 final_save_path = temp_save_path + timestamp+r'.csv'
@@ -131,7 +141,8 @@ def PlaneData_to_file(file_name,df, save_folder=os.path.dirname(os.path.realpath
                 final_save_path = temp_save_path + timestamp+r'.xlsx'
                 df.to_excel(final_save_path)            
         else:
-            print("ERROR: save_type argument is not string.\n Tip: save_type arguments include: json, csv, hdf, excel")
+            print("""ERROR: save_type argument is not string.\n 
+            Tip: save_type arguments include: json, csv, hdf, excel""")
 
     else:
 
