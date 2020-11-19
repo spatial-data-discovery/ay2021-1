@@ -9,7 +9,7 @@ FOLDER: project/natallzl
 * [natallzl_process_script.py](natallzl_process_script.py)
 
 ### Input File
-* CSV file from IBTrACS, [download link](https://www.ncei.noaa.gov/data/international-best-track-archive-for-climate-stewardship-ibtracs/v04r00/access/csv/ibtracs.since1980.list.v04r00.csv)
+* CSV file from IBTrACS ([download link](https://www.ncei.noaa.gov/data/international-best-track-archive-for-climate-stewardship-ibtracs/v04r00/access/csv/ibtracs.since1980.list.v04r00.csv))
 
 # natallzl_process_script.py
 
@@ -17,7 +17,7 @@ FOLDER: project/natallzl
 This script reads in IBTrACS historic tropical cyclone data (file name: ibtracs.since1980.list.v04r00.csv) from the local directory, creates a dataframe using pandas, then processes the dataset for visualization. First, the script creates a new .csv file for map visualization. Then, a new dataframe groups the data by season (year) and ocean basin, and counts of the number of named tropical cyclones (per season and basin) are obtained. Finally, the script creates bar charts that visualize tropical cyclone counts for all basins and for the North Atlantic. *Note:* we ignore warnings to avoid getting a datatype warning upon reading in the input file.
 
 ## How To Run It
-To run this script, the necessary packages must be installed and the input file must be in the local directory (same directory as the process script). Then, simply run the script in the command line and the script will output the output files to the local directory.
+To run this script, the necessary packages must be installed and the input file (ibtracs.since1980.list.v04r00.csv) must be in the local directory (same directory as the process script). Then, simply run the script in the command line and the script will output the output files to the local directory.
 
 ## Required Packages
 * [argparse](https://docs.python.org/3/library/argparse.html)
@@ -35,7 +35,7 @@ To run this script, the necessary packages must be installed and the input file 
 
 ## Tropical Cyclone Data
 * **Data Origin/Provider:** [NOAA; World Data Center for Meteorology, Asheville](https://www.ncdc.noaa.gov/ibtracs/index.php?name=ib-v4-access)
-  * Specifically, the [since 1980 .csv data](https://www.ncei.noaa.gov/data/international-best-track-archive-for-climate-stewardship-ibtracs/v04r00/access/csv/)
+  * [CSV data](https://www.ncei.noaa.gov/data/international-best-track-archive-for-climate-stewardship-ibtracs/v04r00/access/csv/)
 * **Variables & Units:**
   * SID - unique storm identifier
   * SEASON - year
