@@ -83,8 +83,8 @@ if __name__ == '__main__':
     args = parse.parse_args()
 
     # Directories: for reading in files and output map images
-    file_dir = '/Data/spatial_data/' 
-    plot_dir = '/plots/' 
+    file_dir = 'data' 
+    plot_dir = 'plots/' 
 
     # Read in files 
     filenames = os.listdir(file_dir)

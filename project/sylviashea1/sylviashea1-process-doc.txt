@@ -34,14 +34,11 @@ Website:          https://spatial-data-discovery.github.io/project-sylviashea1.h
 		* Manually put scorecard data into CSV format
 		* https://giffords.org/lawcenter/resources/scorecard/#rankings
 	* Mass shootings from 2009 - 2019
-		* https://maps.everytownresearch.org/massshootingsreports/mass-
-		shootings-in-america-2009-2019/
+		* https://maps.everytownresearch.org/massshootingsreports/mass-shootings-in-america-2009-2019/
 	* Gun vendors in the US
-		* https://www.atf.gov/firearms/listing-federal-firearms-licensees-
-		ffls-2016
+		* https://www.atf.gov/firearms/listing-federal-firearms-licensees-ffls-2016
 	* United States shape file (ADM1)
-		* https://www2.census.gov/geo/tiger/GENZ2018/shp/cb_2018_us_state_
-		500k.zip
+		* https://www2.census.gov/geo/tiger/GENZ2018/shp/cb_2018_us_state_500k.zip
 
 2020-11-06 Gathering Inspiration for Viz
 	* https://fivethirtyeight.com/features/gun-deaths/
