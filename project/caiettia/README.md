@@ -91,7 +91,7 @@ This dataset is broken into two components, Zonal wind data(u wind) and Meridion
 
 ## Wind Data Variables Created
 * vector : vector component created from uwnd and vwnd in Panoply (aggregated by day)
-* $$vector = \sqrt{u^2+v^2}$$
+$$vector = \sqrt{u^2+v^2}$$
   * u = uwnd
   * v = vwnd
 
