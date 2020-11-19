@@ -44,8 +44,10 @@ Website:
             * The script now creates one .txt file describing (for each newly converted raster file) the unique cell values in the raster file, as well as the amount of each unique cell value
             * Website may need tweaking, will email Dr. Davis asking for rendering tomorrow
 
-2020-11-11: Remade visualization and made README file for Project Folder
+2020-11-11: Remade visualization, edited website, and made README file for Project Folder
             * Added percent change to visualizations
+            * Edited the citations (none needed for PRJ and ASCII)
 
 2020-11-17: Fixed issue with visualizations where they would be cut off on a mobile device
             * Used https://www.w3schools.com/css/css_rwd_videos.asp for help with this
+            * Website and project are done!
