@@ -2,12 +2,12 @@
 *                                   About                                     *
 *******************************************************************************
 
-Project Title:    TBD
+Project Title:    Rock You Like a Hurricane: Hurricane Frequency From the 80s to Today
 Created by:       Natalie Larsen
 GitHub:           natallzl
 University:       College of William & Mary
 Class:            Data 431 - Spatial Data Discovery
-Website:          TBD
+Website:          https://spatial-data-discovery.github.io/project-natallzl.html
 
 
 *******************************************************************************
@@ -19,3 +19,49 @@ Website:          TBD
             + Created README
 
             Created blank template project-natallzl.Rmd in spatial-data-discovery.github.io repository
+
+2020-11-01  Looked for topic ideas and datasets
+            * CO2 and greenhouse gas emissions
+                * https://ourworldindata.org/co2-and-other-greenhouse-gas-emissions
+                * https://www.epa.gov/ghgemissions/global-greenhouse-gas-emissions-data
+            * glacier change from 1850 to present
+                * https://cds.climate.copernicus.eu/cdsapp#!/dataset/insitu-glaciers-elevation-mass?tab=doc
+            * wildfire occurrences in the US
+                * https://www.usgs.gov/products/data-and-tools/real-time-data/wildfire
+            * hurricanes and sea surface temperature
+                * https://www.nhc.noaa.gov/data/
+
+2020-11-03  Decided on a topic and found a dataset
+            * historic hurricane data (1980-present) and sea surface temperature
+            * hurricane data: https://www.ncdc.noaa.gov/ibtracs/index.php?name=ib-v4-access
+
+2020-11-04  Project progress discussion
+
+            Found sea surface temperature data
+            * EarthData "NOAA Smith and Reynolds Extended Reconstructed Sea Surface
+                          Temperature (ERSST) Level 4 Monthly Version 5 Dataset in netCDF"
+
+2020-11-05  Decided to scrap temp data for now and focus on hurricane data
+
+2020-11-08  Looked up visualization ideas using QGIS
+            * https://www.qgistutorials.com/en/docs/3/automating_map_creation.html
+            * https://medium.com/@tjukanov/geospatial-animations-with-qgis-atlas-995d7ddb2d67
+
+2020-11-10  Looked at raw hurricane data, trying to decide what data to visualize
+
+            Brainstormed how to process data
+
+2020-11-11  Project progress discussion #2
+            * https://www.qgistutorials.com/en/docs/3/automating_map_creation.html
+
+            Decided to visualize animation of hurricane locations over the years and a
+            static graph of number of hurricanes over the years (likely bar plot)
+
+2020-11-14  Started on processing script
+            * read in hurricane data (csv file) to pandas dataframe
+            * select subset of data
+
+2020-11-18  Finished processing script
+            Started on visualizations
+            Worked on project process document
+            Worked on README
