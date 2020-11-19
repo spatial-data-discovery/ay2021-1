@@ -6,16 +6,16 @@ FOLDER: project/caiettia
 
 ## Files
 ### Scripts
-* [caiettia_processing_script.py]()
-* [caiettia_process_doc.txt]()
+* [caiettia_processing_script.py](https://github.com/spatial-data-discovery/ay2021-1/blob/master/project/caiettia/caiettia_processing_script.py)
+* [caiettia_process_doc.txt](https://github.com/spatial-data-discovery/ay2021-1/blob/master/project/caiettia/caiettia_process_doc.txt)
 ### Inputs
-* [Swainson's Hawks.csv]()
-* [Swainson's Hawks_raw.geojson]()
-* [uwnd_data.nc]()
-* [vwnd_data.nc]()
+* [Swainson's Hawks.csv](https://github.com/spatial-data-discovery/ay2021-1/blob/master/project/caiettia/data_files/Swainson's%20Hawks.csv)
+* [Swainson's Hawks_raw.geojson](https://github.com/spatial-data-discovery/ay2021-1/blob/master/project/caiettia/data_files/Swainson's%20Hawks_raw.geojson)
+* [uwnd_data.nc](https://github.com/spatial-data-discovery/ay2021-1/blob/master/project/caiettia/data_files/uwnd_data.nc)
+* [vwnd_data.nc](https://github.com/spatial-data-discovery/ay2021-1/blob/master/project/caiettia/data_files/vwnd_data.nc)
 ### Outputs
-* [SwainsonsHawks_filtered.csv]()
-* [SwainsonHawks_linestrings.geojson]()
+* [SwainsonsHawks_filtered.csv](https://github.com/spatial-data-discovery/ay2021-1/blob/master/project/caiettia/data_files/SwainsonsHawks_filtered.csv)
+* [SwainsonHawks_linestrings.geojson](https://github.com/spatial-data-discovery/ay2021-1/blob/master/project/caiettia/data_files/SwainsonHawks_linestrings.geojson)
 
 # caiettia_processing_script.py
 
@@ -90,7 +90,10 @@ This dataset is broken into two components, Zonal wind data(u wind) and Meridion
 * time
 
 ## Wind Data Variables Created
-* vwnd : vector component created from uwnd and vwnd in Panoply
+* vector : vector component created from uwnd and vwnd in Panoply (aggregated by day)
+* $$vector = \sqrt{u^2+v^2}$$
+  * u = uwnd
+  * v = vwnd
 
 
 
