@@ -53,7 +53,7 @@ Website:          https://spatial-data-discovery.github.io/project-sylviashea1.h
 
 2020-11-08 Testing Visualizations 
 	* Selected one year of scorecards
-		* Joined to US states shape file
+		* Joined to US states shapefile
 	* Changed all date entries in shooting data to separate columns for month
 	and year
 	* Plotted law strictness as choropleth map
@@ -63,7 +63,7 @@ Website:          https://spatial-data-discovery.github.io/project-sylviashea1.h
 	* Added numbers to circles on map (indicating total shot)
 
 2020-11-10 Writing main script
-	* Goal: creates map for each month of each year between 2009 - 2019
+	* Goal: creates map for each month of each year between 2009 - 2020
 		* Reads in all files
 		* Cleans all files
 		* Joins law strictness to shape file, stores in dict {year: df}
@@ -90,7 +90,7 @@ Website:          https://spatial-data-discovery.github.io/project-sylviashea1.h
 2020-11-17 Making video
 	* Could not get video module to work
 	* Decided to do it manually via:
-		* Using script from stack overflow to download jupyter 
+		* Using script from stack overflow to download Jupyter 
 		directory that contained all plots
 		* Adding all images to iMovie
 		* Made each image have duration of 1 second

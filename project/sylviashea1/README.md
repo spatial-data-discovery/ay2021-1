@@ -32,7 +32,7 @@ This script generates a visualization of gun law strictness by state and the num
     - Year and geodataframe stored in dictionary {Year: Corresponding geodataframe}
 * Reads in mass shootings geojson
     - Reformat date to create separate month and year columns
-* For each month and year between 1/2009 and 8/2020
+* For each month and year between 1/2009 and 9/2020
     - Acquires corresponding gun law geodataframe (for that year)
     - Gets subset of mass shooting dataframe (for that date)
     - Plots gun laws as choropleth layer (color indicating strictness/grade)
@@ -65,7 +65,7 @@ Run command in terminal/shell: python3 sylviashea1_generate_plot.py
 - File name: [cb_2018_us_state_500k.zip](https://github.com/spatial-data-discovery/ay2021-1/tree/master/project/sylviashea1/preprocessed_data_inputs)
 - File type: shapefile
 - Source: [United States Census Bureau](https://www.census.gov/geographies/mapping-files/time-series/geo/carto-boundary-file.html)
-- Use: functions as the spatial component for joining gun law scorecard. Must be extracted before running script.
+- Use: Functions as the spatial component for joining gun law scorecard. Must be extracted before running script.
 ### Gun Law Strictness Score Cards
 - File name: [gunlaws_strict_YEAR.csv](https://github.com/spatial-data-discovery/ay2021-1/tree/master/project/sylviashea1/preprocessed_data_inputs)
 - File type: csv
