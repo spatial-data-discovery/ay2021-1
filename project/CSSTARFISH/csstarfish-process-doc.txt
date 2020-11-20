@@ -50,10 +50,11 @@ Class:            Data 431 - Spatial Data Discovery
 		Began working on the portion of the Python script that will make visualizations using the GeoPandas library
             	Created and updated project Rmd file for Spatial Data Discovery website repository (https://github.com/spatial-data-discovery/spatial-data-discovery.github.io)
 
-2020-11-12	Completed conversion of dataframe to GeoDataframe and continued evaluating potential visualizations.
-		Realized that the CSV file downloaded from the NOAA website/data source did not span the entire collection time period, and thus determined a new dataset would be necessary to create a meaningful analysis and/or visualiztion
+2020-11-12	Completed conversion of dataframe to GeoDataframe and continued evaluating potential visualizations
+		Realized that the CSV file downloaded from the NOAA website/data source did not span the entire collection time period, and thus determined a new dataset would be necessary to create a meaningful analysis and/or visualization
 		
-2020-11-13	Found a new NOAA dataset created in collaboration with Rutgers University that contained location data on a wide variety of marine species since 1977 (most recent entry is dated to 2019).
-		Switched focus of project from changes in spatial distribution of Green Sturgeon populations along the coast of California over time to that of various shrimp species across North America.
+2020-11-13	Found a new NOAA dataset created in collaboration with Rutgers University that contained location data on a wide variety of marine species since 1977 (most recent entry is dated to 2019)
+		Switched focus of project from changes in spatial distribution of Green Sturgeon populations along the coast of California over time to that of various shrimp species across North America
 		Link to the new dataset: [Ocean Adapt by NOAA & Rutgers University](https://oceanadapt.rutgers.edu/)
 
+2020-11-16	Edited original Python script so that it would function properly with the new dataset (i.e., process and clean dataset, output a new CSV file, and convert DataFrame to GeoPandas DataFrame)
