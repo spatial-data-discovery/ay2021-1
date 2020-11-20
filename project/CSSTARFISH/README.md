@@ -14,7 +14,7 @@ _________________
 
    * Python script: ["Shrimp"-ly Amazing](https://github.com/spatial-data-discovery/ay2021-1/blob/master/project/CSSTARFISH/shrimply_amazing-csstarfish.py) 
 
-   * What Does This Script Do?
+   * What Does Script Do?
       * This script will read the provided CSV file from the indicated directory and transforms it into a Pandas DataFrame.
       Next, any null values will be dropped and the first row will be removed because it doesn't contain relevant data for this project.
       
@@ -70,6 +70,14 @@ _________________
 
 #### Animated Visualization
   * Video of North American Shrimp Population Distribution Over Time (1977-2019): [Shrimp Population Animation](https://github.com/spatial-data-discovery/ay2021-1/blob/master/project/CSSTARFISH/Shrimp%20Population%20Animation.mp4)
+  
+  
+#### Still Visualizations
+  * Scatter Plot: [Latitude vs. Year](https://github.com/spatial-data-discovery/ay2021-1/blob/master/project/CSSTARFISH/LatitudeVsTime.PNG)
+  	* This plot shows the latitudinal distribution of shrimp populations over time, as well as the clustering that is occurring around certain coordinates.
+	
+  * Line Plot: [Trend Line](https://github.com/spatial-data-discovery/ay2021-1/blob/master/project/CSSTARFISH/TrendLine.png)
+  	* This plot also shows the latitudinal distribution of shrimp populations over time, but now there is also a trend line that helps visualize the downward trend.
   
 _________________  
   
