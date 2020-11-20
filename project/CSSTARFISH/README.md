@@ -26,7 +26,7 @@ _________________
       
       	  With the DataFrame fully filtered to contain only time and location data about shrimp species, the script will then output these data entries to a "cleaned" CSV file.
       
-      * The final portion of the script creates a scatter plot of the shrimp's latitude over time to allow one to detect any trends in their populations over the course of the past few decades, and the final visualization was created using kepler.gl from the CSV file output of this script.
+      * The final portion of the script creates a scatter plot of the shrimp's latitude over time to allow one to detect any trends in their populations over the course of the past few decades, the second still image visualization of latitude over time was created in Excel, and the final visualization was created using kepler.gl from the CSV file output of this script.
   
    * How To Run:
       * To ease any potential burdens with GeoPandas installation, it may help to run the file in a Jupyter Hub notebook.
@@ -70,3 +70,6 @@ _________________
 
 #### Animated Visualization
   * Video of North American Shrimp Population Distribution Over Time (1977-2019): [Shrimp Population Animation](https://github.com/spatial-data-discovery/ay2021-1/blob/master/project/CSSTARFISH/Shrimp%20Population%20Animation.mp4)
+  
+### Resources
+	* [Converting DataFrame to GeoDataFrame](https://goodboychan.github.io/chans_jupyter/python/datacamp/visualization/2020/07/01/02-Creating-and-joining-GeoDataFrames.html#Construct-a-GeoDataFrame-from-a-DataFrame)
