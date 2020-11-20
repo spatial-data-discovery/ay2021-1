@@ -75,7 +75,14 @@ else:
     print("No file found in this path.  Please run this script again with a different path name")
 
 # Output information about the location of the raster.
-print("\nWhere in the world is this raster from?")
-print("\nThis raster's bottom left corner is positioned at approximately 83 degrees West and about 33 degrees North.")
-print("\nConsequently, the raster is located within a town from Jasper County, Georgia, to the southeast of Monticello.")
-print("\nThe raster is also positioned within the bounds of GA Highway 11, Kinderhook Road, Fullerton-Phillips Road, and Perimeter Road.")
+output_message = (
+        "Where in the world is this raster from?\n"
+        "This raster's bottom left corner is positioned at approximately\n"
+        "83 degrees West and about 33 degrees North.  Consequently, the raster\n"
+        "is located within a town from Jasper County, Georgia,\n"
+        "to the southeast of Monticello.  The raster is also positioned within\n"
+        "the bounds of GA Highway 11, Kinderhook Road, Fullerton-Phillips\n"
+        "Road, and Perimeter Road."
+    
+)
+print(output_message)
