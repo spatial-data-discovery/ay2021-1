@@ -71,5 +71,7 @@ _________________
 #### Animated Visualization
   * Video of North American Shrimp Population Distribution Over Time (1977-2019): [Shrimp Population Animation](https://github.com/spatial-data-discovery/ay2021-1/blob/master/project/CSSTARFISH/Shrimp%20Population%20Animation.mp4)
   
+_________________  
+  
 ### Resources
  * [Converting DataFrame to GeoDataFrame](https://goodboychan.github.io/chans_jupyter/python/datacamp/visualization/2020/07/01/02-Creating-and-joining-GeoDataFrames.html#Construct-a-GeoDataFrame-from-a-DataFrame)
