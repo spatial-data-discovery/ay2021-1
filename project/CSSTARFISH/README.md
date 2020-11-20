@@ -44,9 +44,7 @@ _________________
   ##### Input
    * Original, raw dataset: [Raw Data](https://github.com/spatial-data-discovery/ay2021-1/blob/master/project/CSSTARFISH/datadownload.csv)
    * Original, raw dataset with metadata at beginning of file: [Raw Data with Metadata](https://github.com/spatial-data-discovery/ay2021-1/blob/master/project/CSSTARFISH/shrimp_metadata.csv)
-  ##### Output
- * Final, processed dataset: [Filtered Shrimp Data](https://github.com/spatial-data-discovery/ay2021-1/blob/master/project/CSSTARFISH/cleaned_shrimpdata.csv)
-  
+   
  * Data Origin:	[Ocean Adapt](https://oceanadapt.rutgers.edu/), a dataset created by Rutgers University in collaboration with NOAA Fisheries
  * Variable/Attribute Definitions: 
    * Year: Stores the year that the location data for the given species was collected
@@ -65,7 +63,9 @@ _________________
 	
  * Institution Name: Rutgers University and NOAA Fisheries
  * Date Created: Ocean Adapt was first published on December 11, 2014.  Even though the date created for the particular dataset used in this project is unknown, the most recent shrimp location data was recorded in 2019.
-
+   
+  ##### Output
+ * Final, processed dataset: [Filtered Shrimp Data](https://github.com/spatial-data-discovery/ay2021-1/blob/master/project/CSSTARFISH/cleaned_shrimpdata.csv)
 
 #### Animated Visualization
   * Video of North American Shrimp Population Distribution Over Time (1977-2019): [Shrimp Population Animation](https://github.com/spatial-data-discovery/ay2021-1/blob/master/project/CSSTARFISH/Shrimp%20Population%20Animation.mp4)
