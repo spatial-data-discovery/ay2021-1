@@ -1,16 +1,19 @@
+# !/usr/bin/env python3 
+#
 # conv1_CSSTARFISH.py
 #
-# VERSION 0.4
+# AUTHOR: Caroline Freshcorn
+# VERSION: 0.4
+# DATE (LAST UPDATED): 2020-10-20
 #
-# LAST EDIT: 2020-10-20
-#
-# This script reads an HDF5 file into an ASCII raster.
+# This script reads an HDF5 file and writes it into an ASCII raster.
 #
 ###############################################################################
 # IMPORT MODULES
 ###############################################################################
 import os
 import os.path
+
 import argparse
 import numpy
 import h5py
@@ -69,7 +72,7 @@ if os.path.isfile(hdf_path):
 
     print("\nConversion complete.  Please open conv1_CSSTARFISH.asc to view your raster.")
 else:
-    print("No file found in this path.")
+    print("No file found in this path.  Please run this script again with a different path name")
 
 # Output information about the location of the raster.
 print("\nWhere in the world is this raster from?")
