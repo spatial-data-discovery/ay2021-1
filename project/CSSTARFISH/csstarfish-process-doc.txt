@@ -62,7 +62,7 @@ Class:            Data 431 - Spatial Data Discovery
 2020-11-18	Adjusted script to fit PEP8 style guide
 		Created data visualizations in kepler.gl
 
-2020-11-19	Created plot visualizations with GeoPandas
+2020-11-19	Tried creating plot visualizations with GeoPandas, but experienced some difficulty overlaying datapoints onto plot
 
 2020-11-20	Created video animation of data visualizations created in kepler.gl
 		Put together final updates for Rmd and process document, and organized project submission email and directories
