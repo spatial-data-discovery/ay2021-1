@@ -23,11 +23,15 @@ import h5py
 ###############################################################################
 
 # Provide help documentation for the user.
-parse = argparse.ArgumentParser("Reads a provided HDF5 file and converts it into an ASC file format (i.e., an ASCII raster.")
+parse = argparse.ArgumentParser("Reads a provided HDF5 file and converts it "
+                                "into an ASC file format (i.e., an ASCII raster."
+                               )
 parsing = parse.parse_args()
 
 # Set file path.
-path_input = input("Please enter the file path, including the name of the .hdf file: ")
+path_input = input("Please enter the file path, "
+                   "including the name of the .hdf file: "
+                  )
 hdf_path = path_input
 
 # Ensure the file is in the indicated path.
@@ -72,7 +76,7 @@ if os.path.isfile(hdf_path):
 
     print("\nConversion complete.  Please open conv1_CSSTARFISH.asc to view your raster.")
 else:
-    print("No file found in this path.  Please run this script again with a different path name")
+    print("No file found in this path.  Please try again with a different path name.")
 
 # Output information about the location of the raster.
 output_message = (
