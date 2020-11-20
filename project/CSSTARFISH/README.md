@@ -54,13 +54,13 @@ _________________
    * Missing values: Represented with NaN entries
  * Contact Info:	
    * Street Address: 71 Dudley Road
-	 * City: New Brunswick
-	 * State: New Jersey
-	 * Zip Code: 08901-8525
+   * City: New Brunswick
+   * State: New Jersey
+   * Zip Code: 08901-8525
 
-	 * Contact Name: Michelle Stuart
-	 * Phone Number: (848) 932-5574
-	 * Email: michelle.stuart@rutgers.edu
+   * Contact Name: Michelle Stuart
+   * Phone Number: (848) 932-5574
+   * Email: michelle.stuart@rutgers.edu
 	
  * Institution Name: Rutgers University and NOAA Fisheries
  * Date Created: Ocean Adapt was first published on December 11, 2014.  Even though the date created for the particular dataset used in this project is unknown, the most recent shrimp location data was recorded in 2019.
