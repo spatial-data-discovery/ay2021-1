@@ -9,6 +9,9 @@
 import geopandas as gpd
 from shapely.geometry import Point
 
+import os
+import os.path
+
 import pandas as pd
 import matplotlib.pyplot as plt
 
