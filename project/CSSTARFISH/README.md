@@ -15,7 +15,7 @@ _________________
    * Python script: ["Shrimp"-ly Amazing](https://github.com/spatial-data-discovery/ay2021-1/blob/master/project/CSSTARFISH/shrimply_amazing-csstarfish.py) 
 
    * What Does This Script Do?
-      * This script will read the provided CSV file from the data directory and transforms it into a Pandas DataFrame.
+      * This script will read the provided CSV file from the indicated directory and transforms it into a Pandas DataFrame.
       Next, any null values will be dropped and the first row will be removed because it doesn't contain relevant data for this project.
       
       	  When exploring the Ocean Adapt user interface, I was able to determine the names of the species of shrimp that live in regions surrounding North America.
@@ -24,7 +24,7 @@ _________________
       From there, the "Region", "Species", "Latitude_std_err", and "Longitude_std_err" will be removed from the DataFrame, since the "Latitude", "Longitude", and "Year" are the most relevant for creating visualizations of spatial distribution over time.
       The indices will then be reset to begin at 0 and increment by 1 across this final, filtered DataFrame.
       
-      	 With the DataFrame fully filtered to contain only time and location data about shrimp species, the script will then output these data entries to a "cleaned" CSV file.
+      	  With the DataFrame fully filtered to contain only time and location data about shrimp species, the script will then output these data entries to a "cleaned" CSV file.
       
       * The final portion of the script creates a scatter plot of the shrimp's latitude over time to allow one to detect any trends in their populations over the course of the past few decades, and the final visualization was created using kepler.gl from the CSV file output of this script.
   
