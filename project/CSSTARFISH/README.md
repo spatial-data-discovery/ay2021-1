@@ -33,7 +33,7 @@ _________________
       Within this online Python notebook environment, the installation is as simple as running a "!pip install" statement and it will be ready to go.
       * A warning may apear when running the lines for converting the Pandas DataFrame to a GeoPandas DataFrame, but rerunning this portion of the script should make this warning message go away without any future implications for the success of the rest of script.
 
-   * Required Package Installs And Imports:
+   * Required Package Installs and Imports:
       * Pandas
       * MatplotLib
       * GeoPandas
