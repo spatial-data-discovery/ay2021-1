@@ -31,6 +31,7 @@ _________________
    * How To Run:
       * To ease any potential burdens with GeoPandas installation, it may help to run the file in a Jupyter Hub notebook.
       Within this online Python notebook environment, the installation is as simple as running a "!pip install" statement and it will be ready to go.
+      When running with this method, it may be necessary to comment out the argument parsing in lines 21-26.
       * A warning may apear when running the lines for converting the Pandas DataFrame to a GeoPandas DataFrame, but rerunning this portion of the script should make this warning message go away without any future implications for the success of the rest of script.
 
    * Required Package Installs and Imports:
