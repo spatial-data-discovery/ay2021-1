@@ -47,7 +47,7 @@ _________________
   ##### Output
    * Final, processed dataset: [Filtered Shrimp Data](https://github.com/spatial-data-discovery/ay2021-1/blob/master/project/CSSTARFISH/cleaned_shrimpdata.csv)
   
-  * Data Origin:	Ocean Adapt, a dataset created by Rutgers University in collaboration with NOAA Fisheries
+  * Data Origin:	[Ocean Adapt](https://oceanadapt.rutgers.edu/), a dataset created by Rutgers University in collaboration with NOAA Fisheries
   * Variable/Attribute Definitions: 
     * Year:	Stores the year that the location data for the given species was collected
     * Region:	Stores the general region of the ocean in which the given species was found
