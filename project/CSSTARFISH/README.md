@@ -17,7 +17,7 @@ _________________
       * This script will read the provided CSV file from the data directory and transforms it into a Pandas DataFrame.
       Next, any null values will be dropped and the first row will be removed because it doesn't contain relevant data for this project.
       
-      When exploring the Ocean Adapt user interface, I was able to determine the names of the species of shrimp that live in regions surrounding North America.
+      	 When exploring the Ocean Adapt user interface, I was able to determine the names of the species of shrimp that live in regions surrounding North America.
       Upon learning this information, I created a list containing these species' names.
       As such, the next step in the script is to create a new DataFrame containing only the rows pertaining to these particular species.
       From there, the "Region", "Species", "Latitude_std_err", and "Longitude_std_err" will be removed from the DataFrame, since the "Latitude", "Longitude", and "Year" are the most relevant for creating visualizations of spatial distribution over time.
