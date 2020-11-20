@@ -45,26 +45,26 @@ _________________
    * Original, raw dataset: [Raw Data](https://github.com/spatial-data-discovery/ay2021-1/blob/master/project/CSSTARFISH/datadownload.csv)
    * Original, raw dataset with metadata at beginning of file: [Raw Data with Metadata](https://github.com/spatial-data-discovery/ay2021-1/blob/master/project/CSSTARFISH/shrimp_metadata.csv)
   ##### Output
-   * Final, processed dataset: [Filtered Shrimp Data](https://github.com/spatial-data-discovery/ay2021-1/blob/master/project/CSSTARFISH/cleaned_shrimpdata.csv)
+ * Final, processed dataset: [Filtered Shrimp Data](https://github.com/spatial-data-discovery/ay2021-1/blob/master/project/CSSTARFISH/cleaned_shrimpdata.csv)
   
-  * Data Origin:	[Ocean Adapt](https://oceanadapt.rutgers.edu/), a dataset created by Rutgers University in collaboration with NOAA Fisheries
-  * Variable/Attribute Definitions: 
-    * Year:	Stores the year that the location data for the given species was collected
-    * Region:	Stores the general region of the ocean in which the given species was found
-    * Species:	Stores the name of the marine life species for which the location data was recorded
-    * Missing values:	Represented with NaN entries
-  * Contact Info:	
-    * Street Address: 71 Dudley Road
-	  * City: New Brunswick
-	  * State: New Jersey
-	  * Zip Code: 08901-8525
+ * Data Origin:	[Ocean Adapt](https://oceanadapt.rutgers.edu/), a dataset created by Rutgers University in collaboration with NOAA Fisheries
+ * Variable/Attribute Definitions: 
+   * Year: Stores the year that the location data for the given species was collected
+   * Region: Stores the general region of the ocean in which the given species was found
+   * Species: Stores the name of the marine life species for which the location data was recorded
+   * Missing values: Represented with NaN entries
+ * Contact Info:	
+   * Street Address: 71 Dudley Road
+	 * City: New Brunswick
+	 * State: New Jersey
+	 * Zip Code: 08901-8525
 
-	  * Contact Name: Michelle Stuart
-	  * Phone Number: (848) 932-5574
-	  * Email: michelle.stuart@rutgers.edu
+	 * Contact Name: Michelle Stuart
+	 * Phone Number: (848) 932-5574
+	 * Email: michelle.stuart@rutgers.edu
 	
-	* Institution Name: Rutgers University and NOAA Fisheries
-  * Date Created:	Unknown, but the dataset's copyright is dated to 2018 and the most recent data was recorded in 2019
+ * Institution Name: Rutgers University and NOAA Fisheries
+ * Date Created: Ocean Adapt was first published on December 11, 2014.  Even though the date created for the particular dataset used in this project is unknown, the most recent shrimp location data was recorded in 2019.
 
 
 #### Animated Visualization
