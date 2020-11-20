@@ -1,5 +1,5 @@
 # Author: Natalie Larsen
-# Last Updated: 2020-11-19
+# Last Updated: 2020-11-20
 #
 # This script reads in IBTrACS historic tropical cyclone data from the local directory and
 # processes the dataset for visualization. It outputs a new .csv file for map visualization,
@@ -43,7 +43,7 @@ if __name__ == "__main__":
     warnings.filterwarnings("ignore") #To avoid data type warning output
 
     print("\nReading in data...\n")
-    
+
 #Read in .csv using pandas, make dataframe, get columns of interest
     data_raw = pd.read_csv("ibtracs.since1980.list.v04r00.csv")
     data = data_raw[['SID', 'SEASON', 'NAME', 'BASIN', 'LAT', 'LON']]
@@ -81,3 +81,10 @@ if __name__ == "__main__":
     plot_NA()
 
     print("Complete! New files in local directory\n")
+
+
+#Helpful sources:
+    #https://pandas.pydata.org/pandas-docs/stable/user_guide/
+    #https://stackoverflow.com/questions/29836477/pandas-create-new-column-with-count-from-groupby
+    #https://www.shanelynn.ie/bar-plots-in-python-using-pandas-dataframes/#stacked-bar-plots
+    #https://www.kite.com/python/answers/how-to-move-the-legend-outside-of-a-matplotlib-plot-in-python

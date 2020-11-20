@@ -1,15 +1,16 @@
-#Author: Brian Wu
+# Author: Brian Wu
 #
 # change_calculator.py
 #
-# Last Editied: 2020-11-18
+# Last Editied: 2020-11-20
 #
 # Purpose:
 #
 # This script will take a positive integer as input
 # and determine the number of quarters, dimes, nickels, and pennies
 # needed to obtain this exact number of cents, using as few contains
-# as possible.
+# as possible. The user must enter the integer in the command prompt
+# (Ex: python pep8_brain-bot.py 99)
 #
 ###########
 # MODULES #

@@ -58,3 +58,11 @@ Class:            Data 431 - Spatial Data Discovery
 		Link to the new dataset: [Ocean Adapt by NOAA & Rutgers University](https://oceanadapt.rutgers.edu/)
 
 2020-11-16	Edited original Python script so that it would function properly with the new dataset (i.e., process and clean dataset, output a new CSV file, and convert DataFrame to GeoPandas DataFrame)
+
+2020-11-18	Adjusted script to fit PEP8 style guide
+		Created data visualizations in kepler.gl
+
+2020-11-19	Tried creating plot visualizations with GeoPandas, but experienced some difficulty overlaying datapoints onto plot
+
+2020-11-20	Created video animation of data visualizations created in kepler.gl
+		Put together final updates for Rmd and process document, and organized project submission email and directories
