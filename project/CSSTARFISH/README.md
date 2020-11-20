@@ -12,7 +12,7 @@ _________________
 
 #### Script
 
-
+   * Python script: ["Shrimp"-ly Amazing](https://github.com/spatial-data-discovery/ay2021-1/blob/master/project/CSSTARFISH/shrimply_amazing-csstarfish.py) 
 
    * What Does This Script Do?
       * This script will read the provided CSV file from the data directory and transforms it into a Pandas DataFrame.
