@@ -2,12 +2,12 @@
 *                                   About                                     *
 *******************************************************************************
 
-Project Title:    TBD
+Project Title:    Crop Yields in Africa 1961 - 2018
 Created by:       Katherine Lannen
 GitHub:           kelannen
 University:       College of William & Mary
 Class:            Data 431 - Spatial Data Discovery
-Website:          TBD
+Website:          https://spatial-data-discovery.github.io/project-kelannen.html
 
 *******************************************************************************
 *                                 Project Log                                 *
@@ -16,3 +16,55 @@ Website:          TBD
 2020-11-04  Created kelannen folder in ay2021-1 project directory
             + Created project process document
             + Created README
+            + Discussed project ideas, decided to go with crop yields
+            and maybe try seeing if there exists a correlation between that
+            and another variable (for instance temperature)
+            
+2020-11-08  Looking at potential sources for data
+            + https://www.nass.usda.gov/
+            + https://www.usda.gov/topics/farming/crop-production
+            + https://www.nass.usda.gov/Statistics_by_State/
+            + https://www.wunderground.com/history
+            
+2020-11-10 Looking at Sources and inspiration
+            + https://www.mrlc.gov/
+            + http://www.earthstat.org/climate-variation-effects-crop-yields-maize-soybean-rice-wheat/
+            + http://www.earthstat.org/harvested-area-yield-4-crops-1995-2005/
+            + http://www.earthstat.org/
+            
+2020-11-11 Potential Data Sources and narrowing focus
+            + https://www.nature.com/articles/s41597-020-0433-7
+            + https://doi.pangaea.de/10.1594/PANGAEA.909132
+            + https://springernature.figshare.com/articles/Metadata_record_for_The_global_dataset_of_historical_yields_for_major_crops_1981_2016/11903277
+
+
+2020-11-18 Decided topic and main sources, started working on code
+            + Decided to do crop yields in Africa countries
+            + https://common-data.carto.com/tables/africa_adm0/public,
+            the Africa geojson
+            + http://www.fao.org/faostat/en/#data/QC, crop yield information
+            went to the bulk download section on this page and downloaded it
+            for Africa
+            + Started working on the script as I decided to use it to do the
+            majority of the cleaning and formatting of the data and also to 
+            merge data sets
+
+2020-11-19 Script, Visualization, and finding weather data
+            + Continued script from where I left of and added two different 
+            focusses so that I can compare total crop yields and yields for 
+            specific types of crops
+            + Created graphs for everything and added the code to create
+            the visualization(s)
+            + Created the videos from the animation/visualization
+            + Found the weather data for the African countries so
+            went back and added it to the script and the visualizations
+            and animations
+            + https://databank.worldbank.org/reports.aspx?source=2&series=AG.LND.PRCP.MM&country= 
+            filtered the data some there and then made minor changes before 
+            loading into the script and doing the rest of the changes there
+            + Started working on documentation
+
+2020-11-20 Finish documentation, work on website and other uploads
+            + Finish and upload process document
+            + Email Davis the code and other requirements
+            + Develop and test the frontend
