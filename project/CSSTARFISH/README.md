@@ -42,10 +42,10 @@ _________________
 #### Dataset
 
   ##### Input
-   * Original, raw dataset: 
-   * Original, raw dataset with metadata at beginning of file:
+   * Original, raw dataset: [Raw Data](https://github.com/spatial-data-discovery/ay2021-1/blob/master/project/CSSTARFISH/datadownload.csv)
+   * Original, raw dataset with metadata at beginning of file: [Raw Data with Metadata](https://github.com/spatial-data-discovery/ay2021-1/blob/master/project/CSSTARFISH/shrimp_metadata.csv)
   ##### Output
-   * Final, processed dataset:
+   * Final, processed dataset: [Filtered Shrimp Data](https://github.com/spatial-data-discovery/ay2021-1/blob/master/project/CSSTARFISH/cleaned_shrimpdata.csv)
   
   * Data Origin:	Ocean Adapt, a dataset created by Rutgers University in collaboration with NOAA Fisheries
   * Variable/Attribute Definitions: 
@@ -68,3 +68,4 @@ _________________
 
 
 #### Animated Visualization
+  * Video of North American Shrimp Population Distribution Over Time (1977-2019): [Shrimp Population Animation](https://github.com/spatial-data-discovery/ay2021-1/blob/master/project/CSSTARFISH/Shrimp%20Population%20Animation.mp4)
