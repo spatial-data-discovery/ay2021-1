@@ -13,7 +13,7 @@ _________________
 #### Script
 
    * Python script: ["Shrimp"-ly Amazing](https://github.com/spatial-data-discovery/ay2021-1/blob/master/project/CSSTARFISH/shrimply_amazing-csstarfish.py) 
-   * Python notebook: ["Shrimp"-ly Amazing Notebook](https://github.com/spatial-data-discovery/ay2021-1/blob/master/project/CSSTARFISH/shrimply_amazing-csstarfish.ipynb)
+   * Python notebook: ["Shrimp"-ly Amazing Notebook](https://github.com/spatial-data-discovery/ay2021-1/blob/master/project/CSSTARFISH/shrimply_amazing_csstarfish.ipynb)
 
    * What Does The Script Do?
       * This script will read the provided CSV file from the indicated directory and transforms it into a Pandas DataFrame.
