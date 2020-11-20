@@ -66,7 +66,7 @@ if os.path.isfile(hdf_path):
         asc_file.write("\nNODATA_VALUE " + data_attr["NODATA_value"])
         asc_file.write("\n")
 
-        print("Filling in raster data.")
+        print("\nFilling in raster data.")
         for row in numpy.asarray(data_assignment_objects):
             for column in row:
                 asc_file.write(str(column) + " ")
@@ -74,7 +74,7 @@ if os.path.isfile(hdf_path):
 
     hdfile.close()
 
-    print("\nConversion complete.  Please open conv1_CSSTARFISH.asc to view your raster.")
+    print("\nConversion complete.  Please open conv1_CSSTARFISH.asc to view your raster.\n")
 else:
     print("No file found in this path.  Please try again with a different path name.")
 
