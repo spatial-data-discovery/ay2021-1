@@ -1,5 +1,5 @@
 # README
-LAST UPDATED: 2020-11-19  
+LAST UPDATED: 2020-11-20   
 ORGANIZATION: spatial-data-discovery  
 REPOSITORY: ay2021-1  
 FOLDER: project/natallzl  
@@ -7,9 +7,6 @@ FOLDER: project/natallzl
 ## Files
 * [natallzl-process-doc.txt](natallzl-process-doc.txt)
 * [natallzl_process_script.py](natallzl_process_script.py)
-
-### Input File
-* CSV file from IBTrACS ([download link](https://www.ncei.noaa.gov/data/international-best-track-archive-for-climate-stewardship-ibtracs/v04r00/access/csv/ibtracs.since1980.list.v04r00.csv))
 
 # natallzl_process_script.py
 
@@ -25,13 +22,13 @@ To run this script, the necessary packages must be installed and the input file 
 * [pandas](https://pandas.pydata.org/)
 * [matplotlib](https://matplotlib.org/)
 
-## Input Files
-* [ibtracs.since1980.list.v04r00.csv](https://www.ncei.noaa.gov/data/international-best-track-archive-for-climate-stewardship-ibtracs/v04r00/access/csv/ibtracs.since1980.list.v04r00.csv)
+### Input File
+* CSV file from IBTrACS ([download link](https://www.ncei.noaa.gov/data/international-best-track-archive-for-climate-stewardship-ibtracs/v04r00/access/csv/ibtracs.since1980.list.v04r00.csv))
 
 ## Output Files
-* ibtracs_processed.csv
-* cyclone_plot.png
-* cycloneNA_plot.png
+* ibtracs_processed.[csv](https://docs.fileformat.com/spreadsheet/csv/)
+* cyclone_plot.[png](https://docs.fileformat.com/image/png/)
+* cycloneNA_plot.[png](https://docs.fileformat.com/image/png/)
 
 ## Tropical Cyclone Data
 * **Data Origin/Provider:** [NOAA; World Data Center for Meteorology, Asheville](https://www.ncdc.noaa.gov/ibtracs/index.php?name=ib-v4-access)
@@ -39,7 +36,7 @@ To run this script, the necessary packages must be installed and the input file 
 * **Variables & Units:**
   * SID - unique storm identifier
   * SEASON - year
-  * BASIN - general oceanic location of storm occurrence
+  * BASIN - ocean basin location of storm occurrence
     * NA - North Atlantic
     * EP - Eastern North Pacific
     * WP - Western North Pacific
@@ -53,9 +50,9 @@ To run this script, the necessary packages must be installed and the input file 
   * 160+ columns; see [IBTrACS column documentation](https://www.ncdc.noaa.gov/ibtracs/pdf/IBTrACS_v04_column_documentation.pdf) for a more comprehensive variable description
 * **Missing Data Value:** blank cell in .csv; NaN in pandas dataframe
 * **Contact Information:** IBTrACS.Team@noaa.gov
-* **Institution:** NOAA
+* **Institution:** [NOAA](https://www.noaa.gov/)
 * **Dates Included:** 1980-01-01 to 2020-11-15
-* **Date Data Last Updated:** 2020-11-15 04:07
+* **Date Dataset Last Updated:** 2020-11-15, 04:07
 
 ## Variables Used
 * SID
@@ -64,6 +61,3 @@ To run this script, the necessary packages must be installed and the input file 
 * NAME
 * LAT
 * LON
-
-## Variables Created
-No new variables created for map visualization; however, created temporary counts for creation of bar charts. See process script.

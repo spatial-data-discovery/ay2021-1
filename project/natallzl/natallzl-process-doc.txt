@@ -59,9 +59,24 @@ Website:          https://spatial-data-discovery.github.io/project-natallzl.html
 
 2020-11-14  Started on processing script
             * read in hurricane data (csv file) to pandas dataframe
-            * select subset of data
+                * https://pandas.pydata.org/
+            * selected subset of data
+            * began creating bar plots using matplotlib
+                * https://matplotlib.org/
 
-2020-11-18  Finished processing script
-            Started on visualizations
-            Worked on project process document
-            Worked on README
+2020-11-18  Worked on project
+              * Finished processing script
+              * Started on visualizations
+              * Worked on project process document
+              * Worked on README
+
+2020-11-19  Worked on project
+              * Finished visualizations
+              * Submitted email deliverables
+              * Worked on .Rmd
+
+2020-11-20  Finalized project deliverables
+              * processing script
+              * project process document
+              * README
+              * .Rmd
