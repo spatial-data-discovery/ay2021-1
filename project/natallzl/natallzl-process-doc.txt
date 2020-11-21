@@ -67,11 +67,13 @@ Website:          https://spatial-data-discovery.github.io/project-natallzl.html
 2020-11-18  Worked on project
               * Finished processing script
               * Started on visualizations
+                  * QGIS and GIMP (https://www.gimp.org/) 
               * Worked on project process document
               * Worked on README
 
 2020-11-19  Worked on project
               * Finished visualizations
+                  * Used Ezgif to convert to .mp4 (https://ezgif.com/)
               * Submitted email deliverables
               * Worked on .Rmd
 

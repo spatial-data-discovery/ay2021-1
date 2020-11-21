@@ -37,7 +37,6 @@ Website:          https://spatial-data-discovery.github.io/project-kelannen.html
             + https://doi.pangaea.de/10.1594/PANGAEA.909132
             + https://springernature.figshare.com/articles/Metadata_record_for_The_global_dataset_of_historical_yields_for_major_crops_1981_2016/11903277
 
-
 2020-11-18 Decided topic and main sources, started working on code
             + Decided to do crop yields in Africa countries
             + https://common-data.carto.com/tables/africa_adm0/public,
@@ -56,9 +55,14 @@ Website:          https://spatial-data-discovery.github.io/project-kelannen.html
             + Created graphs for everything and added the code to create
             the visualization(s)
             + Created the videos from the animation/visualization
-            + Found the weather data for the African countries so
-            went back and added it to the script and the visualizations
-            and animations
+            + Looked at various sources for weather data: started out 
+            looking for temperature ended up with precipitation
+            + https://data.giss.nasa.gov/gistemp/maps/index.html
+            + https://data.giss.nasa.gov/gistemp/tabledata_v4/SH.Ts+dSST.txt
+            + https://data.giss.nasa.gov/gistemp/
+            + http://www.columbia.edu/~mhs119/Temperature/
+            + Added precipitation data it to the script and the 
+            visualizations and animations
             + https://databank.worldbank.org/reports.aspx?source=2&series=AG.LND.PRCP.MM&country= 
             filtered the data some there and then made minor changes before 
             loading into the script and doing the rest of the changes there

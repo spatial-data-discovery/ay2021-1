@@ -66,3 +66,4 @@ Class:            Data 431 - Spatial Data Discovery
 
 2020-11-20	Created video animation of data visualizations created in kepler.gl
 		Put together final updates for Rmd and process document, and organized project submission email and directories
+		Finalized Submission

@@ -12,10 +12,11 @@ _________________
 
 #### Script
 
+   * Python script: ["Shrimp"-ly Amazing](https://github.com/spatial-data-discovery/ay2021-1/blob/master/project/CSSTARFISH/shrimply_amazing-csstarfish.py) 
+   * Python notebook: ["Shrimp"-ly Amazing Notebook](https://github.com/spatial-data-discovery/ay2021-1/blob/master/project/CSSTARFISH/shrimply_amazing_csstarfish.ipynb)
 
-
-   * What Does This Script Do?
-      * This script will read the provided CSV file from the data directory and transforms it into a Pandas DataFrame.
+   * What Does The Script Do?
+      * This script will read the provided CSV file from the indicated directory and transforms it into a Pandas DataFrame.
       Next, any null values will be dropped and the first row will be removed because it doesn't contain relevant data for this project.
       
       	  When exploring the Ocean Adapt user interface, I was able to determine the names of the species of shrimp that live in regions surrounding North America.
@@ -24,14 +25,15 @@ _________________
       From there, the "Region", "Species", "Latitude_std_err", and "Longitude_std_err" will be removed from the DataFrame, since the "Latitude", "Longitude", and "Year" are the most relevant for creating visualizations of spatial distribution over time.
       The indices will then be reset to begin at 0 and increment by 1 across this final, filtered DataFrame.
       
-      	 With the DataFrame fully filtered to contain only time and location data about shrimp species, the script will then output these data entries to a "cleaned" CSV file.
+      	  With the DataFrame fully filtered to contain only time and location data about shrimp species, the script will then output these data entries to a "cleaned" CSV file.
       
-      * The final portion of the script creates a scatter plot of the shrimp's latitude over time to allow one to detect any trends in their populations over the course of the past few decades, and the final visualization was created using kepler.gl from the CSV file output of this script.
+      * The final portion of the script creates a scatter plot of the shrimp's latitude over time to allow one to detect any trends in their populations over the course of the past few decades, the second still image visualization of latitude over time was created in Excel, and the final visualization was created using kepler.gl from the CSV file output of this script.
   
    * How To Run:
       * To ease any potential burdens with GeoPandas installation, it may help to run the file in a Jupyter Hub notebook.
       Within this online Python notebook environment, the installation is as simple as running a "!pip install" statement and it will be ready to go.
-      * A warning may apear when running the lines for converting the Pandas DataFrame to a GeoPandas DataFrame, but rerunning this portion of the script should make this warning message go away without any future implications for the success of the rest of script.
+      When running with this method, it may be necessary to comment out the argument parsing in lines 21-26.
+      * A warning may apear when running the lines for converting the Pandas DataFrame to a GeoPandas DataFrame, but rerunning this portion of the script should make this warning message go away without any future implications for the success of the rest of script.  To help avoid this problem, I have also included a .ipynb file to make it easier to run the code line-by-line.
 
    * Required Package Installs and Imports:
       * Pandas
@@ -70,3 +72,16 @@ _________________
 
 #### Animated Visualization
   * Video of North American Shrimp Population Distribution Over Time (1977-2019): [Shrimp Population Animation](https://github.com/spatial-data-discovery/ay2021-1/blob/master/project/CSSTARFISH/Shrimp%20Population%20Animation.mp4)
+  
+  
+#### Still Visualizations
+  * Scatter Plot: [Latitude vs. Year](https://github.com/spatial-data-discovery/ay2021-1/blob/master/project/CSSTARFISH/LatitudeVsTime.PNG)
+  	* This plot shows the latitudinal distribution of shrimp populations over time, as well as the clustering that is occurring around certain coordinates.
+	
+  * Line Plot: [Trend Line](https://github.com/spatial-data-discovery/ay2021-1/blob/master/project/CSSTARFISH/TrendLine.png)
+  	* This plot also shows the latitudinal distribution of shrimp populations over time, but now there is also a trend line that helps visualize the downward trend.
+  
+_________________  
+  
+### Resources
+ * [Converting DataFrame to GeoDataFrame](https://goodboychan.github.io/chans_jupyter/python/datacamp/visualization/2020/07/01/02-Creating-and-joining-GeoDataFrames.html#Construct-a-GeoDataFrame-from-a-DataFrame)
