@@ -60,9 +60,11 @@ Website:          TBA
                       US_Conflict_40day4.png
 
 
-2020-11-18 Updated readme.Rmd and project-jabbaswm.Rmd
+2020-11-18 *Updated readme.Rmd and project-jabbaswm.Rmd
 
 
 2020-11-20 + Installed Gimp (version 2.10.22) (https://www.gimp.org/downloads/)
                                  + Created animation of 40 day segment images
-                                          - First try I exported as a .gif to
+                                          - First try I exported as a .gif
+                                 + Created a .mp4 file from the gif using an online converter
+                                 (https://ezgif.com/gif-to-mp4)

@@ -27,7 +27,8 @@ def split_write_csv(fpath):
     '''
     Name: split_write_csv
     Inputs: str, absolute filepath to the .csv dataset (fpath)
-    Objective: Imports the .csv dataset as a pandas dataframe and then manipulates the data dataframe and timedelta object to write four new .csv files containing the total data based on
+    Objective: Imports the .csv dataset as a pandas dataframe and then manipulates the data
+    dataframe and timedelta object to write four new .csv files containing the total data based on
     40 day increments.
     '''
     if fpath.endswith('.csv') == True: #Error handling
