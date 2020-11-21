@@ -2,7 +2,7 @@
 *                                   About                                     *
 *******************************************************************************
 
-Project Title:    Estimating Yearly Forest Cover with Hansen et al Dataset
+Project Title:    Estimating Yearly Forest Loss with Hansen et al Dataset
 Created by:       Jonathan Vincent Tandaw
 GitHub:           vincentandaw
 University:       College of William & Mary

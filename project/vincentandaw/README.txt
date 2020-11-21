@@ -5,6 +5,7 @@
 * ORGANIZATION: spatial-data-discovery
 * REPOSITORY: ay2021-1
 * FOLDER: project/vincentandaw
+* NAME OF PROJECT: Estimating Yearly Forest Loss with Hansen et al Dataset
 
 #RUNNING THE SCRIPT#
 The script can be run from the command line. This script will import the following modules: importlib, os, sys, glob and arcpy.
@@ -15,11 +16,21 @@ ArcGIS Pro python environment before proceeding. These requirements will be chec
 Due to how large the original dataset is, I have included a folder called "Data" with all the inputs
 necessary for the script to work. The data comes from http://earthenginepartners.appspot.com/science-2013-global-forest/download_v1.7.html
 
+Please put the Data folder in the same directory as the script, as the script will need to call data from that folder. Alternately, if you
+prefer to download your own data, place the data into the folder and rename the folder Data.
+
 #OUTPUT DATA#
 Script will output two adjacent rasters that make up Mesoamerica, each raster is a 10x10 degree swath/granule, one with the top left point at
 20N 90W and the other at 20N 100W. The values therein will reflect at what year a given pixel (forest) is lost, 0 marks no loss of forest, 2000
 marks loss of forest in year 200, 2008 marks loss of forest in year 2008, and so on. A folder called Output will be created into which output 
 rasters and accompanying ArcGIS files will be saved. If this is not allowed by the system, the files will be saved in the same directory as script.
+
+The raster calculations are simply: (ForestCover + ForestGain - ForestLoss) x Datamask, with spatial extent set to maximum of all inputs. We would 
+get output rasters that represent what year a given pixel's worth of forest is lost: 1 for no loss at all, 0 for loss in 2001, -1 for loss in 2002,
+and so on.
+
+A still graphic will also be presented, added with a green to red colorway. I wasn't able to get ArcPy to add a colormap, and animating the forest
+loss does little because on a grand scale, the forest loss is barely visible.
 
 #CREATED VARIABLES#
 
