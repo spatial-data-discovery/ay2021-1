@@ -1,0 +1,35 @@
+*******************************************************************************
+*                                   About                                     *
+*******************************************************************************
+
+Project Title:    Estimating Yearly Forest Cover with Hansen et al Dataset
+Created by:       Jonathan Vincent Tandaw
+GitHub:           vincentandaw
+University:       College of William & Mary
+Class:            Data 431 - Spatial Data Discovery
+Website:          TBD
+
+*******************************************************************************
+*                                 Project Log                                 *
+*******************************************************************************
+
+2020-11-02 Data collection
+        * http://earthenginepartners.appspot.com/science-2013-global-forest/download_v1.7.html 
+        * downloaded tree cover, forest gained, forest yearly loss and datamask for 20N090W and 20N100W
+
+2020-11-06 ArcPy Adventures
+	    * Reclassified ForestCover layer: >70% Forest Cover as 1, and <70% as 0 (based off my work with Wildlife Conservation Society experts of the region)
+	    * Reclassified datamask to only have 0 as no data and 1 as mapped land surface, removing permanent water bodies like the sea
+		* Raster Calculator: forest cover (values: 0-1) - yearly forest loss (values: 0 for no loss at all, 1 for loss in 2001, 2 in 2002...15 in 2015)
+	    * Raster Calculator: added forest gain (which unfortunately is only a yes or no for the ENTIRE 15 years...)
+		* Raster Calculator: multiplied result with datamask such that no data and permanent water bodies with 0 values are multiplied out (because multiplication by 0)
+		* Extract by attributes: clumped layers every three years, extract rasters by clump of years from both rasters
+		* Convert all resultant rasters into ASCII to be processed into an animation with QGIS
+		
+2020-11-012 Making a good script
+		*PEP8 editing: docstring, renaming variables, implementing \ to cut up string longer than PEP8 recommended length per line
+		*Created try-except loops and other considerations to increase usability
+		*"housekeeping" efforts to comply to requirements of assignment, such as updating process doc
+		
+2020-11-08 Editing for PEP8 Considerations
+
