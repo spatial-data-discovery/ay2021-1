@@ -27,3 +27,42 @@ Website:          TBA
 
                   + US Crisis monitor (Domestic armed conflict dataset)(ACLED)
                   https://acleddata.com/special-projects/us-crisis-monitor/
+
+2020-11-06 Found tutorial
+          + Found QGIS tutorial on how to make a heatmap
+          https://www.qgistutorials.com/en/docs/3/creating_heatmaps.html
+
+          + Created initial script (project/jabbas)
+          'jabbas_script.py'
+
+2020-11-07 Begun writing conversion script
+          + Decided to import data into pandas data frame (can read/write to csv)
+          + Adjusted format of 'EVENT_DATE' to follow python datetime format (YYYY-MM-DD)
+          * Found documentation to help write the script:
+                 - https://docs.python.org/3/library/datetime.html
+                 - https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.to_csv.html
+
+2020-11-08 Conversion script completed
+          + Created a script that creates 4 new datasets in which the data is partitioned such that it includes total data points incremented by 40 days per file (160 days total in data, hence 4 datasets)
+          + Took new datasets into QGIS and created heatmaps
+          + Experimented with different intervals for splitting the data
+                 * A large majority of the points are within the first two weeks of the dataset
+                 so the heatmaps don't differ too much
+                 * Despite deciding that in usual circumstances a stationary heatmap would suffice
+                 I still went with splitting at 40 day intervals to show how long the protests went on
+
+2020-11-17 Watched QGIS/Animation tutorial and produced pictures ready for animation
+          * Watched Tyler Davis' tutorial on animation (https://www.youtube.com/watch?v=XvkAhf-U-mg)
+          + Followed tutorial and created 4 images of my data (with custom legend)
+                    + US_Conflict_40day1.png
+                      US_Conflict_40day2.png
+                      US_Conflict_40day3.png
+                      US_Conflict_40day4.png
+
+
+2020-11-18 Updated readme.Rmd and project-jabbaswm.Rmd
+
+
+2020-11-20 + Installed Gimp (version 2.10.22) (https://www.gimp.org/downloads/)
+                                 + Created animation of 40 day segment images
+                                          - First try I exported as a .gif to
