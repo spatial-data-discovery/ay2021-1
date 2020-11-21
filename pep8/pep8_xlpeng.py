@@ -49,7 +49,6 @@ def HDFConverter(folderpath, filename):
         print('File not found. Please check your file path.')
         sys.exit()
         
-
     
     data = [i for i in f['data']['assignment']]
     attributes = {}
@@ -58,7 +57,6 @@ def HDFConverter(folderpath, filename):
         attributes[key] = f_attr.attrs[key].decode('utf-8')
     asc_attr = ['nrows', 'ncols', 'xllcorner', 'yllcorner', 'cellsize', 'NODATA_value']
 
-    
     
     asciipath = os.path.join(folderpath, "conv_1.txt")
     with open(asciipath,"w+") as asc:
@@ -71,11 +69,9 @@ def HDFConverter(folderpath, filename):
             asc.write("\n")
     
 
-
     prjpath = os.path.join(folderpath, "conv_1.prj")
     with open(prjpath,"w+") as prj:
         prj.write("%s" %attributes['crs'])
-
 
 
     print("Files created successfully! \n"
@@ -104,3 +100,4 @@ if __name__ == "__main__":
 
     print("The raster image covers part of the Cedar Creek, Goolsby Road,"
           "and Fullerton Phillips Road. It's somewhere near Monticello, Georgia.")
+    
