@@ -33,3 +33,23 @@ Website:          TBD
 		
 2020-11-08 Editing for PEP8 Considerations
 
+2020-11-18 Bulk of code has been completed
+		*fixed issues surrounding extent of raster calculations. ArcPy defaults to using the intersection of rasters as its extent, which means my raster will only be as large
+		as large as all the pixels found in all of my rasters (which amounts to some 100 pixels only).
+		*failed to find a good way to introduce a colormap in ArcPy. Sources online say it just doesn't work as anticipated
+		*changed nature of output: instead of rasters split by chunks of time for an animation, I realize that the animation won't be appealing because forest loss on a grand scale
+		is tiny. Animation looks good on the EVI "Breathing" example because the changes are easily visible, but not so for my output. So I'm just doing two rasters that show
+		temporal aspect of forest loss just by its values. Improves compute time as well!
+		
+2020-11-20 More optimizing on the cmd, and Sorted()
+		*added print statements that help user understand what's happening
+		*more PEP8 work on defining constants, adding first line shebang
+		*testing bad inputs: allowed y and yes as part of acknowledgement, not just yes
+		*added Output folder in which output is saved, with exceptions for folder existence and lack of permission (if unallowed, save in same dir)
+
+2020-11-21		
+		*Professor asked how glob orders files: they sort like the filesystem does. I've made it more robust by using Sorted(), which uses timsort.
+		*Visualizations i.e. graphic creation
+		*(Simple) Rmd creation.
+
+

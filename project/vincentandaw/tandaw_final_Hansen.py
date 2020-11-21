@@ -1,14 +1,29 @@
+#!/usr/bin/env python3
+
 # Author: Vincent Tandaw
-# Last Updated: November 20, 2020
+# Last Updated: November 21, 2020
 
 # Script Description:
-# Creates temporal forest cover rasters of Mesoamerica from Hansen et al dataset
+# Creates rasters that show forest loss by year in Mesoamerica from Hansen et al dataset
 
 import importlib
 import os
 import sys
 import glob
 import argparse
+
+print('Checking for ArcPy installation')
+check_for_arcpy = importlib.util.find_spec("arcpy") 
+found = check_for_arcpy is not None 
+if found == True: #ensures arcpy exists BEFORE importing, or else code breaks
+    import arcpy 
+    from arcpy import sa
+    print('Checking for ArcPy installation. ArcPy found.')
+else:
+    print('ArcPy is unavailable and required for this script. Is this an activated' \
+          'ArcGIS Pro environment? If not, please activate and try again.')
+    sys.exit()
+
 
 def hansen_mesoamerica():
     """
@@ -18,10 +33,10 @@ def hansen_mesoamerica():
     it provides rasters on forest cover, forest gained, forest lost, and other useful
     spatial data. This function will take gross forest cover, subtract it with forest
     lost, add forest gained, and multiplied by a binary mask showing mappable land 
-    surfaces to create approximate forest cover rasters of Mesoamerican forests. 
+    surfaces to create approximate forest loss rasters of Mesoamerican forests. 
     Rasters produced will be clumped into three-year chunks: 2001-2003, 
-    2004-2006...2012-2015 to better show change of forest cover, as year-on-year change
-    is relatively small and indistinguishable on a larger scale.
+    2004-2006...2012-2015 to better show change/loss of forest cover, as year-on-year
+    change is relatively small and indistinguishable on a larger scale.
     
     Credit, written in format as described by the authors:
     Hansen, M. C., P. V. Potapov, R. Moore, M. Hancher, S. A. Turubanova, A. Tyukavina, 
@@ -33,21 +48,17 @@ def hansen_mesoamerica():
     http://earthenginepartners.appspot.com/science-2013-global-forest.
     """
 
-    check_for_arcpy = importlib.util.find_spec("arcpy") 
-    found = check_for_arcpy is not None 
-    if found == True: #ensures arcpy exists BEFORE importing, or else code breaks
-        import arcpy 
-        from arcpy import sa
-    else:
-        return 'ArcPy is unavailable and required for this script. Exiting script.'
+    MAKE_FOLDER_ALLOWED = True
     
     try:
+        print('Checking for Spatial Analyst license')
         if arcpy.CheckExtension("Spatial") == "Available": #also needs Spatial Analyst
             arcpy.CheckOutExtension("Spatial") 
         else:
-            return 'The Spatial Analyst license is unavailable. Exiting script.'
-
-        print('finding data sources...')
+            print('Checking for Spatial Analyst license. Unavailable. Exiting...')
+            sys.exit()
+        print('Checking for Spatial Analyst license. License found')
+        print('Finding raster data sources...')
 
         ###SET ARCPY ENVIRONMENT PARAMETERS###
         arcpy.env.overwriteOutput = True
@@ -55,7 +66,8 @@ def hansen_mesoamerica():
 
         ###DATA SOURCES###
         file_location = os.path.join('data','*.tif') #Data folder is provided by me
-        data = glob.glob(file_location)
+        data = sorted(glob.glob(file_location)) #sorted uses timsort, a Insertion Sort-and
+                                                #Merge Sort hybrid for python use. 
 
         mask_20N90W = arcpy.Raster(data[0])
         mask_20N100W = arcpy.Raster(data[1])
@@ -66,9 +78,17 @@ def hansen_mesoamerica():
         treecov_20N90W = arcpy.Raster(data[6])
         treecov_20N100W = arcpy.Raster(data[7])
 
-        print('building rasters. this will take a while...')
+        print('Raster data found! Building rasters. This may take a while...')
 
         ###ANALYSIS###
+        #make output folder if not exists but allowed. EAFP!
+        try:
+            if not os.path.exists('Output'):
+                os.mkdir('Output')
+        except OSERROR as e:
+            if e.errno==errno.EEXIST:
+                MAKE_FOLDER_ALLOWED = False
+        
         #reclassify mask to only get value=1 i.e. forest (0=Nodata,2=permanent water bodies)
         remap = sa.RemapValue([[0,"NODATA"],[1,1],[2,"NODATA"]])
         mask_1 = sa.Reclassify(mask_20N90W, 'value', remap, "NODATA")
@@ -105,17 +125,21 @@ def hansen_mesoamerica():
         rc3_20N100W = sa.RasterCalculator([reclass_rc2_20N100W,mask_2],
                                           ['rc2','mask'],'rc2*mask')
 
-        #Extract by Attrs by three years + no loss aka starting point
-        #-2 to 0, -5 to -3, -8 to -6... is 2001-2003, 2004-2006, 2007-2009...
+        #reclass values from raster calculator output to add meaning
+        remap = sa.RemapValue([[1,0],[0,2001],[-1,2002],[-2,2003],[-3,2004],[-4,2005],
+                               [-5,2006],[-6,2007],[-7,2008],[-8,2009],[-9,2010],
+                               [-10,2011],[-11,2012],[-12,2013],[-13,2014],[-14,2015]])
 
-        raster_list = [(rc3_20N90W, data[0][-12:]), (rc3_20N100W, data[1][-12:-4])]
-        expression = [("VALUE>=-2 AND VALUE<=0","01-03"),("VALUE>=-5 AND VALUE<=-3", "04-06"),
-                      ("VALUE>=-8 AND VALUE<=-6","07-09"),("VALUE>=-11 AND VALUE<=-9","10-12"),
-                      ("VALUE>=-14 AND VALUE<=-11","13-15")]
-        for ras in raster_list:
-            for exp in expression:
-                attExtract = sa.ExtractByAttributes(ras[0], exp[0])
-                RasAsASCII =  arcpy.RasterToASCII_conversion(attExtract, f'.//{ras[1]}_{exp[1]}.asc')
+        recl_rc3_20N90W = sa.Reclassify(rc3_20N90W, 'value',remap,"NODATA")
+        recl_rc3_20N100W = sa.Reclassify(rc3_20N100W,'value',remap,"NODATA")
+
+        if MAKE_FOLDER_ALLOWED == True:
+            recl_rc3_20N90W.save(r'./Output/TreeLoss_20N90W.tif')
+            recl_rc3_20N100W.save(r'./Output/TreeLoss_20N100W.tif')
+        else:
+            recl_rc3_20N90W.save(r'./TreeLoss_20N90W.tif')
+            recl_rc3_20N100W.save(r'./TreeLoss_20N100W.tif')
+
         return 'done!'
     except arcpy.ExecuteError:
         print(arcpy.GetMessages(2))
@@ -125,17 +149,16 @@ def hansen_mesoamerica():
 
 if __name__=='__main__':
     parser = argparse.ArgumentParser(description=
-                'Creates approximate tree cover rasters from Hansen dataset of 20N90W and 20N100W' \
-                'swaths from 2000-2015')
+                'Creates approximate tree cover rasters from Hansen dataset of 20N90W' \
+                ' and 20N100W swaths from 2000-2015')
     args = parser.parse_args()
 
-    print('please change python environment to ArcGIS Pro environment')
-
     user_warning = input(
-        'This will take a substantial amount (up to an hour) of time and space (about 90-93GB). ' \
-        'Type yes to confirm and continue')
-    if user_warning.lower() == 'yes':
+        'This may take a substantial amount: some 30min and 280mb. ' \
+        'Proceed? y/n \n')
+    if user_warning.lower() in ['yes','y']:
         hansen_mesoamerica()
-        print('Done. Check the directory in which this script is located')
+        print('Done. Check output in generated Output folder if allowed. ' \
+              'Output raster is in tif format')
     else:
         sys.exit()

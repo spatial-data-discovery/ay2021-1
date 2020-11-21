@@ -1,6 +1,6 @@
-# README
+#README
 
-* LAST UPDATED: 2020-11-13
+* LAST UPDATED: 2020-11-21
 * USERNAME: vincentandaw
 * ORGANIZATION: spatial-data-discovery
 * REPOSITORY: ay2021-1
@@ -8,8 +8,8 @@
 
 #RUNNING THE SCRIPT#
 The script can be run from the command line. This script will import the following modules: importlib, os, sys, glob and arcpy.
-The last item on this list requires an ESRI ArcGIS Pro license, as well as the Spatial Analyst license. These two requirements will 
-be checked by the script. 
+The last item on this list requires an ESRI ArcGIS Pro license, as well as the Spatial Analyst license. Do not forget to activate 
+ArcGIS Pro python environment before proceeding. These requirements will be checked by the script, and some help will be provided.
 
 #INPUT DATA#
 Due to how large the original dataset is, I have included a folder called "Data" with all the inputs
@@ -17,9 +17,9 @@ necessary for the script to work. The data comes from http://earthenginepartners
 
 #OUTPUT DATA#
 Script will output two adjacent rasters that make up Mesoamerica, each raster is a 10x10 degree swath/granule, one with the top left point at
-20N 90W and the other at 20N 100W, at five different three-year time intervals. This creates a total of 10 rasters: 20N 90W raster at years 
-2000-2003, 2004-2006, 2007-2009, 2010-2012, 2013-2015; and 20N 100W raster with similar time intervals. The output will also create ArcGIS Pro
-helper files such as OVR files that help with pyramid generation for use within ArcGIS Pro
+20N 90W and the other at 20N 100W. The values therein will reflect at what year a given pixel (forest) is lost, 0 marks no loss of forest, 2000
+marks loss of forest in year 200, 2008 marks loss of forest in year 2008, and so on. A folder called Output will be created into which output 
+rasters and accompanying ArcGIS files will be saved. If this is not allowed by the system, the files will be saved in the same directory as script.
 
 #CREATED VARIABLES#
 
@@ -53,6 +53,9 @@ helper files such as OVR files that help with pyramid generation for use within 
 
 *rc3_20N90W = raster calculator: masking for only mapped surface area
 *rc3_20N100W = raster calculator: masking for only mapped surface area
+
+*recl_rc3_20N90W = reclass values from raster calculator output to add temporal meaning e.g. 2001 = forest loss in 2001, 2002 = forest loss in 2002
+*recl_rc3_20N100W = reclass values from raster calculator output to add temporal meaning e.g. 2001 = forest loss in 2001, 2002 = forest loss in 2002
 
 
 #CREDIT#
