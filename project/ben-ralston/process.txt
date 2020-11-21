@@ -1,0 +1,80 @@
+*******************************************************************************
+*                                   About                                     *
+*******************************************************************************
+
+Project Title:    US Unemployment During the Pandemic
+Created by:       Ben Ralston
+GitHub:           ben-ralston
+University:       College of William & Mary
+Class:            Data 431 - Spatial Data Discovery
+Website:          https://spatial-data-discovery.github.io/project-ben-ralston.html
+
+*******************************************************************************
+*                                 Project Log                                 *
+*******************************************************************************
+
+2020-11-05  Initial planning for project
+            * Thought about focusing on projected sea level rise.
+            * Planned to visualize coastlines over time using 
+              coastlines over time using elevation data.
+
+2020-11-08  Found potential dataset with sea level projections
+            * https://www.frontiersin.org/articles/10.3389/fmars.2020.00263/full
+
+2020-11-11  Decided to change project to look at US unemployment data
+            * Topic seems relevant to current events as we try to work through
+              the COVID-19 pandemic.
+            * Found dataset from US Bureau of Labor Statistics:
+              https://www.bls.gov/web/laus.supp.toc.htm
+
+2020-11-13  Started working on data processing script
+            * Created functions to read in unemployment .xlsx dataset
+              and reformat data
+
+2020-11-16  Attempted to create visualizations in Python
+            * Found helpful tutorial:
+              https://towardsdatascience.com/a-complete-guide-to-an-interactive-geographical-map-using-python-f4c5197e23e0
+            * Downloaded US shapefiles:
+              https://www.census.gov/geographies/mapping-files/time-series/geo/carto-boundary-file.html
+
+2020-11-17  Switched to using R for visualizations
+            * Had issues using Python, couldn't figure out how to show Alaska
+              and Hawaii next to continental US.
+            * Found good resources on creating map visualizations in R:
+              https://cran.r-project.org/web/packages/usmap/vignettes/mapping.html
+            * Created basic R script to visualize unemployment data
+
+2020-11-18  Decided to visualize COVID cases along side unemployment rate
+            * Found CDC dataset with daily case numbers by state:
+              https://data.cdc.gov/Case-Surveillance/United-States-COVID-19-Cases-and-Deaths-by-State-o/9mfq-cb36
+            * Created functions in Python script to convert data to
+              monthly new cases by state.
+            * Downloaded population dataset from Census Bureau:
+              https://www.census.gov/data/tables/time-series/demo/popest/2010s-state-total.html#par_textimage
+            * Adjusted COVID cases to state populations.
+            * Found another R visualization tutorial:
+              https://cran.r-project.org/web/packages/usmap/vignettes/advanced-mapping.html
+            * Decided to use circles of different sizes to represent COVID cases for
+              each state.
+            * Has benefit of both datasets being shown on the same map instead of
+              having side-by-side maps which might not show any potential
+              trends/correlations as well.
+            * Found dataset from Google with coordinates for the center of
+              each state:
+              https://developers.google.com/public-data/docs/canonical/states_csv
+            * Added COVID cases to visualization in R script
+
+2020-11-19  Finished visualization
+            * Finalized color scheme for map and adjusted titles/labels
+            * Found tutorial on animating series of images:
+              https://stackoverflow.com/questions/753190/programmatically-generate-video-or-animated-gif-in-python
+            * Created Python script to make GIF of individual plots
+            * Recorded metadata for datasets in README.md
+            * Began working on project website
+
+
+2020-11-20  Finished project
+            * Completed REAMDE.md
+            * Finalized website prose
+            * Re-structured project folder with directories for input data and
+              Intermediate output files
