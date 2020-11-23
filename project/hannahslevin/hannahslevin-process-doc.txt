@@ -39,5 +39,6 @@ Website:          https://spatial-data-discovery.github.io/project-hannahslevin.
 2020-11-21	Processed Data
 		* Used tabula-py to export pdf tables to pandas dataframes to csvs
 		
-
-
+2020-11-22	Processed Data
+		* Downloaded USA state level data from https://www.geoboundaries.org/index.html
+		* Performed spatial join in QGIS with the geoboundaries USA ADM 1 shapefile and the 3 csvs I created in my script
