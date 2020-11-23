@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xml:lang="en"><Esri><CreaDate>20201122</CreaDate><CreaTime>19124600</CreaTime><ArcGISFormat>1.0</ArcGISFormat><SyncOnce>TRUE</SyncOnce><DataProperties><lineage><Process ToolSource="c:\program files\arcgis\pro\Resources\ArcToolbox\toolboxes\Conversion Tools.tbx\RasterToASCII" Date="20201122" Time="191246">RasterToASCII C:\Users\Amy\Desktop\Classes\data431\final_proj\final_proj.gdb\Extract_rain2 C:\Users\Amy\Desktop\Classes\data431\final_proj\output_rasters\rainfall1984.asc</Process></lineage></DataProperties></Esri></metadata>
