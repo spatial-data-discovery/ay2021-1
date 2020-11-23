@@ -35,4 +35,9 @@ Website:          https://spatial-data-discovery.github.io/project-hannahslevin.
 		* I realized I could either hone in on drug legalization, which is more publicly available, or choose a new topic
 		* I ultimately decided upon looking at healthcare, specifically in American prisons
 		* Downloaded PDF data from https://www.cdc.gov/nchs/data/nhsr/nhsr096.pdf on prison healthcare
+		
+2020-11-21	Processed Data
+		* Used tabula-py to export pdf tables to pandas dataframes to csvs
+		
+
 
