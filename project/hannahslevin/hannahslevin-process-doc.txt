@@ -15,5 +15,24 @@ Website:          https://spatial-data-discovery.github.io/project-hannahslevin.
 *******************************************************************************
 
 2020-10-13	Beginning the project
-		* Created project folder in ay-2021.github.io repository with README and 		process doc
-		* Uploaded a blank template project-hannahslevin.Rmd file to spatial-data-		discovery.github.io 
+		* Created project folder in ay-2021.github.io repository with README and process doc
+		* Uploaded a blank template project-hannahslevin.Rmd file to spatial-data-discovery.github.io 
+
+2020-11-03	Started brainstorming 
+		* Came up with two main ideas:
+			* Utilizing  data to understand gerrymandering
+			* Looking at drug usage over time
+		
+2020-11-09	Began the search for data 
+		* Preliminarily decided to research drug usage over time
+		* Searched the internet for data on drug usage and laws
+		* Found preliminary data from:
+			* Substance Abuse and Mental Health Services Adminstration 
+			* CDC
+			
+2020-11-15	Officially decided on a topic and dataset
+		* During the search for drug data, I found that data on drug usage is not usually publicly available
+		* I realized I could either hone in on drug legalization, which is more publicly available, or choose a new topic
+		* I ultimately decided upon looking at healthcare, specifically in American prisons
+		* Downloaded PDF data from https://www.cdc.gov/nchs/data/nhsr/nhsr096.pdf on prison healthcare
+
