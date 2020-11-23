@@ -1,0 +1,146 @@
+*******************************************************************************
+*                                   About                                     *
+*******************************************************************************
+
+Project Title:    Rain on Election Day
+Created by:       Amy Hilla
+GitHub:           aehilla
+University:       College of William & Mary
+Class:            Data 431 - Spatial Data Discovery
+Website:          https://spatial-data-discovery.github.io/project-aehilla.html
+
+*******************************************************************************
+*                                 Project Log                                 *
+*******************************************************************************
+
+Background: final project idea sprung from a separate research project I work as a research assistant on,
+for Dr. Sharan Grewal in the Government department. That project is to estimate voter turnout on historical
+ election dates using rainfall rates.  I chose to use the same data and some of the same code for this
+ final project, but limit my focus to the United States election days.
+
+2020-09-09 Pitch idea of using precipitation data from voter turnout research to Prof Davis
+            * get approval for this idea
+            * begin thinking about what visualization might be most interesting
+
+2020-09-16 First test visualization/ rainfall measurement calculation
+            * performed for Dr. Grewal for proof of concept
+            * successfully download netcdf file of May 1996 rainfall
+            * source: ftp://rfdata:forceDATA@ftp.iiasa.ac.at/WFDEI/
+            * convert to raster
+            * extract by mask to Albania borders
+            * border shapefile source: https://www.geoboundaries.org/
+            * set time slice to election day
+            * calculate average rainfall rate across Albania on election day
+
+2020-10-07 Decide to limit scope of final project to US election days
+            * probably more interesting as a visualization
+            * also makes the analysis more feasible by limiting to one country
+
+2020-10-12 Begin working on webscraper script for Dr. Grewal
+            * to calculate rainfall on election dates, we need a dataset of historic election dates in each country
+            * there is not a public, centralized dataset of this kind
+            * goal: create a script that can effectively parse election dates from wikipedia pages
+            * written in Python using the Wikipedia API: https://pypi.org/project/wikipedia/
+            * realistically, goal is to parse the majority of the election dates in the voter turnout dataset
+            * some election dates will have to be looked up manually
+            * goal is to minimize the number of dates that must be manually verified
+            * original goal is also to have the script successfully pull dates for ALL countries
+
+2020-10-26 Continue working on webscraper
+          * parsing dates from wikipedia = super hard
+          * original source for beginning the webscraper: https://github.com/spatial-data-discovery/spatial-data-discovery.github.io/blob/master/scripts/webscraper.py
+          * this script requires a specific web address to scrape text from
+          * because I don't know specific wikipedia page addresses, I used the google search function
+          * to search for country + year + election + 'wikipedia' to find the wikipedia page URLs
+          * then use the wikipedia API to pull the content from the page
+          * then use regex to search for text in a date format
+          * then use datetime.parser to parse the string date into a datetime object, and append to a new dataframe
+
+2020-11-04 Webscraper successfully parses election dates for about 90% of elections in our global dataset
+          * issues arise when the election date on the wikipedia page is in a different format
+          * or if the country name changed -- eg. Swaziland became eSwatini, Zaire became the DRC, etc.
+          * but in general the election scraper is functional - but it works less well for the United States than other countries
+          * It is less able to parse election dates from the US pages because they tend to be in format: Month, Day with no year
+          * whereas other countries are usually in the format: Day Month, Year
+          * this issue made me realize I may need to create a separate web scraping script for just the USA
+
+2020-11-09 Begin web scraper for US election dates specifically
+          * change the regex expression to be more suited to the date format usually used on the US election wikipedia pages
+          * try to optimize the google search and wikipedia API search process to more efficiently pull the content
+
+2020-11-11  Finalize USA election dates web scraper
+          * web scraper is not as successful at pulling election dates as I would like
+          * Ultimately was able to parse election dates for 32 out of 37 elections, from 1946 to 2018
+          * had to look up 5 manually
+
+2020-11-14 Work on getting rainfall data downloaded
+          * manually downloaded November daily rainfall data for every election year since 1946
+          * after doing all the downloads, realized I definitely could have written a script to automate that process :(
+          * WFD CRU goes from 1901 to 2001 -- used this for elections 1946 to 2000
+          * WFDEI CRU goes from 1979 to 2018 -- used this for elections 2002 to 2018
+          * WFD data downloaded as .nc, WFDEI downloaded as .nc.gz 
+          * unzip all the .gz files using 7zip
+
+2020-11-19 Start coding ArcPro jupyter notebook script to automate the pre-processing of the netcdf rainfall files
+          * step 1: add USA boundary shapefile downloaded from geoboundaries.org to ArcGIS Pro project
+          * step 2: use Make NetCDF Raster Layer tool to load the netcdf rainfall data
+          * Problem: MakeNetCDFRasterLayer will not run on the WFD CRU data but will run on the WFDEI data
+          * the issue arises because the tool requires you to input a variable, an x dimension, and a y dimension
+          * in the WFD .nc files, the dimensions are "x, y, land, tstep" and the variables are "nav_long, nav_lat, land, Day, Rainf"
+          * in the WFDEI .nc files, the dimensions are "lon, lat, tstep, day" and the variables are "long, lat, timestp, day, Rainf"
+          * running the MakeNetCDFRasterLayer tool in arcpy works on the WFDEI files if variable = "Rainf", XDimension = "lon", and YDimension = "lat"
+          * theoretically, the tool should run with the WFD data is the variable = "Rainf", XDimension = "x", and YDimension = "y"
+          * but it does not work
+          * attempted workaround: load WFD .nc files into QGIS to then convert into ASC
+          * netCDF browser plugin required
+          * NetCDF browser plugin does not exist for QGIS 3.10 -- deprecated
+          * attempted workaround #2: load .nc files into QGIS as mesh layer and then convert to ASC
+          * .nc files should load as mesh files according to this: https://gis.stackexchange.com/questions/357159/cannot-open-netcdf-file-in-qgis
+          * but when I try it I get an error that the file is an unreadable type
+          * cannot find another workaround
+          * WFDEI data only exists for 1979 to 2018
+          * change of plan: just visualize rainfall on election day for this time span (i.e. elections from 1980-2018)
+          * I'm okay with limiting the visualization to 1980 - 2018, rather than 1946 - 2018 as I originally planned
+          * probably better to instead spend my time on the animation
+
+2020-11-20 Begin visualization
+          * the For loop to process the WFDEI netCDF files works fine for all the elections from 1980 to 2018
+          * I want to include one more line to change the symbology from black and white to the "Precipitation" color ramp
+          * having trouble finding a way to change raster symbology programmatically
+          * can't get this function to work: https://pro.arcgis.com/en/pro-app/tool-reference/data-management/add-colormap.htm
+          * none of the built in raster functions allow you to change the symbology: https://pro.arcgis.com/en/pro-app/help/data/imagery/raster-functions.htm#:~:text=Raster%20functions%20are%20operations%20that,a%20new%20raster%20to%20disk.
+          * attempt to run this code (doesn't work):
+                 # arcpy.ia.Colormap(extract_filename + '.tif',"rainfall_2018_1.tif", "#")
+                 # this code is supposed to use the colormap from an existing tif file, which I manually set the symbology of
+                 # but it only gives this error:
+                 # RuntimeError: Failed to apply Raster Function: 'Colormap' (The parameter is incorrect. )
+          * cannot find any other workarounds to change the raster colormap
+          * decide to change the colors manually in GIS
+          
+2020-11-21 Work on animation
+          * load all the rainfallext rasters into a new ArcGIS Pro project
+          * Add new Animation
+          * set each raster image as its own keyframe
+          * I don't want any kind of transition between each keyframe, but ArcGIS adds one automatically - how to get rid of this?
+          * cannot find way to remove transitions
+          * new strategy: create animation of each raster image in outside program
+          * first export all the rainfall rasters as .tif using ArcGIS Raster To Other Format tool
+          * they export successfully but all the tif files look terrible and are low quality
+          * new strategy #2: use Prof. Davis's animation tutorial for QGIS: https://www.youtube.com/watch?v=XvkAhf-U-mg&feature=youtu.be
+          * add line to export files as .asc in the netCDF processing script so I can use them in QGIS
+          
+2020-11-22 Work on animation, wrap-up
+          * Successfully followed steps to create animation from individual ascii files in QGIS
+          * changed colorramp in QGIS to the "precipitation" one, which shows rainfall more visibly
+          * default is 7 classes
+          * change to using 4 classes with equal intervals because this makes the rainfall patterns more stark
+          * then export as PNG, then create animation
+          * created .gif flipping through each year with 150 milliseconds between
+          * this is too fast - tried several different timings, decide to use 600 milliseconds for best readability
+          * try to download ffmpeg to convert .gif to .mp4
+          * can't add ffmpeg to path so that I can run from command line
+          * all the source code is present but not recognized from command line - why?
+          * realized that I need to install the .exe not just the source code
+          * this fixed the issue
+          * convert .gif to .mp4 using code from: https://spatial-data-discovery.github.io/resources-methods.html#converting-images-to-animations
+          * create the final files for submission, and then everything is done
