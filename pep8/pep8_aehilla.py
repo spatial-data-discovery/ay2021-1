@@ -3,7 +3,7 @@
 ### Spatial Data Discovery, Fall 2020
 
 ### Summary: this script automates the pre-processing of monthly netCDF rainfall data,
-to create raster files of rainfall in the US on each election day
+### to create raster files of rainfall in the US on each election day
 
 ## NOTE: this script must be run within ArcGIS Pro for arcpy to import successfully
 
