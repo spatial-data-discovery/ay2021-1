@@ -8,22 +8,25 @@
 ## Files
 
 ### Scripts 
-- GIF_Script.py(https://github.com/spatial-data-discovery/ay2021-1/blob/master/project/hannahslevin/GIF_Script.py)
-- admissions_screening_conv.py
+* [GIF_Script.py](https://github.com/spatial-data-discovery/ay2021-1/blob/master/project/hannahslevin/GIF_Script.py)
+* [admissions_screening_conv.py](https://github.com/spatial-data-discovery/ay2021-1/blob/master/project/hannahslevin/admissions_screening_conv.py)
+
+
+
 
 ### Inputs
-- prison_healthcare.pdf
-- Images:
-    - EKG.png
-    - Elevated Lipids.png
-    - Hepatitis A.png 
-    - Hepatitis B.png
-    - Hepatitis C.png
-    - High BP.png
-    - Mental Health.png
-    - Suicide Risk.png
-    - Tuberculosis.png
-- geoBoundariesUSA-ADM1-shp.zip
+- [prison_healthcare.pdf](https://github.com/spatial-data-discovery/ay2021-1/blob/master/project/hannahslevin/data/prison_healthcare.pdf)
+- [Images](https://github.com/spatial-data-discovery/ay2021-1/tree/master/project/hannahslevin/data/images):
+    - [EKG.png](https://github.com/spatial-data-discovery/ay2021-1/blob/master/project/hannahslevin/data/images/EKG.png)
+    - [Elevated Lipids.png](https://github.com/spatial-data-discovery/ay2021-1/blob/master/project/hannahslevin/data/images/Elevated Lipids.png)
+    - [Hepatitis A.png](https://github.com/spatial-data-discovery/ay2021-1/blob/master/project/hannahslevin/data/images/Hepatitis A.png)
+    - [Hepatitis B.png](https://github.com/spatial-data-discovery/ay2021-1/blob/master/project/hannahslevin/data/images/Hepatitis B.png)
+    - [Hepatitis C.png](https://github.com/spatial-data-discovery/ay2021-1/blob/master/project/hannahslevin/data/images/Hepatitis C.png)
+    - [High BP.png](https://github.com/spatial-data-discovery/ay2021-1/blob/master/project/hannahslevin/data/images/High BP.png)
+    - [Mental Health.png](https://github.com/spatial-data-discovery/ay2021-1/blob/master/project/hannahslevin/data/images/Mental Health.png)
+    - [Suicide Risk.png](https://github.com/spatial-data-discovery/ay2021-1/blob/master/project/hannahslevin/data/images/Suicide Risk.png)
+    - [Tuberculosis.png](https://github.com/spatial-data-discovery/ay2021-1/blob/master/project/hannahslevin/data/images/Tuberculosis.png)
+- [geoBoundariesUSA-ADM1-shp.zip](https://github.com/spatial-data-discovery/ay2021-1/blob/master/project/hannahslevin/data/geoBoundariesUSA-ADM1-shp.zip)
     
 ### Outputs
 - admissions_screening.gif
