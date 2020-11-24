@@ -1,0 +1,22 @@
+date,state,fips,cases,deaths
+2020-03-05,Arizona,04,2,0
+2020-03-05,California,06,67,1
+2020-03-05,Colorado,08,2,0
+2020-03-05,Florida,12,4,0
+2020-03-05,Georgia,13,2,0
+2020-03-05,Illinois,17,5,0
+2020-03-05,Maryland,24,3,0
+2020-03-05,Massachusetts,25,3,0
+2020-03-05,Nebraska,31,13,0
+2020-03-05,Nevada,32,2,0
+2020-03-05,New Hampshire,33,2,0
+2020-03-05,New Jersey,34,2,0
+2020-03-05,New York,36,22,0
+2020-03-05,North Carolina,37,1,0
+2020-03-05,Oregon,41,2,0
+2020-03-05,Rhode Island,44,2,0
+2020-03-05,Tennessee,47,1,0
+2020-03-05,Texas,48,16,0
+2020-03-05,Utah,49,1,0
+2020-03-05,Washington,53,75,11
+2020-03-05,Wisconsin,55,1,0
