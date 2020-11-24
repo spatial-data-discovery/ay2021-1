@@ -30,8 +30,8 @@
 - [geoBoundariesUSA-ADM1-shp.zip](https://github.com/spatial-data-discovery/ay2021-1/blob/master/project/hannahslevin/data/geoBoundariesUSA-ADM1-shp.zip)
     
 ### Outputs
-- admissions_screening.gif
-- admissions_screening.csv
+- [admissions_screening.gif](https://github.com/spatial-data-discovery/ay2021-1/blob/master/project/hannahslevin/admissions_screening.gif)
+- [admissions_screening.csv](https://github.com/spatial-data-discovery/ay2021-1/blob/master/project/hannahslevin/data/admissions_screening.csv)
 
 
 # admissions_screening_conv.py
