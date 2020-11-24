@@ -3,6 +3,7 @@
 !pip install imageio==2.6
 !pip install imageio-ffmpeg
 import os, sys
+import imageio
 
 #establish path
 path = input('Name of path to directory containing images:')
