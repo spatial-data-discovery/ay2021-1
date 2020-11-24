@@ -59,7 +59,7 @@ This script is necessary because I use the outputed csv to perform a spatial joi
 * [shp](https://desktop.arcgis.com/en/arcmap/10.3/manage-data/shapefiles/what-is-a-shapefile.htm)
 
 ## Inputs
-- admissions_screening.csv
+- [admissions_screening.csv](https://github.com/spatial-data-discovery/ay2021-1/blob/master/project/hannahslevin/data/admissions_screening.csv)
 - [geoBoundariesUSA-ADM1-shp.zip](https://github.com/spatial-data-discovery/ay2021-1/blob/master/project/hannahslevin/data/geoBoundariesUSA-ADM1-shp.zip)
 ## Outputs
 - admissions_screening.shp
@@ -74,7 +74,7 @@ I added the admissions_screening.csv and geoBoundariesUSA-ADM1-shp to an empty p
 * [shp](https://desktop.arcgis.com/en/arcmap/10.3/manage-data/shapefiles/what-is-a-shapefile.htm)
 
 ## Inputs
-- admissions_screening.shp
+- [admissions_screening.shp](https://github.com/spatial-data-discovery/ay2021-1/blob/master/project/hannahslevin/data/Admissions%20Screening%20SHP.zip)
 ## Outputs
 - [EKG.png](https://github.com/spatial-data-discovery/ay2021-1/blob/master/project/hannahslevin/data/images/EKG.png)
 - [Elevated Lipids.png](https://github.com/spatial-data-discovery/ay2021-1/blob/master/project/hannahslevin/data/images/Elevated%20Lipids.png)
