@@ -8,7 +8,7 @@
 ## Files
 
 ### Scripts 
-- GIF_Script.py
+- GIF_Script.py(https://github.com/spatial-data-discovery/ay2021-1/blob/master/project/hannahslevin/GIF_Script.py)
 - admissions_screening_conv.py
 
 ### Inputs
