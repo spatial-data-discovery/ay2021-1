@@ -19,15 +19,12 @@ Website:          https://spatial-data-discovery.github.io/project-xlpeng.html
            + Updated README file
            + Created xlpeng-process-doc.txt
 
-
 2020-10-21   Topic Brainstorming
            + Searched on the Internet to see which topic I am interested in
            + Searched related data to see if it is easy to for future manipulating
 
-
 2020-10-22   Topic Decision 
            + Decided to focus on visualizing the COVID-19 cases in the U.S.
-
 
 2020-10-25   Data Sources
            + Coronavirus (Covid-19) Data in the United States, published by the New York Times
@@ -38,13 +35,11 @@ Website:          https://spatial-data-discovery.github.io/project-xlpeng.html
            + US Shape file 
                  - https://www.census.gov/geographies/mapping-files/time-series/geo/cartographic-boundary.html 
 
-
 2020-11-01   Data Decision
            + Decided to use the data from the NYT because it doesn't 
              include non-necessary information 
            + Considered ways to visualize the data
            + Decided to use the choropleth map
-
 
 2020-10-20   Python Script and Visualization
            + Started writing python script to process the data
@@ -55,14 +50,12 @@ Website:          https://spatial-data-discovery.github.io/project-xlpeng.html
                  - join the two layers so that QGIS can color each state with number of cases
                  - adjust the symbology of the map
 
-
 2020-10-21   Website and Visualization
            + Created the RMD file for the project
            + Updated title and subtitles
            + adjusted the visualization 
                  - finalized the color of the choropleth map
                  - finalized the shape of the U.S. map
-
 
 2020-10-23   Animation
            + Created the print layout in QGIS
@@ -74,13 +67,11 @@ Website:          https://spatial-data-discovery.github.io/project-xlpeng.html
                  - https://ezgif.com/gif-to-mp4
            + Emailed Professor Davis with animation file
 
-
              Documentation
            + Updated the process doc
            + Started writing the email
            + Developed the frontend
            + Updated README 
-
 
 2020-10-24   Final Check and Wrap Up
            + Email Professor Davis with required stuffs 
