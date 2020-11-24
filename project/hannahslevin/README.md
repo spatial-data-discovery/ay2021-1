@@ -3,6 +3,7 @@
 - LAST UPDATED: 2020-11-24
 - ORGANIZATION: spatial-data-discovery
 - REPOSITORY: ay2021-1
+- FOLDER: project/hannahslevin
 
 
 ## Files
@@ -48,6 +49,44 @@
 This script takes the first table stored in the prison_healthcare.pdf file and converts the table to a csv.  Tabula-py is a python wrapper for a java package, so java must be installed on your local before using tabula-py.  The package turns the table into a pandas dataframe.  I then use pandas to clean the table and get it ready to export to csv.  The script outputs the admissions_screening.csv file.  
 
 This script is necessary because I use the outputed csv to perform a spatial join to the GeoBoundaries ADM 1 shapefile.  
+
+# Spatial Join
+## Software Used
+- [QGIS](https://www.qgis.org/en/site/)
+
+## File types:
+* [csv](https://www.computerhope.com/issues/ch001356.htm)
+* [shp](https://desktop.arcgis.com/en/arcmap/10.3/manage-data/shapefiles/what-is-a-shapefile.htm)
+
+## Inputs
+- admissions_screening.csv
+- [geoBoundariesUSA-ADM1-shp.zip](https://github.com/spatial-data-discovery/ay2021-1/blob/master/project/hannahslevin/data/geoBoundariesUSA-ADM1-shp.zip)
+## Outputs
+- admissions_screening.shp
+## Process
+
+
+# Map Visualization 
+## Software Used
+- [ArcGIS Pro](hhttps://www.esri.com/en-us/arcgis/products/arcgis-pro/overview)
+
+## File types:
+* [shp](https://desktop.arcgis.com/en/arcmap/10.3/manage-data/shapefiles/what-is-a-shapefile.htm)
+
+## Inputs
+- admissions_screening.shp
+## Outputs
+- [EKG.png](https://github.com/spatial-data-discovery/ay2021-1/blob/master/project/hannahslevin/data/images/EKG.png)
+- [Elevated Lipids.png](https://github.com/spatial-data-discovery/ay2021-1/blob/master/project/hannahslevin/data/images/Elevated%20Lipids.png)
+- [Hepatitis A.png](https://github.com/spatial-data-discovery/ay2021-1/blob/master/project/hannahslevin/data/images/Hepatitis%20A.png)
+- [Hepatitis B.png](https://github.com/spatial-data-discovery/ay2021-1/blob/master/project/hannahslevin/data/images/Hepatitis%20B.png)
+- [Hepatitis C.png](https://github.com/spatial-data-discovery/ay2021-1/blob/master/project/hannahslevin/data/images/Hepatitis%20C.png)
+- [High BP.png](https://github.com/spatial-data-discovery/ay2021-1/blob/master/project/hannahslevin/data/images/High%20BP.png)
+- [Mental Health.png](https://github.com/spatial-data-discovery/ay2021-1/blob/master/project/hannahslevin/data/images/Mental%20Health.png)
+- [Suicide Risk.png](https://github.com/spatial-data-discovery/ay2021-1/blob/master/project/hannahslevin/data/images/Suicide%20Risk.png)
+- [Tuberculosis.png](https://github.com/spatial-data-discovery/ay2021-1/blob/master/project/hannahslevin/data/images/Tuberculosis.png)
+
+## Process
 
 
 # GIF_Script.py
