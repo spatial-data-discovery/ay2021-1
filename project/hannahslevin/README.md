@@ -56,5 +56,10 @@ This script is necessary because I use the outputed csv to perform a spatial joi
 - [imageio-ffmpeg](https://github.com/imageio/imageio-ffmpeg)
 - [os](https://docs.python.org/3/library/os.html)
 - [sys](https://docs.python.org/3/library/sys.html)
+
+## File types:
+* [png](https://www.computerhope.com/jargon/p/png.htm)
+* [gif](https://www.computerhope.com/jargon/g/gif.htm)
+
 ## How it works:
 After spatially joining geoBoundariesUSA-ADM1-shp.zip and admissions_screening.csv in QGIS, I took the joined shapefile into ArcGIS Pro on the Virtual Desktop.  I created 10 maps that showcased each attribute in the shapefile.  Each of these maps are stored in the "./data/images/" directory within my project folder.  This script creates a GIF out of the 10 maps in that directory using imageio version 2.6.  I used an older version of this package because it had the functionally to change the duration that each image was shown on the screen, while the most recent update did not.  This script exports the admissions_screening.gif file to the project directory. 
