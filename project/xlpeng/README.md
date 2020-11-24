@@ -8,6 +8,7 @@
 ## Files
 ### Script
 * [coviddata_process.py](https://github.com/spatial-data-discovery/ay2021-1/blob/master/project/xlpeng/coviddata_process.py)
+* [xlpeng-process-doc.txt](https://github.com/spatial-data-discovery/ay2021-1/blob/master/project/xlpeng/xlpeng-process-doc.txt)
 
 ### Input Data
 * [United State Shape File](https://www.census.gov/geographies/mapping-files/time-series/geo/cartographic-boundary.html)
