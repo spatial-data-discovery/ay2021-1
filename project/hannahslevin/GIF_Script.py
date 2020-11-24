@@ -17,4 +17,4 @@ for file in dirs:
 images = []
 for file in dirs:
     images.append(imageio.imread(path+'/'+file))
-imageio.mimsave('./data/admissions_screening.gif', images,fps=.75)
+imageio.mimsave('./admissions_screening.gif', images,fps=.75)
