@@ -18,7 +18,7 @@
 - [prison_healthcare.pdf](https://github.com/spatial-data-discovery/ay2021-1/blob/master/project/hannahslevin/data/prison_healthcare.pdf)
 - [Images](https://github.com/spatial-data-discovery/ay2021-1/tree/master/project/hannahslevin/data/images):
     - [EKG.png](https://github.com/spatial-data-discovery/ay2021-1/blob/master/project/hannahslevin/data/images/EKG.png)
-    - [Elevated Lipids.png](https://github.com/spatial-data-discovery/ay2021-1/blob/master/project/hannahslevin/data/images/Elevated Lipids.png)
+    - [Elevated Lipids.png](https://github.com/spatial-data-discovery/ay2021-1/blob/master/project/hannahslevin/data/images/Elevated%20Lipids.png)
     - [Hepatitis A.png](https://github.com/spatial-data-discovery/ay2021-1/blob/master/project/hannahslevin/data/images/Hepatitis A.png)
     - [Hepatitis B.png](https://github.com/spatial-data-discovery/ay2021-1/blob/master/project/hannahslevin/data/images/Hepatitis B.png)
     - [Hepatitis C.png](https://github.com/spatial-data-discovery/ay2021-1/blob/master/project/hannahslevin/data/images/Hepatitis C.png)
