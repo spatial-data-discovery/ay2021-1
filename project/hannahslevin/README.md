@@ -64,7 +64,7 @@ This script is necessary because I use the outputed csv to perform a spatial joi
 ## Outputs
 - admissions_screening.shp
 ## Process
-
+I added the admissions_screening.csv and geoBoundariesUSA-ADM1-shp to an empty project in QGIS.  I clicked on the shapefile's properties and went to the join tab, I joined on admissions_screening.csv's state column and the shapefile's shapeName column.  I then went in and manually deleted all of the US territories, since my analysis focused on the contiguous United States.  
 
 # Map Visualization 
 ## Software Used
@@ -87,7 +87,7 @@ This script is necessary because I use the outputed csv to perform a spatial joi
 - [Tuberculosis.png](https://github.com/spatial-data-discovery/ay2021-1/blob/master/project/hannahslevin/data/images/Tuberculosis.png)
 
 ## Process
-For each attribute in the admissions_screening.shp, I created a map.  To create the maps, I added the admissions_screening shapefile to 10 different map tabs in Arc Pro. For each attribute (EKG, Hepitatis A, etc..), I selected unique symbology and designated yes as green, no as red, and no data and other values as grey.  For each map tab, I opened a letter sized landscape layout tab.  I placed the corresponding map frame in the layout and added the title, Admissions Screenings in Prisons by State, and added the attribute as a subtitle.  I then added a legend with white bolded font and exported the layout to png.  Each of these pngs are used in the GIF_Script.py to create the admissions_screening.gif.  
+For each attribute in the admissions_screening.shp, I created a map.  To create the maps, I added the admissions_screening shapefile to 10 different map tabs in Arc Pro. The QGIS join that I performed messed up some of the attribute names, so I manually re-entered them as they appeared in the original PDF.  For each attribute (EKG, Hepitatis A, etc..), I selected unique symbology and designated yes as green, no as red, and no data and other values as grey.  For each map tab, I opened a letter sized landscape layout tab.  I placed the corresponding map frame in the layout and added the title, Admissions Screenings in Prisons by State, and added the attribute as a subtitle.  I then added a legend with white bolded font and exported the layout to png.  Each of these pngs are used in the GIF_Script.py to create the admissions_screening.gif.  
 
 # GIF_Script.py
 ## Packages imported:
