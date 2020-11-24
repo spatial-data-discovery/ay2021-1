@@ -19,12 +19,12 @@
 - [Images](https://github.com/spatial-data-discovery/ay2021-1/tree/master/project/hannahslevin/data/images):
     - [EKG.png](https://github.com/spatial-data-discovery/ay2021-1/blob/master/project/hannahslevin/data/images/EKG.png)
     - [Elevated Lipids.png](https://github.com/spatial-data-discovery/ay2021-1/blob/master/project/hannahslevin/data/images/Elevated%20Lipids.png)
-    - [Hepatitis A.png](https://github.com/spatial-data-discovery/ay2021-1/blob/master/project/hannahslevin/data/images/Hepatitis A.png)
-    - [Hepatitis B.png](https://github.com/spatial-data-discovery/ay2021-1/blob/master/project/hannahslevin/data/images/Hepatitis B.png)
-    - [Hepatitis C.png](https://github.com/spatial-data-discovery/ay2021-1/blob/master/project/hannahslevin/data/images/Hepatitis C.png)
-    - [High BP.png](https://github.com/spatial-data-discovery/ay2021-1/blob/master/project/hannahslevin/data/images/High BP.png)
-    - [Mental Health.png](https://github.com/spatial-data-discovery/ay2021-1/blob/master/project/hannahslevin/data/images/Mental Health.png)
-    - [Suicide Risk.png](https://github.com/spatial-data-discovery/ay2021-1/blob/master/project/hannahslevin/data/images/Suicide Risk.png)
+    - [Hepatitis A.png](https://github.com/spatial-data-discovery/ay2021-1/blob/master/project/hannahslevin/data/images/Hepatitis%20A.png)
+    - [Hepatitis B.png](https://github.com/spatial-data-discovery/ay2021-1/blob/master/project/hannahslevin/data/images/Hepatitis%20B.png)
+    - [Hepatitis C.png](https://github.com/spatial-data-discovery/ay2021-1/blob/master/project/hannahslevin/data/images/Hepatitis%20C.png)
+    - [High BP.png](https://github.com/spatial-data-discovery/ay2021-1/blob/master/project/hannahslevin/data/images/High%20BP.png)
+    - [Mental Health.png](https://github.com/spatial-data-discovery/ay2021-1/blob/master/project/hannahslevin/data/images/Mental%20Health.png)
+    - [Suicide Risk.png](https://github.com/spatial-data-discovery/ay2021-1/blob/master/project/hannahslevin/data/images/Suicide%20Risk.png)
     - [Tuberculosis.png](https://github.com/spatial-data-discovery/ay2021-1/blob/master/project/hannahslevin/data/images/Tuberculosis.png)
 - [geoBoundariesUSA-ADM1-shp.zip](https://github.com/spatial-data-discovery/ay2021-1/blob/master/project/hannahslevin/data/geoBoundariesUSA-ADM1-shp.zip)
     
