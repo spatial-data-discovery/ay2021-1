@@ -10,7 +10,7 @@
 * [coviddata_process.py](https://github.com/spatial-data-discovery/ay2021-1/blob/master/project/xlpeng/coviddata_process.py)
 
 ### Input Data
-* [United State Shape file](https://www.census.gov/geographies/mapping-files/time-series/geo/cartographic-boundary.html)
+* [United State Shape File](https://www.census.gov/geographies/mapping-files/time-series/geo/cartographic-boundary.html)
 * [covid-19-data](https://github.com/nytimes/covid-19-data)
 
 ### Outputs
@@ -31,8 +31,10 @@ The script runs just like any other python script. The command to run it is: pyt
 * [argparse](https://pypi.org/project/argparse/)
 
 ## About the Data
+### COVID-19 Confirmed Cases (2020-01-21 - present)  
 * File: [covid-19-data](https://github.com/spatial-data-discovery/ay2021-1/blob/master/project/xlpeng/inputData/us-states.csv)
 * Format: csv
+* Date Updated: 2020-11-24
 * Source: [The New York Times](https://github.com/nytimes/covid-19-data)
 * Contact: covid-data@nytimes.com
 * Variables & Units: 
@@ -42,3 +44,9 @@ The script runs just like any other python script. The command to run it is: pyt
   * Cases - The cumulative number of confirmed cases of COVID-19
   * Deaths - The cumulative number of deaths of COVID-19
 * Variable Used: date, state, cases
+
+### United States Shape File 
+* File: [cb_2019_us_state_500k](https://github.com/spatial-data-discovery/ay2021-1/blob/master/project/xlpeng/inputData/cb_2019_us_state_500k.zip)
+* Format: shapefile
+* Source: [United States Census Bureau](https://www.census.gov/geographies/mapping-files/time-series/geo/cartographic-boundary.html)
+
