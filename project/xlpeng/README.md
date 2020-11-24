@@ -19,11 +19,18 @@
 
 ## coviddata_process.py
 
-### Purpose
+### How it works 
+This script reads and extracts the data from the given csv file that includes the covid-19 data of selected dates and saves the data into separate newly created csv files.
+
+### How to runs the script
+The script runs just like any other python script. The command to run it is: python coviddata_process.py
+
 ### Packages Required
+* [os](https://docs.python.org/3/library/os.html)
+* [sys](https://docs.python.org/3/library/sys.html)
+* [argparse](https://pypi.org/project/argparse/)
 
-
-## About Data
+## About the Data
 * File
 * format
 * Source
