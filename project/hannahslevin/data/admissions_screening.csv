@@ -1,0 +1,46 @@
+,State,Hepatitis A,Hepatitis B,Hepatitis C,Tuberculosis,Elevated lipids,High blood pressure,Electrocardiogram,Mental health,Suicide risk,Tramautic brain injury,Sum
+1,Alabama,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,9
+2,Arizona,Yes,Yes,No,Yes,Yes,Yes,No,Yes,Yes,Yes,7
+3,Arkansas,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,9
+4,California,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,9
+5,Colorado,No,No,No,Yes,Yes,Yes,Yes,Yes,Yes,Yes,6
+6,Connecticut,No,No,No,Yes,No,Yes,No,Yes,Yes,No,4
+7,Delaware,No,No,No,Yes,No,Yes,Yes,Yes,Yes,No,5
+8,Florida,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,9
+9,Georgia,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,9
+10,Hawaii,No,No,No,Yes,No,No,No,Yes,Yes,Yes,3
+11,Idaho,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,No,8
+12,Illinois,No,No,No,Yes,No,Yes,Yes,Yes,Yes,Yes,5
+13,Indiana,No,No,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,7
+14,Iowa,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,9
+15,Kansas,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,9
+16,Kentucky,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,9
+17,Louisiana,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,9
+18,Maine,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,9
+19,Maryland,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,9
+20,Michigan,No,Yes,Yes,Yes,No,Yes,Yes,Yes,Yes,Yes,7
+21,Minnesota,Yes,Yes,Yes,Yes,No,Yes,No,Yes,Yes,No,7
+22,Missouri,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,9
+23,Montana,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,9
+24,Nebraska,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,9
+25,Nevada,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,8
+26,New Hampshire,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,9
+27,New Jersey,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,8
+28,New Mexico,Yes,Yes,Yes,Yes,No,Yes,No,Yes,Yes,Yes,7
+29,New York,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,--­,9
+30,North Carolina,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,9
+31,North Dakota,No,No,Yes,Yes,No,Yes,No,Yes,Yes,No,5
+32,Ohio,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,9
+33,Oklahoma,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,9
+34,Oregon,No,No,Yes,Yes,No,Yes,No,Yes,Yes,No,5
+35,Pennsylvania,No,No,Yes,Yes,Yes,Yes,No,Yes,Yes,No,6
+36,Rhode Island,No,No,Yes,Yes,No,Yes,No,Yes,Yes,No,5
+37,South Carolina,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,Yes,--­,8
+38,South Dakota,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,9
+39,Texas,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,Yes,No,8
+40,Utah,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,Yes,No,8
+41,Vermont,No,No,No,Yes,Yes,Yes,No,Yes,Yes,Yes,5
+42,Virginia,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,9
+43,Washington,No,Yes,Yes,Yes,No,Yes,No,Yes,Yes,Yes,6
+44,Wisconsin,No,No,No,Yes,Yes,Yes,No,Yes,Yes,Don’t know,5
+45,Wyoming,No,No,No,Yes,No,Yes,No,Yes,Yes,Yes,4
