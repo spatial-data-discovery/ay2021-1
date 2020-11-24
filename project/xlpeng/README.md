@@ -25,7 +25,7 @@
 ### How it works 
 This script reads and extracts the data from the given csv file that includes the covid-19 data of selected dates and saves the data into separate newly created csv files. Users can manually adjust the dates they need to get corresponding data by simply changing the string values in the python list.
 
-### How to runs the script
+### How to run the script
 The input file is supposed to be save in the default local directory, and the generated files will be saved into the same local folder. The script runs just like any other python script. The command to run it is: python coviddata_process.py
 
 ### Packages Required
