@@ -15,8 +15,10 @@
 * [covid-19-data](https://github.com/nytimes/covid-19-data)
 
 ### Outputs
-* [IntermediateOutput](https://github.com/spatial-data-discovery/ay2021-1/tree/master/project/xlpeng/intermediateOutput) (sixteen csv file contains covid-19 cases at specific dates)
+* [IntermediateOutput](https://github.com/spatial-data-discovery/ay2021-1/tree/master/project/xlpeng/intermediateOutput) (16 csv files contain covid-19 cases for specific dates)
 * [FinalOutput](https://github.com/spatial-data-discovery/ay2021-1/tree/master/project/xlpeng/finalOutput)
+  *[covid-data.gif] (https://github.com/spatial-data-discovery/ay2021-1/blob/master/project/xlpeng/finalOutput/covid-data.gif) The data animation in gif format. 
+  *[covid_animation.mp4] (https://github.com/spatial-data-discovery/ay2021-1/blob/master/project/xlpeng/finalOutput/covid_animation.mp4) The data animation in mp4 format. 
 
 ## coviddata_process.py
 
