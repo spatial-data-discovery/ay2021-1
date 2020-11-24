@@ -56,9 +56,13 @@ Website:          https://spatial-data-discovery.github.io/project-xlpeng.html
                  - adjust the symbology of the map
 
 
-2020-10-21   Website
+2020-10-21   Website and Visualization
            + Created the RMD file for the project
            + Updated title and subtitles
+           + adjusted the visualization 
+                 - finalized the color of the choropleth map
+                 - finalized the shape of the U.S. map
+
 
 2020-10-23   Animation
            + Created the print layout in QGIS
@@ -78,14 +82,7 @@ Website:          https://spatial-data-discovery.github.io/project-xlpeng.html
            + Updated README 
 
 
-
-2020-10-24   Wrap Up
+2020-10-24   Final Check and Wrap Up
            + Email Professor Davis with required stuffs 
            + Check if the website layout is correct
-
-
-
-
-
-
 
