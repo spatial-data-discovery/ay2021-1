@@ -46,4 +46,4 @@ Website:          https://spatial-data-discovery.github.io/project-hannahslevin.
 2020-11-23	Visualized Data
 		* Created Visualizations for aggregated admissions screening data by state using ArcGIS Pro via the Virtual Desktop 
 		* Created Visualizations for each individual admissions screening criteria by state using ArcGIS Pro via the Virtual Desktop 
-		
+		* Created gif of each admissions screening map using imageio
