@@ -5,7 +5,7 @@
 ### Summary: this script automates the web scraping process for US election dates from Wikipedia
 
 from bs4 import BeautifulSoup
-import requests 
+import requests
 import google
 import re
 import pandas as pd
@@ -14,7 +14,7 @@ import dateutil.parser as dparser
 from urllib import request
 import wikipedia
 import numpy as np
-from googlesearch import search 
+from googlesearch import search
 
 ## read in the input file
 idea_data = pd.read_csv('idea_data.csv')
@@ -28,34 +28,29 @@ newdatadict = {}
 ## For loop to search for the exact date of the election for each election in the data
 for year in USA['Year'].unique():
     newdatadict['year'] = year
-    #electiontype = list(USA[USA['Year'] == year]['Election type'])[0]
 
-    # to search 
+    # to search
     newdatadict['date'] = np.nan
     try:
         query =  str(year) + ' United States Election Wikipedia'
         results = search(query, tld="co.in", num=10, stop=1, pause=1)
         results_list= []
 
-        for j in results: 
-            #print(j) 
+        for j in results:
             results_list.append(j)
-            
+
         try:
             url = results_list[0]
             html = request.urlopen(url).read().decode('utf8')
             html[:60]
             soup = BeautifulSoup(html, 'html.parser')
             title = (soup.find('title')).string
-            #title = str(title).replace('wikipedia', '')
-            #title = str(title).replace('- Wikipedia', '')
-            try: 
+
+            try:
                 wiki = wikipedia.page(title)
                 string_cstext = wiki.content
                 try:
                     m = re.search('\w{3,9}?\s\d{1,2}?,\s\d{4}?', string_cstext)
-                    print(m)
-                    ## take this date parser part out of the for loop 
                     date = dparser.parse(m.group(),fuzzy=True)
                     newdatadict['date'] = date
                     newdf = newdf.append(newdatadict, ignore_index = True)
@@ -63,11 +58,8 @@ for year in USA['Year'].unique():
                 except:
                     try:
                         m = re.search('\d{1,2}?\s\w{3,9}?', string_cstext)
-                        ## take this date parser part out of the for loop 
                         date = dparser.parse(m.group(),fuzzy=True)
-
                         date = date.replace(year = year)
-
                         newdatadict['date'] = date
                         newdf = newdf.append(newdatadict, ignore_index = True)
                         print('USA' + ' ' + str(year) + ' election date is ' + str(date))
