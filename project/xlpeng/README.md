@@ -31,8 +31,14 @@ The script runs just like any other python script. The command to run it is: pyt
 * [argparse](https://pypi.org/project/argparse/)
 
 ## About the Data
-* File
-* format
-* Source
-* Contact
-* Variable Used
+* File: [covid-19-data](https://github.com/spatial-data-discovery/ay2021-1/blob/master/project/xlpeng/inputData/us-states.csv)
+* Format: csv
+* Source: [The New York Times](https://github.com/nytimes/covid-19-data)
+* Contact: covid-data@nytimes.com
+* Variables & Units: 
+  * Date (yyyy-mm-dd) - Date of publishing
+  * State - Name of the state
+  * FIPS - FIPS code for each state
+  * Cases - The cumulative number of confirmed cases of COVID-19
+  * Deaths - The cumulative number of deaths of COVID-19
+* Variable Used: date, state, cases
