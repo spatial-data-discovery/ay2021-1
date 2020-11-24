@@ -26,16 +26,17 @@ import numpy as np
 
 def readCSV():
 
-    #set the file path and folder path
-    #the created files will be saved in this folder 
-    folder = 'data_files'
+
+    #the created files will be saved in the local directory folder 
+    
+    #folder = 'data_files'
     input_file = 'us-states.csv'
 
-    filepath = os.path.join(folder, input_file)
+    #filepath = os.path.join(folder, input_file)
 
     #open the file and read each line
-    if os.path.exists(filepath):
-        file = open(filepath,"r")
+    if os.path.exists(input_file):
+        file = open(input_file,"r")
         reader = csv.reader(file, delimiter=',')
         data = file.readlines()
 
