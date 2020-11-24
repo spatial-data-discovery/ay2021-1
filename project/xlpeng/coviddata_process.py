@@ -16,8 +16,6 @@
 import os
 import sys
 import argparse
-import csv
-import numpy as np
 
 
 ##################
@@ -37,7 +35,6 @@ def readCSV():
     #open the file and read each line
     if os.path.exists(input_file):
         file = open(input_file,"r")
-        reader = csv.reader(file, delimiter=',')
         data = file.readlines()
 
     #Error handling
