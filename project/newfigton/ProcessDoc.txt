@@ -1,0 +1,32 @@
+Ciaran Lowell
+Spatial Data Discovery
+Fall 2020
+
+10-12-2020 Contacted Arjun Malhotra (lloD) to obtain Slippi Files
+
+10-13-2020 Downloaded Slippi files provided by lloD from Google Drive
+		Files are in "games" folder of Github
+
+10-20-2020 Installed Slippi python parser package
+	   https://github.com/hohav/py-slippi
+
+10-25-2020 Installed Seaborn python package
+
+10-28-2020 Followed along with Swoodivarius' script to pull neutral wins and create basic heatmaps. I use many of his methods in my final code
+	https://swoodivarius.github.io/Final.html
+
+11-05-2020 Install GIMP 2.10.22 to make transparent move library
+		https://www.gimp.org/
+
+11-22-2020 Correspond with Hohav (creator of Slippi Python Parser) to troubleshoot error I'm getting. Its turnips!
+		Turnips were a continuous source of annoyance for this project
+
+11-23-2020 Accepted that no Python library exists that will let me efficiently graph points using custom images. 
+	   Contact lloD for more data files to create comparison images, don't recieve data in time
+
+11-24-2020 Clean code; convert graphing/calculations to methods as much as possible. Code is still ugly but better. Changed a few things to 		make it easier to implement multiple characters in future work. 
+		
+		Wrote project write-up and uploaded files to github
+
+		Converted visualizations into videos and then GIFs using Windows Photos and then Imgur  
+		https://imgur.com/a/zy8PGhV
